@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1785047799442,
+      "tag": "0000_odd_vertigo",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1785318844355,
+      "tag": "0001_massive_callisto",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1785943672660,
+      "tag": "0002_daily_avengers",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1786053582723,
+      "tag": "0003_mature_lizard",
+      "breakpoints": true
+    }
+  ]
+}
