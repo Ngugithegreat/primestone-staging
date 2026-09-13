@@ -94,17 +94,18 @@ export async function POST(req: NextRequest) {
   }
 
   if (action === "rename-provider") {
-    const handle = req.nextUrl.searchParams.get("handle");
+    const id = req.nextUrl.searchParams.get("id");
+    const currentName = req.nextUrl.searchParams.get("currentName");
     const name = req.nextUrl.searchParams.get("name");
     const newHandle = req.nextUrl.searchParams.get("newHandle") ?? undefined;
-    if (!handle || !name) {
-      return NextResponse.json({ error: "missing ?handle= or ?name=" }, { status: 400 });
+    if ((!id && !currentName) || !name) {
+      return NextResponse.json({ error: "missing ?id= or ?currentName=, and ?name=" }, { status: 400 });
     }
     const db = getDb();
     const [updated] = await db
       .update(schema.signalProviders)
       .set({ name, ...(newHandle ? { handle: newHandle } : {}) })
-      .where(eq(schema.signalProviders.handle, handle))
+      .where(id ? eq(schema.signalProviders.id, id) : eq(schema.signalProviders.name, currentName!))
       .returning({ id: schema.signalProviders.id, name: schema.signalProviders.name, handle: schema.signalProviders.handle });
     if (!updated) {
       return NextResponse.json({ ok: false, error: "no provider with that handle" }, { status: 404 });
