@@ -7,6 +7,9 @@ const nextConfig = {
   turbopack: {
     root: import.meta.dirname,
   },
+  outputFileTracingIncludes: {
+    "/api/ops/bootstrap": ["./drizzle/**/*"],
+  },
 };
 
 export default nextConfig;
