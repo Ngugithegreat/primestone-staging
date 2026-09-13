@@ -3,7 +3,7 @@ import { LoginForm } from "@/components/auth/LoginForm";
 
 export const metadata: Metadata = {
   title: "Sign in",
-  description: "Sign in to your PrimeStone account.",
+  description: "Sign in to your Meridian account.",
 };
 
 export default function LoginPage() {

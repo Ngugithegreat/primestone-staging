@@ -289,8 +289,8 @@ export function OrderTicket({
           className={cn(
             "focus-ring h-12 w-full rounded-xl text-[15px] font-bold transition-all duration-200 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-45",
             side === "buy"
-              ? "bg-mint-500 text-ink-950 shadow-[0_8px_28px_-10px_rgba(0,223,164,0.7)] hover:bg-mint-400"
-              : "bg-rose-500 text-white shadow-[0_8px_28px_-10px_rgba(244,63,94,0.7)] hover:bg-rose-400",
+              ? "bg-mint-500 text-ink-950 shadow-[0_8px_28px_-10px_rgba(207,166,83,0.7)] hover:bg-mint-400"
+              : "bg-rose-500 text-white shadow-[0_8px_28px_-10px_rgba(229,73,58,0.7)] hover:bg-rose-400",
           )}
         >
           {side === "buy" ? "Buy" : "Sell"} {lots} {symbol}

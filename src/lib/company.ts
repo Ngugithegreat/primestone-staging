@@ -14,8 +14,8 @@
  *      - `address`  — the exact registered-office lines in Mauritius
  */
 export const COMPANY = {
-  name: "PrimeStone Markets Ltd",
-  shortName: "PrimeStone",
+  name: "Meridian Markets Ltd",
+  shortName: "Meridian",
   foundedYear: 2019,
 
   regulator: "Financial Services Commission (FSC) of Mauritius",
@@ -36,19 +36,19 @@ export const COMPANY = {
   },
 
   email: {
-    support: "support@primestone.com",
-    sales: "hello@primestone.com",
-    compliance: "compliance@primestone.com",
-    complaints: "complaints@primestone.com",
+    support: "support@meridiancapital.example",
+    sales: "hello@meridiancapital.example",
+    compliance: "compliance@meridiancapital.example",
+    complaints: "complaints@meridiancapital.example",
   },
 
   phone: "+230 000 0000", // TODO: replace with your real switchboard number
   supportHours: "Monday to Friday, 08:00–18:00 GMT+4",
 
   socials: {
-    x: "https://x.com/primestone",
-    linkedin: "https://linkedin.com/company/primestone",
-    instagram: "https://instagram.com/primestone",
+    x: "https://x.com/meridian",
+    linkedin: "https://linkedin.com/company/meridian",
+    instagram: "https://instagram.com/meridian",
   },
 } as const;
 

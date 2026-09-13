@@ -146,7 +146,7 @@ export default function TermsPage() {
     <LegalDoc
       eyebrow="Legal"
       title="Terms of Service"
-      lead="The agreement that governs your use of PrimeStone and its copy-trading services."
+      lead="The agreement that governs your use of Meridian and its copy-trading services."
       updated="24 July 2026"
       sections={SECTIONS}
     />

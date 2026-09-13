@@ -45,7 +45,7 @@ export async function POST(req: Request) {
     phone,
     amount: kesWhole,
     accountReference: `PS${user.id.slice(0, 8)}`,
-    description: "PrimeStone deposit",
+    description: "Meridian deposit",
   });
   if (!push.ok) return NextResponse.json({ error: push.error }, { status: 502 });
 

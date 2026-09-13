@@ -38,7 +38,7 @@ function realProviderToTrader(p: RealProvider): Trader {
     handle: p.handle || `@${p.name.toLowerCase().replace(/\s+/g, "")}`,
     country: p.country || "Kenya",
     flag: FLAG[p.country] ?? "🌍",
-    gradient: ["#2ff0bd", "#6366f1"],
+    gradient: ["#e3c583", "#279d6c"],
     verified: p.verified,
     strategy: p.strategy || "Copy strategy",
     bio: p.bio || "",

@@ -83,7 +83,7 @@ export function LoginForm() {
       subtitle="Sign in to your desk to check your copies, positions and balance."
       footer={
         <>
-          New to PrimeStone?{" "}
+          New to Meridian?{" "}
           <Link href="/signup" className="font-medium text-mint-400 hover:text-mint-300">
             Open a free account
           </Link>

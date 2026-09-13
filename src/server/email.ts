@@ -68,14 +68,14 @@ function shell(title: string, body: string): string {
   <style>
     :root { color-scheme: light dark; supported-color-schemes: light dark; }
     @media (prefers-color-scheme: dark) {
-      .ps-bg { background:#05070c !important; }
+      .ps-bg { background:#0a0907 !important; }
       .ps-card { background:#0b0f17 !important; border-color:rgba(255,255,255,0.08) !important; }
       .ps-mark, .ps-title { color:#ffffff !important; }
       .ps-text { color:#c7d2e0 !important; }
       .ps-muted { color:#8b97a8 !important; }
       .ps-foot { color:#647588 !important; }
-      .ps-chip { background:rgba(0,223,164,0.10) !important; border-color:rgba(0,223,164,0.25) !important; color:#5eead4 !important; }
-      .ps-code { background:#05070c !important; border-color:rgba(255,255,255,0.10) !important; color:#ffffff !important; }
+      .ps-chip { background:rgba(207,166,83,0.10) !important; border-color:rgba(207,166,83,0.25) !important; color:#5eead4 !important; }
+      .ps-code { background:#0a0907 !important; border-color:rgba(255,255,255,0.10) !important; color:#ffffff !important; }
     }
   </style>
   </head>
@@ -83,11 +83,11 @@ function shell(title: string, body: string): string {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef2f7;" class="ps-bg">
       <tr><td align="center" style="padding:32px 16px;">
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:520px;">
-          <tr><td class="ps-mark" style="padding:0 4px 20px;font-size:21px;font-weight:800;letter-spacing:-0.02em;color:#0b1220;">
-            Prime<span style="color:${BRAND};">Stone</span>
+          <tr><td class="ps-mark" style="padding:0 4px 20px;font-size:21px;font-weight:800;letter-spacing:-0.02em;color:#0a0907;">
+            Meri<span style="color:${BRAND};">dian</span>
           </td></tr>
           <tr><td class="ps-card" style="background:#ffffff;border:1px solid #e5eaf1;border-radius:18px;padding:30px;">
-            <h1 class="ps-title" style="margin:0 0 14px;font-size:20px;font-weight:700;color:#0b1220;">${title}</h1>
+            <h1 class="ps-title" style="margin:0 0 14px;font-size:20px;font-weight:700;color:#0a0907;">${title}</h1>
             ${body}
           </td></tr>
           <tr><td class="ps-foot" style="padding:20px 6px 0;font-size:11.5px;line-height:1.7;color:#8b97a8;">
@@ -109,7 +109,7 @@ function muted(text: string): string {
 }
 
 function strong(text: string): string {
-  return `<strong class="ps-title" style="color:#0b1220;">${text}</strong>`;
+  return `<strong class="ps-title" style="color:#0a0907;">${text}</strong>`;
 }
 
 function button(href: string, label: string): string {
@@ -121,7 +121,7 @@ function button(href: string, label: string): string {
 function codeBlock(code: string): string {
   return `<div class="ps-code" style="margin:4px 0 22px;background:#f5f8fb;border:1px solid #e5eaf1;border-radius:12px;
     padding:18px;text-align:center;font-family:'SF Mono',Menlo,Consolas,monospace;font-size:30px;font-weight:700;
-    letter-spacing:0.32em;color:#0b1220;">${code}</div>`;
+    letter-spacing:0.32em;color:#0a0907;">${code}</div>`;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -134,7 +134,7 @@ export function welcomeEmail(input: {
   const verifySection = input.verifyCode
     ? `${p("First, let's confirm this email is yours. Enter this 6-digit code on the verification screen:")}
        ${codeBlock(input.verifyCode)}
-       ${muted("The code expires in 30 minutes. If you didn't create a PrimeStone account, you can ignore this email.")}`
+       ${muted("The code expires in 30 minutes. If you didn't create a Meridian account, you can ignore this email.")}`
     : "";
   return {
     subject: `Welcome to ${COMPANY.name}`,
@@ -153,7 +153,7 @@ export function verifyEmail(input: { firstName: string; code: string }): {
   html: string;
 } {
   return {
-    subject: `Your PrimeStone verification code: ${input.code}`,
+    subject: `Your Meridian verification code: ${input.code}`,
     html: shell(
       "Verify your email",
       `${p(`Hi ${input.firstName}, enter this code to verify your email address:`)}

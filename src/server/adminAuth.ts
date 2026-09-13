@@ -21,7 +21,7 @@ export function isAdminConfigured(): boolean {
 
 function expectedToken(): string {
   const secret = process.env.ADMIN_PASSWORD ?? "";
-  return createHmac("sha256", secret).update("primestone-admin-v1").digest("hex");
+  return createHmac("sha256", secret).update("meridian-admin-v1").digest("hex");
 }
 
 function safeEqual(a: string, b: string): boolean {

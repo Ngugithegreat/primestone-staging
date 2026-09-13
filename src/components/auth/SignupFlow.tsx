@@ -282,7 +282,7 @@ export function SignupFlow() {
                       className={cn(
                         "focus-ring relative rounded-2xl border p-5 text-left transition-all duration-250",
                         active
-                          ? "border-mint-500/50 bg-mint-500/[0.07] shadow-[0_0_0_1px_rgba(0,223,164,0.25)]"
+                          ? "border-mint-500/50 bg-mint-500/[0.07] shadow-[0_0_0_1px_rgba(207,166,83,0.25)]"
                           : "border-white/[0.08] bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05]",
                       )}
                     >

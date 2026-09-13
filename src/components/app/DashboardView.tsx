@@ -129,14 +129,14 @@ export function DashboardView() {
           }}
           spark={curve.slice(-24).map((p) => p.value)}
           sparkPositive={totalPnl >= 0}
-          accent="#00dfa4"
+          accent="#cfa653"
         />
         <StatTile
           index={1}
           label="Total profit"
           value={signed(totalPnl)}
           icon={Activity}
-          accent={totalPnl >= 0 ? "#2ff0bd" : "#f43f5e"}
+          accent={totalPnl >= 0 ? "#e3c583" : "#e5493a"}
           delta={{
             value: `${totalPnlPct >= 0 ? "+" : ""}${totalPnlPct.toFixed(2)}% all time`,
             positive: totalPnl >= 0,
@@ -148,7 +148,7 @@ export function DashboardView() {
           label="Win rate"
           value={`${stats.winRate.toFixed(1)}%`}
           icon={Target}
-          accent="#818cf8"
+          accent="#4fb98b"
           delta={{ value: `${stats.wins}W / ${stats.losses}L`, positive: stats.winRate >= 50 }}
           footer={`Profit factor ${stats.profitFactor.toFixed(2)}`}
         />
@@ -157,7 +157,7 @@ export function DashboardView() {
           label="Copy allocation"
           value={money(copyAllocated)}
           icon={Users}
-          accent="#fbbf24"
+          accent="#f0b429"
           delta={{
             value: `${copyPnl >= 0 ? "+" : ""}${money(copyPnl)} realised`,
             positive: copyPnl >= 0,
@@ -188,15 +188,15 @@ export function DashboardView() {
               <AreaChart data={curve} margin={{ top: 8, right: 8, left: 0, bottom: 0 }}>
                 <defs>
                   <linearGradient id="equity-fill" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#00dfa4" stopOpacity={0.32} />
-                    <stop offset="100%" stopColor="#00dfa4" stopOpacity={0} />
+                    <stop offset="0%" stopColor="#cfa653" stopOpacity={0.32} />
+                    <stop offset="100%" stopColor="#cfa653" stopOpacity={0} />
                   </linearGradient>
                 </defs>
                 <CartesianGrid stroke="rgba(255,255,255,0.05)" vertical={false} />
                 <XAxis dataKey="t" hide />
                 <YAxis
                   domain={["dataMin - 200", "dataMax + 200"]}
-                  tick={{ fill: "#64748b", fontSize: 11 }}
+                  tick={{ fill: "#8a7862", fontSize: 11 }}
                   tickFormatter={(v: number) => `$${Math.round(v).toLocaleString("en-US")}`}
                   axisLine={false}
                   tickLine={false}
@@ -205,7 +205,7 @@ export function DashboardView() {
                 <Tooltip
                   cursor={{ stroke: "rgba(255,255,255,0.2)", strokeDasharray: "3 3" }}
                   contentStyle={{
-                    background: "#0c111b",
+                    background: "#14110d",
                     border: "1px solid rgba(255,255,255,0.1)",
                     borderRadius: 10,
                     fontSize: 12,
@@ -216,7 +216,7 @@ export function DashboardView() {
                 <Area
                   type="monotone"
                   dataKey="value"
-                  stroke="#00dfa4"
+                  stroke="#cfa653"
                   strokeWidth={2}
                   fill="url(#equity-fill)"
                   animationDuration={1100}

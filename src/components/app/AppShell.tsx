@@ -407,7 +407,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
           >
             <span
               className="grid h-8 w-8 place-items-center rounded-lg text-[12px] font-semibold text-ink-950"
-              style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}
+              style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
             >
               {initialsOf(`${user?.firstName ?? "A"} ${user?.lastName ?? "S"}`)}
             </span>

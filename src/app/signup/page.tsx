@@ -5,7 +5,7 @@ import { SignupFlow } from "@/components/auth/SignupFlow";
 export const metadata: Metadata = {
   title: "Open an account",
   description:
-    "Open a PrimeStone account in under two minutes and get demo credit to start copying immediately.",
+    "Open a Meridian account in under two minutes and get demo credit to start copying immediately.",
 };
 
 export default function SignupPage() {

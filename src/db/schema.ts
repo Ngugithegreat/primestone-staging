@@ -14,7 +14,7 @@ import {
 } from "drizzle-orm/pg-core";
 
 /* ==========================================================================
-   PrimeStone database schema
+   Meridian database schema
    --------------------------------------------------------------------------
    The data model for a regulated copy-trading platform: identity, KYC, an
    immutable double-entry ledger for client money, payments, the owner-managed

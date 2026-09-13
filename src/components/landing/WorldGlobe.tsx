@@ -127,15 +127,15 @@ export function WorldGlobe() {
 
       // soft glow behind
       const g = ctx.createRadialGradient(cx, cy, rad * 0.2, cx, cy, rad * 1.15);
-      g.addColorStop(0, "rgba(0,223,164,0.10)");
-      g.addColorStop(1, "rgba(0,223,164,0)");
+      g.addColorStop(0, "rgba(207,166,83,0.10)");
+      g.addColorStop(1, "rgba(207,166,83,0)");
       ctx.fillStyle = g;
       ctx.beginPath();
       ctx.arc(cx, cy, rad * 1.15, 0, Math.PI * 2);
       ctx.fill();
 
       // globe rim
-      ctx.strokeStyle = "rgba(0,223,164,0.16)";
+      ctx.strokeStyle = "rgba(207,166,83,0.16)";
       ctx.lineWidth = 1;
       ctx.beginPath();
       ctx.arc(cx, cy, rad, 0, Math.PI * 2);

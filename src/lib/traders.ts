@@ -23,7 +23,7 @@ export type Trader = {
   followers: number;
   /** Performance fee taken from profit, percent. */
   fee: number;
-  /** Months live on PrimeStone. */
+  /** Months live on Meridian. */
   monthsActive: number;
   aum: number;
   trades: number;
@@ -70,7 +70,7 @@ const RAW: Seedling[] = [
     name: "Kwame Mwangi",
     handle: "@swingkwame",
     country: "Kenya",
-    gradient: ["#00dfa4", "#0ea5e9"],
+    gradient: ["#cfa653", "#c2703a"],
     verified: true,
     strategy: "Swing · Trend Following",
     bio: "Multi-week positions on majors and gold, sized off ATR. I trade the daily close and never hold through tier-1 news. Slow, boring, repeatable.",
@@ -96,7 +96,7 @@ const RAW: Seedling[] = [
     name: "Elena Fischer",
     handle: "@fx_elena",
     country: "Germany",
-    gradient: ["#818cf8", "#c084fc"],
+    gradient: ["#4fb98b", "#d97757"],
     verified: true,
     strategy: "London Session Breakout",
     bio: "Systematic breakout model on the 07:00–11:00 GMT window. Fully rules-based, flat by the New York close, no averaging down. Ever.",
@@ -122,7 +122,7 @@ const RAW: Seedling[] = [
     name: "Raj Patel",
     handle: "@quantraj",
     country: "Singapore",
-    gradient: ["#22d3ee", "#3b82f6"],
+    gradient: ["#c2703a", "#3b82f6"],
     verified: true,
     strategy: "Statistical Arbitrage",
     bio: "Market-neutral pairs book across FX crosses and index futures. Positions are small, frequent and hedged; the edge is in the count, not the size.",
@@ -174,7 +174,7 @@ const RAW: Seedling[] = [
     name: "Marcus Hale",
     handle: "@haleprop",
     country: "United Kingdom",
-    gradient: ["#00dfa4", "#84cc16"],
+    gradient: ["#cfa653", "#84cc16"],
     verified: true,
     strategy: "Institutional Order Flow",
     bio: "Ex-prop desk. I trade liquidity sweeps at session highs and lows on the 15m. Two to four setups a week, 1% risk each, no exceptions.",
@@ -200,7 +200,7 @@ const RAW: Seedling[] = [
     name: "Yuki Tanaka",
     handle: "@yenscalper",
     country: "Japan",
-    gradient: ["#f43f5e", "#f97316"],
+    gradient: ["#e5493a", "#f97316"],
     verified: true,
     strategy: "Asian Session Scalping",
     bio: "Range scalps on yen pairs during Tokyo hours. Twenty to forty trades a day, tiny targets, brutal risk control. Not for the faint-hearted.",
@@ -252,7 +252,7 @@ const RAW: Seedling[] = [
     name: "David Chen",
     handle: "@chen_indices",
     country: "United States",
-    gradient: ["#38bdf8", "#6366f1"],
+    gradient: ["#38bdf8", "#279d6c"],
     verified: true,
     strategy: "Index Mean Reversion",
     bio: "Fade the open, buy the panic. Nasdaq and Dow only, cash session only. Twelve years of the same three setups.",
@@ -356,7 +356,7 @@ const RAW: Seedling[] = [
     name: "Grace Wanjiru",
     handle: "@gracepips",
     country: "Kenya",
-    gradient: ["#c084fc", "#6366f1"],
+    gradient: ["#d97757", "#279d6c"],
     verified: true,
     strategy: "Smart Money Concepts",
     bio: "Higher-timeframe bias, lower-timeframe entries. I mark my levels on Sunday and I do not deviate from them during the week.",
@@ -509,10 +509,10 @@ const GEN_STRATEGIES = [
 ];
 
 const GEN_GRADIENTS: [string, string][] = [
-  ["#00dfa4", "#0ea5e9"], ["#818cf8", "#c084fc"], ["#22d3ee", "#3b82f6"],
-  ["#f59e0b", "#ef4444"], ["#00dfa4", "#84cc16"], ["#f43f5e", "#f97316"],
-  ["#a78bfa", "#ec4899"], ["#38bdf8", "#6366f1"], ["#facc15", "#22c55e"],
-  ["#2dd4bf", "#0284c7"], ["#fb923c", "#eab308"], ["#c084fc", "#6366f1"],
+  ["#cfa653", "#c2703a"], ["#4fb98b", "#d97757"], ["#c2703a", "#3b82f6"],
+  ["#f59e0b", "#ef4444"], ["#cfa653", "#84cc16"], ["#e5493a", "#f97316"],
+  ["#a78bfa", "#ec4899"], ["#38bdf8", "#279d6c"], ["#facc15", "#22c55e"],
+  ["#2dd4bf", "#0284c7"], ["#fb923c", "#eab308"], ["#d97757", "#279d6c"],
   ["#4ade80", "#14b8a6"], ["#f472b6", "#a855f7"], ["#34d399", "#10b981"],
   ["#60a5fa", "#a78bfa"],
 ];

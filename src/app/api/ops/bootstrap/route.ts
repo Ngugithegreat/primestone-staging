@@ -93,6 +93,25 @@ export async function POST(req: NextRequest) {
     }
   }
 
+  if (action === "rename-provider") {
+    const handle = req.nextUrl.searchParams.get("handle");
+    const name = req.nextUrl.searchParams.get("name");
+    const newHandle = req.nextUrl.searchParams.get("newHandle") ?? undefined;
+    if (!handle || !name) {
+      return NextResponse.json({ error: "missing ?handle= or ?name=" }, { status: 400 });
+    }
+    const db = getDb();
+    const [updated] = await db
+      .update(schema.signalProviders)
+      .set({ name, ...(newHandle ? { handle: newHandle } : {}) })
+      .where(eq(schema.signalProviders.handle, handle))
+      .returning({ id: schema.signalProviders.id, name: schema.signalProviders.name, handle: schema.signalProviders.handle });
+    if (!updated) {
+      return NextResponse.json({ ok: false, error: "no provider with that handle" }, { status: 404 });
+    }
+    return NextResponse.json({ ok: true, updated });
+  }
+
   if (action === "promote") {
     const email = req.nextUrl.searchParams.get("email");
     if (!email) {

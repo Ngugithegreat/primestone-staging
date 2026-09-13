@@ -712,7 +712,7 @@ export const useStore = create<Store>()(
       // v2: dropped `user`/`sessionMode` from persistence (auth is now
       // server-cookie only). New key so stale v1 blobs — which still hold a
       // `user` — are abandoned rather than rehydrated into a password-less login.
-      name: "primestone.session.v2",
+      name: "meridian.session.v2",
       storage: createJSONStorage(() => localStorage),
       // NB: `user` is deliberately NOT persisted. Who is signed in is decided
       // ONLY by the httpOnly server session cookie (validated via /api/auth/me),

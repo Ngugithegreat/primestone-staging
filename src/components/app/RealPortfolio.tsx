@@ -39,15 +39,15 @@ export function RealPortfolio() {
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <StatTile index={0} label="Account value" value={usd(real.totalMinor)} icon={WalletIcon} accent="#00dfa4" />
-        <StatTile index={1} label="Available" value={usd(real.balanceMinor)} icon={PiggyBank} accent="#2ff0bd" footer="Not yet allocated" />
-        <StatTile index={2} label="Copying" value={usd(real.allocatedMinor)} icon={Users} accent="#818cf8" footer={`${subs.length} provider${subs.length === 1 ? "" : "s"}`} />
+        <StatTile index={0} label="Account value" value={usd(real.totalMinor)} icon={WalletIcon} accent="#cfa653" />
+        <StatTile index={1} label="Available" value={usd(real.balanceMinor)} icon={PiggyBank} accent="#e3c583" footer="Not yet allocated" />
+        <StatTile index={2} label="Copying" value={usd(real.allocatedMinor)} icon={Users} accent="#4fb98b" footer={`${subs.length} provider${subs.length === 1 ? "" : "s"}`} />
         <StatTile
           index={3}
           label="Realized P&L"
           value={`${real.realizedPnlMinor >= 0 ? "+" : "-"}${usd(Math.abs(real.realizedPnlMinor))}`}
           icon={TrendingUp}
-          accent={real.realizedPnlMinor >= 0 ? "#00dfa4" : "#f43f5e"}
+          accent={real.realizedPnlMinor >= 0 ? "#cfa653" : "#e5493a"}
           footer="All-time, from closed trades"
         />
       </div>
@@ -82,7 +82,7 @@ export function RealPortfolio() {
                   <div className="flex items-center gap-3">
                     <span
                       className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950"
-                      style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}
+                      style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
                     >
                       {initialsOf(a.provider.name)}
                     </span>

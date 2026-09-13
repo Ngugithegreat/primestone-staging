@@ -120,13 +120,13 @@ export function LiveEquityStream() {
     <svg viewBox={`0 0 ${W} ${H}`} className="w-full" aria-hidden="true">
       <defs>
         <linearGradient id="live-eq-fill" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#00dfa4" stopOpacity="0.32" />
-          <stop offset="100%" stopColor="#00dfa4" stopOpacity="0" />
+          <stop offset="0%" stopColor="#cfa653" stopOpacity="0.32" />
+          <stop offset="100%" stopColor="#cfa653" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="live-eq-line" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#6366f1" />
-          <stop offset="55%" stopColor="#00dfa4" />
-          <stop offset="100%" stopColor="#2ff0bd" />
+          <stop offset="0%" stopColor="#279d6c" />
+          <stop offset="55%" stopColor="#cfa653" />
+          <stop offset="100%" stopColor="#e3c583" />
         </linearGradient>
         {/* Clip so the incoming point scrolls in instead of overflowing. */}
         <clipPath id="live-eq-clip">
@@ -166,11 +166,11 @@ export function LiveEquityStream() {
       </g>
 
       {/* Leading marker — pinned near the right edge, pulsing. */}
-      <circle ref={glowRef} cx={N * DX} cy={yOf(SEED[N]!)} r="9" fill="#2ff0bd" opacity="0.18">
+      <circle ref={glowRef} cx={N * DX} cy={yOf(SEED[N]!)} r="9" fill="#e3c583" opacity="0.18">
         <animate attributeName="r" values="6;12;6" dur="1.8s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0.28;0.05;0.28" dur="1.8s" repeatCount="indefinite" />
       </circle>
-      <circle ref={dotRef} cx={N * DX} cy={yOf(SEED[N]!)} r="4" fill="#2ff0bd" />
+      <circle ref={dotRef} cx={N * DX} cy={yOf(SEED[N]!)} r="4" fill="#e3c583" />
     </svg>
   );
 }

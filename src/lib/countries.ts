@@ -1,6 +1,6 @@
 /**
  * Supported registration countries — the full world list, so anyone across the
- * continent (and beyond) can open a PrimeStone account. Alphabetical.
+ * continent (and beyond) can open a Meridian account. Alphabetical.
  */
 export const COUNTRIES: string[] = [
   "Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Antigua and Barbuda",

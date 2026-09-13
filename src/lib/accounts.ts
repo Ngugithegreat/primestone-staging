@@ -31,7 +31,7 @@ export const ACCOUNT_TYPES: AccountType[] = [
     minDeposit: 50,
     maxLeverage: 500,
     demoCredit: 10_000,
-    accent: ["#00dfa4", "#0ea5e9"],
+    accent: ["#cfa653", "#c2703a"],
     popular: true,
     features: [
       "Copy up to 5 strategy providers",
@@ -53,7 +53,7 @@ export const ACCOUNT_TYPES: AccountType[] = [
     minDeposit: 500,
     maxLeverage: 400,
     demoCredit: 25_000,
-    accent: ["#818cf8", "#c084fc"],
+    accent: ["#4fb98b", "#d97757"],
     features: [
       "Raw spreads straight from 12 liquidity providers",
       "Copy up to 20 strategy providers",
@@ -74,7 +74,7 @@ export const ACCOUNT_TYPES: AccountType[] = [
     minDeposit: 5_000,
     maxLeverage: 200,
     demoCredit: 100_000,
-    accent: ["#fbbf24", "#f97316"],
+    accent: ["#f0b429", "#f97316"],
     features: [
       "Best-available pricing across the full LP pool",
       "Unlimited copy allocations",

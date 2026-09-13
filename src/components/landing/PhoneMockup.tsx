@@ -6,7 +6,7 @@ import { AnimatedNumber, LiveDot } from "@/components/ui/Primitives";
 
 /**
  * A phone showing the app's interior — a live-feeling dashboard inside a device
- * frame, so visitors see what PrimeStone looks like on a phone.
+ * frame, so visitors see what Meridian looks like on a phone.
  */
 export function PhoneMockup() {
   return (
@@ -14,7 +14,7 @@ export function PhoneMockup() {
       {/* glow */}
       <div
         className="pointer-events-none absolute -inset-6 -z-10 rounded-[48px] blur-3xl"
-        style={{ background: "radial-gradient(closest-side, rgba(0,223,164,0.18), transparent 75%)" }}
+        style={{ background: "radial-gradient(closest-side, rgba(207,166,83,0.18), transparent 75%)" }}
       />
       {/* device */}
       <div className="rounded-[42px] border border-white/12 bg-ink-950 p-2.5 shadow-[0_50px_120px_-30px_rgba(0,0,0,0.9)]">
@@ -26,7 +26,7 @@ export function PhoneMockup() {
             {/* top bar */}
             <div className="flex items-center justify-between">
               <span className="text-[12px] font-bold text-white">
-                Prime<span className="text-mint-400">Stone</span>
+                Meri<span className="text-mint-400">dian</span>
               </span>
               <span className="flex items-center gap-1 rounded-full border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[9px] text-slate-300">
                 <LiveDot label="" /> Live
@@ -73,7 +73,7 @@ export function PhoneMockup() {
                   className="flex items-center justify-between rounded-xl border border-white/[0.05] bg-white/[0.02] px-2.5 py-1.5"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="grid h-6 w-6 place-items-center rounded-full text-[8px] font-bold text-ink-950" style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}>
+                    <span className="grid h-6 w-6 place-items-center rounded-full text-[8px] font-bold text-ink-950" style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}>
                       {(who as string).slice(0, 1)}
                     </span>
                     <div>

@@ -86,7 +86,7 @@ export async function POST(req: Request) {
     const res = await sendB2C({
       phone: p.destination,
       amountKes: kesWhole,
-      remarks: `PrimeStone withdrawal ${accountNumber(p.userId)}`,
+      remarks: `Meridian withdrawal ${accountNumber(p.userId)}`,
     });
     if (!res.ok) return NextResponse.json({ error: res.error }, { status: 502 });
 

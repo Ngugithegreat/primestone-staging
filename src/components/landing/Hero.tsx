@@ -70,22 +70,22 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(96deg, #04060a 0%, rgba(4,6,10,0.95) 28%, rgba(4,6,10,0.74) 50%, rgba(4,6,10,0.34) 76%, rgba(4,6,10,0.55) 100%)",
+              "linear-gradient(96deg, #0a0907 0%, rgba(10,9,7,0.95) 28%, rgba(10,9,7,0.74) 50%, rgba(10,9,7,0.34) 76%, rgba(10,9,7,0.55) 100%)",
           }}
         />
         <div
           className="absolute inset-x-0 top-0 h-40"
-          style={{ background: "linear-gradient(to bottom, #04060a, transparent)" }}
+          style={{ background: "linear-gradient(to bottom, #0a0907, transparent)" }}
         />
         <div
           className="absolute inset-x-0 bottom-0 h-52"
-          style={{ background: "linear-gradient(to top, #04060a 12%, transparent)" }}
+          style={{ background: "linear-gradient(to top, #0a0907 12%, transparent)" }}
         />
         {/* Soft brand glow */}
         <div
           className="absolute -left-[8%] top-[10%] h-[44vw] w-[44vw] rounded-full blur-[140px]"
           style={{
-            background: "radial-gradient(closest-side, rgba(0,223,164,0.16), transparent 70%)",
+            background: "radial-gradient(closest-side, rgba(207,166,83,0.16), transparent 70%)",
           }}
         />
       </div>
@@ -141,7 +141,7 @@ export function Hero() {
             <ButtonLink
               href="/signup"
               size="lg"
-              className="group shadow-[0_12px_44px_-12px_rgba(0,223,164,0.7)]"
+              className="group shadow-[0_12px_44px_-12px_rgba(207,166,83,0.7)]"
             >
               Open a free account
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

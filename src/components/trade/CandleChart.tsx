@@ -22,13 +22,13 @@ const PAD_BOTTOM = 26;
 const PAD_TOP = 14;
 
 const COLORS = {
-  up: "#00dfa4",
-  down: "#f43f5e",
-  upFill: "rgba(0,223,164,0.85)",
-  downFill: "rgba(244,63,94,0.85)",
+  up: "#cfa653",
+  down: "#e5493a",
+  upFill: "rgba(207,166,83,0.85)",
+  downFill: "rgba(229,73,58,0.85)",
   grid: "rgba(255,255,255,0.045)",
   axis: "rgba(255,255,255,0.08)",
-  text: "#64748b",
+  text: "#8a7862",
   crosshair: "rgba(255,255,255,0.28)",
 };
 
@@ -175,7 +175,7 @@ export function CandleChart({
       candles.forEach((c, i) => {
         const x = i * step + (step - bodyW) / 2;
         const bh = (c.v / maxVol) * (volH - 12);
-        ctx.fillStyle = c.c >= c.o ? "rgba(0,223,164,0.20)" : "rgba(244,63,94,0.20)";
+        ctx.fillStyle = c.c >= c.o ? "rgba(207,166,83,0.20)" : "rgba(229,73,58,0.20)";
         ctx.fillRect(x, volTop + (volH - 12 - bh), bodyW, bh);
       });
     }
@@ -221,7 +221,7 @@ export function CandleChart({
       ctx.fillStyle = o.color;
       roundRect(ctx, 6, y - 8, tw + 12, 16, 3);
       ctx.fill();
-      ctx.fillStyle = "#04060a";
+      ctx.fillStyle = "#0a0907";
       ctx.textAlign = "center";
       ctx.fillText(label, 6 + (tw + 12) / 2, y);
     }
@@ -242,7 +242,7 @@ export function CandleChart({
     ctx.fillStyle = lastUp ? COLORS.up : COLORS.down;
     roundRect(ctx, plotW + 3, py - 9, PAD_RIGHT - 8, 18, 3);
     ctx.fill();
-    ctx.fillStyle = "#04060a";
+    ctx.fillStyle = "#0a0907";
     ctx.font = '600 10.5px ui-monospace, "SF Mono", monospace';
     ctx.textAlign = "center";
     ctx.fillText(price.toFixed(inst.digits), plotW + 3 + (PAD_RIGHT - 8) / 2, py);

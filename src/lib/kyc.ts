@@ -214,7 +214,7 @@ export function buildDemoUsers(count = 28): AdminUser[] {
         documents,
         submittedAt: submitted,
         reviewedAt: reviewed,
-        reviewedBy: reviewed ? "compliance@primestone.com" : null,
+        reviewedBy: reviewed ? "compliance@meridiancapital.example" : null,
         rejectionReason:
           status === "rejected"
             ? pick(rand, [

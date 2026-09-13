@@ -11,7 +11,7 @@ export default function NotFound() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(0,223,164,0.12), transparent 60%)",
+            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(207,166,83,0.12), transparent 60%)",
         }}
         aria-hidden="true"
       />
@@ -26,7 +26,7 @@ export default function NotFound() {
           This page closed at a loss
         </h1>
         <p className="mx-auto mt-3 max-w-md text-[15px] leading-relaxed text-slate-400">
-          The link you followed does not point anywhere on PrimeStone. It may have moved, or
+          The link you followed does not point anywhere on Meridian. It may have moved, or
           the strategy provider may no longer be listed.
         </p>
         <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">

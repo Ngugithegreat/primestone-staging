@@ -75,10 +75,10 @@ export function verifyTotp(secret: string, code: string): boolean {
 
 /** The otpauth:// URI an authenticator app scans. */
 export function otpauthUrl(email: string, secret: string): string {
-  const label = encodeURIComponent(`PrimeStone:${email}`);
+  const label = encodeURIComponent(`Meridian:${email}`);
   const params = new URLSearchParams({
     secret,
-    issuer: "PrimeStone",
+    issuer: "Meridian",
     algorithm: "SHA1",
     digits: "6",
     period: "30",

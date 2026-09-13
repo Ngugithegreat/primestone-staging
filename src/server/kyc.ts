@@ -26,7 +26,7 @@ function maskIdNumber(value: string): string {
 }
 
 function hashIdNumber(value: string): string {
-  const salt = process.env.KYC_HASH_SALT ?? "primestone-dev-salt";
+  const salt = process.env.KYC_HASH_SALT ?? "meridian-dev-salt";
   return createHash("sha256").update(`${salt}:${value.replace(/\s+/g, "")}`).digest("hex");
 }
 

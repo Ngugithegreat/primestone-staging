@@ -73,7 +73,7 @@ export function AdminGate({ children }: { children: ReactNode }) {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(99,102,241,0.14), transparent 60%)",
+            "radial-gradient(ellipse 60% 40% at 50% 0%, rgba(39,157,108,0.14), transparent 60%)",
         }}
       />
       <motion.div

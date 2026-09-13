@@ -11,7 +11,7 @@ export function StatTile({
   value,
   delta,
   icon: Icon,
-  accent = "#00dfa4",
+  accent = "#cfa653",
   spark,
   sparkPositive = true,
   footer,

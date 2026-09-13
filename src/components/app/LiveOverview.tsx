@@ -39,11 +39,11 @@ export function LiveOverview() {
           <div className="relative p-6 sm:p-7">
             <div
               className="pointer-events-none absolute -right-24 -top-28 h-72 w-72 rounded-full blur-[90px]"
-              style={{ background: "radial-gradient(closest-side, rgba(0,223,164,0.20), transparent 70%)" }}
+              style={{ background: "radial-gradient(closest-side, rgba(207,166,83,0.20), transparent 70%)" }}
             />
             <div
               className="pointer-events-none absolute -left-20 bottom-[-40%] h-64 w-64 rounded-full blur-[90px] opacity-70"
-              style={{ background: "radial-gradient(closest-side, rgba(99,102,241,0.16), transparent 70%)" }}
+              style={{ background: "radial-gradient(closest-side, rgba(39,157,108,0.16), transparent 70%)" }}
             />
 
             <div className="relative flex flex-wrap items-start justify-between gap-5">
@@ -151,7 +151,7 @@ export function LiveOverview() {
                   <div className="flex items-center gap-3">
                     <span
                       className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950"
-                      style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}
+                      style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
                     >
                       {initialsOf(a.provider.name)}
                     </span>

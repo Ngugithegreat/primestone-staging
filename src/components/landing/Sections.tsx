@@ -155,7 +155,7 @@ export function GlobalReach() {
               Copiers in <span className="text-gradient">60+ countries</span>
             </>
           }
-          body="Wherever you are, people copy verified traders on PrimeStone every day. Spin the globe — and see the whole desk in your pocket."
+          body="Wherever you are, people copy verified traders on Meridian every day. Spin the globe — and see the whole desk in your pocket."
         />
 
         <div className="mt-14 grid items-center gap-10 lg:grid-cols-2">
@@ -198,19 +198,19 @@ const STEPS = [
     icon: Search,
     title: "Find a strategy that fits",
     body: "Filter hundreds of verified providers by return, drawdown, risk score, instruments and fee. Every number is calculated from settled trades — nothing is self-reported.",
-    accent: "#00dfa4",
+    accent: "#cfa653",
   },
   {
     icon: SlidersHorizontal,
     title: "Set your own limits",
     body: "Choose how much to allocate, scale their position size up or down, and set a copy stop-loss that unwinds everything if the strategy hits your pain threshold.",
-    accent: "#6366f1",
+    accent: "#279d6c",
   },
   {
     icon: Repeat2,
     title: "Their trades become yours",
     body: "Entries, exits, stops and partial closes mirror into your account within 40 milliseconds, sized proportionally to your allocation. Stop any time — no lock-in.",
-    accent: "#22d3ee",
+    accent: "#c2703a",
   },
 ];
 
@@ -288,7 +288,7 @@ export function TopTraders() {
         className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[900px] -translate-x-1/2 blur-[120px]"
         style={{
           background:
-            "radial-gradient(closest-side, rgba(99,102,241,0.16), rgba(99,102,241,0) 70%)",
+            "radial-gradient(closest-side, rgba(39,157,108,0.16), rgba(39,157,108,0) 70%)",
         }}
         aria-hidden="true"
       />
@@ -339,7 +339,7 @@ export function Features() {
                 className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full blur-[70px]"
                 style={{
                   background:
-                    "radial-gradient(closest-side, rgba(0,223,164,0.24), transparent 70%)",
+                    "radial-gradient(closest-side, rgba(207,166,83,0.24), transparent 70%)",
                 }}
               />
               <Badge tone="mint" dot>
@@ -350,7 +350,7 @@ export function Features() {
               </h3>
               <p className="mt-3 max-w-lg text-[14.5px] leading-relaxed text-slate-400">
                 A provider trading 5 lots on a $500,000 book does not put 5 lots on your
-                $2,000. PrimeStone sizes every mirrored trade to your allocation, respects
+                $2,000. Meridian sizes every mirrored trade to your allocation, respects
                 your leverage cap, and skips any signal that would breach your margin.
               </p>
 
@@ -413,19 +413,19 @@ export function Features() {
           {[
             {
               icon: BarChart3,
-              color: "#818cf8",
+              color: "#4fb98b",
               title: "Audited track records",
               body: "Every provider statistic is recomputed nightly from settled trades. Providers cannot edit history, hide losers or reset a bad month.",
             },
             {
               icon: Zap,
-              color: "#fbbf24",
+              color: "#f0b429",
               title: "40ms execution",
               body: "Co-located matching with 12 tier-1 liquidity providers. Slippage between the provider's fill and yours is published on every trade.",
             },
             {
               icon: Layers,
-              color: "#22d3ee",
+              color: "#c2703a",
               title: "Diversify across strategies",
               body: "Split capital across uncorrelated providers and the platform shows you the combined exposure before you commit a cent.",
             },
@@ -549,7 +549,7 @@ const METHODS = [
   {
     icon: Smartphone,
     name: "M-Pesa",
-    color: "#00dfa4",
+    color: "#cfa653",
     speed: "Instant",
     fee: "No fee",
     body: "Push an STK prompt to your phone and the funds land before the confirmation SMS does. Kenya, Tanzania and Ghana.",
@@ -558,7 +558,7 @@ const METHODS = [
   {
     icon: Bitcoin,
     name: "Crypto",
-    color: "#fbbf24",
+    color: "#f0b429",
     speed: "1–3 confirmations",
     fee: "Network fee only",
     body: "USDT, USDC, BTC and ETH across five chains. Deposit addresses are unique per account and never recycled.",
@@ -567,7 +567,7 @@ const METHODS = [
   {
     icon: CreditCard,
     name: "Cards",
-    color: "#818cf8",
+    color: "#4fb98b",
     speed: "Instant",
     fee: "No fee",
     body: "Visa and Mastercard, 3-D Secure enforced. Card details are tokenised by the processor — they never touch our servers.",
@@ -679,7 +679,7 @@ export function PlatformShowcase() {
         className="pointer-events-none absolute inset-x-0 top-1/3 h-[500px] blur-[130px]"
         style={{
           background:
-            "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(0,223,164,0.13), transparent 70%)",
+            "radial-gradient(ellipse 50% 50% at 50% 50%, rgba(207,166,83,0.13), transparent 70%)",
         }}
         aria-hidden="true"
       />
@@ -765,7 +765,7 @@ function ShowcaseFrame({ variant }: { variant: string }) {
         <span className="h-2.5 w-2.5 rounded-full bg-amber-450/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-mint-500/70" />
         <div className="ml-3 flex-1 rounded-md border border-white/[0.06] bg-ink-950/60 px-3 py-1 text-[11px] text-slate-500">
-          app.primestone.com/{variant === "chart" ? "trade" : variant}
+          app.meridiancapital.example/{variant === "chart" ? "trade" : variant}
         </div>
       </div>
 
@@ -957,7 +957,7 @@ const QUOTES = [
       "I stopped trying to be a trader and started being an allocator. Six providers, rebalanced quarterly. My drawdown is a third of what it was when I traded my own ideas.",
     name: "Brian Kimani",
     role: "Copying since 2023 · Nairobi",
-    gradient: ["#00dfa4", "#0ea5e9"] as [string, string],
+    gradient: ["#cfa653", "#c2703a"] as [string, string],
     stat: "+64.2% in 14 months",
   },
   {
@@ -965,7 +965,7 @@ const QUOTES = [
       "The thing that sold me was the drawdown column sitting right next to the return. Every other platform buries it. Here it is the second number you see.",
     name: "Anita Deshmukh",
     role: "ECN account · Mumbai",
-    gradient: ["#818cf8", "#c084fc"] as [string, string],
+    gradient: ["#4fb98b", "#d97757"] as [string, string],
     stat: "9 providers copied",
   },
   {
@@ -973,7 +973,7 @@ const QUOTES = [
       "Funded with M-Pesa on a Sunday night and the balance was there before I locked my phone. Withdrew on Tuesday, same speed. That alone puts it ahead of the broker I left.",
     name: "Joseph Otieno",
     role: "Standard account · Kisumu",
-    gradient: ["#fbbf24", "#f97316"] as [string, string],
+    gradient: ["#f0b429", "#f97316"] as [string, string],
     stat: "31 withdrawals, zero delays",
   },
 ];
@@ -1122,7 +1122,7 @@ export function CtaBand() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(ellipse 60% 90% at 50% 0%, rgba(0,223,164,0.18), transparent 65%), radial-gradient(ellipse 50% 80% at 80% 100%, rgba(99,102,241,0.16), transparent 65%)",
+                  "radial-gradient(ellipse 60% 90% at 50% 0%, rgba(207,166,83,0.18), transparent 65%), radial-gradient(ellipse 50% 80% at 80% 100%, rgba(39,157,108,0.16), transparent 65%)",
               }}
               aria-hidden="true"
             />
@@ -1208,7 +1208,7 @@ export function SiteFooter() {
           <div>
             <Link href="/" className="inline-flex items-center gap-2.5">
               <span className="font-display text-[19px] font-semibold tracking-tight text-white">
-                Prime<span className="text-mint-400">Stone</span>
+                Meri<span className="text-mint-400">dian</span>
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-[13.5px] leading-relaxed text-slate-400">

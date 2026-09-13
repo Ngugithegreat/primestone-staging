@@ -87,13 +87,13 @@ export function LiveChart({
         theme: "dark",
         style: "1", // candles
         locale: "en",
-        toolbar_bg: "#070a11",
+        toolbar_bg: "#0d0b09",
         enable_publishing: false,
         hide_side_toolbar: true,
         allow_symbol_change: false,
         withdateranges: true,
         details: false,
-        backgroundColor: "#070a11",
+        backgroundColor: "#0d0b09",
         gridColor: "rgba(255,255,255,0.05)",
       });
     });

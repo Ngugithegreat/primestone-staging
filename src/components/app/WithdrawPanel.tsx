@@ -117,7 +117,7 @@ export function WithdrawPanel({
       <div className="relative p-6">
         <div
           className="pointer-events-none absolute -right-16 -top-16 h-52 w-52 rounded-full blur-[70px]"
-          style={{ background: "radial-gradient(closest-side, rgba(99,102,241,0.18), transparent 70%)" }}
+          style={{ background: "radial-gradient(closest-side, rgba(39,157,108,0.18), transparent 70%)" }}
         />
         <div className="relative flex items-center gap-2.5">
           <span className="grid h-9 w-9 place-items-center rounded-lg border border-iris-500/25 bg-iris-500/10">

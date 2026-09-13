@@ -289,7 +289,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 <CartesianGrid stroke="rgba(255,255,255,0.05)" vertical={false} />
                 <XAxis dataKey="label" hide />
                 <YAxis
-                  tick={{ fill: "#64748b", fontSize: 11 }}
+                  tick={{ fill: "#8a7862", fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                   width={44}
@@ -297,7 +297,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 />
                 <Tooltip
                   contentStyle={{
-                    background: "#0c111b",
+                    background: "#14110d",
                     border: "1px solid rgba(255,255,255,0.1)",
                     borderRadius: 10,
                     fontSize: 12,
@@ -325,13 +325,13 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 <CartesianGrid stroke="rgba(255,255,255,0.05)" vertical={false} />
                 <XAxis
                   dataKey="month"
-                  tick={{ fill: "#64748b", fontSize: 10 }}
+                  tick={{ fill: "#8a7862", fontSize: 10 }}
                   axisLine={false}
                   tickLine={false}
                   interval={0}
                 />
                 <YAxis
-                  tick={{ fill: "#64748b", fontSize: 11 }}
+                  tick={{ fill: "#8a7862", fontSize: 11 }}
                   axisLine={false}
                   tickLine={false}
                   width={36}
@@ -340,7 +340,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 <Tooltip
                   cursor={{ fill: "rgba(255,255,255,0.04)" }}
                   contentStyle={{
-                    background: "#0c111b",
+                    background: "#14110d",
                     border: "1px solid rgba(255,255,255,0.1)",
                     borderRadius: 10,
                     fontSize: 12,
@@ -349,7 +349,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 />
                 <Bar dataKey="value" radius={[3, 3, 0, 0]} animationDuration={900}>
                   {months.map((m) => (
-                    <Cell key={m.month} fill={m.value >= 0 ? "#00dfa4" : "#f43f5e"} />
+                    <Cell key={m.month} fill={m.value >= 0 ? "#cfa653" : "#e5493a"} />
                   ))}
                 </Bar>
               </BarChart>

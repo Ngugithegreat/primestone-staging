@@ -4,7 +4,7 @@ import { ResetPasswordForm } from "@/components/auth/ResetPasswordForm";
 
 export const metadata: Metadata = {
   title: "Reset password",
-  description: "Choose a new PrimeStone password.",
+  description: "Choose a new Meridian password.",
 };
 
 export default function ResetPasswordPage() {

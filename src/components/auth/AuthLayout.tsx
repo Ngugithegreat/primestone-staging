@@ -38,7 +38,7 @@ export function AuthLayout({
           className="pointer-events-none absolute inset-0 -z-10"
           style={{
             background:
-              "radial-gradient(ellipse 60% 40% at 15% 0%, rgba(0,223,164,0.10), transparent 60%)",
+              "radial-gradient(ellipse 60% 40% at 15% 0%, rgba(207,166,83,0.10), transparent 60%)",
           }}
           aria-hidden="true"
         />
@@ -78,7 +78,7 @@ export function AuthLayout({
           className="pointer-events-none absolute inset-0"
           style={{
             background:
-              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(99,102,241,0.18), transparent 60%), radial-gradient(ellipse 70% 50% at 30% 100%, rgba(0,223,164,0.14), transparent 60%)",
+              "radial-gradient(ellipse 80% 50% at 50% 0%, rgba(39,157,108,0.18), transparent 60%), radial-gradient(ellipse 70% 50% at 30% 100%, rgba(207,166,83,0.14), transparent 60%)",
           }}
           aria-hidden="true"
         />
@@ -87,7 +87,7 @@ export function AuthLayout({
         <div className="relative flex h-full flex-col justify-between p-10">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-mint-300">
-              Why PrimeStone
+              Why Meridian
             </span>
             <h2 className="mt-7 font-display text-[30px] font-bold leading-[1.15] text-white">
               You do not need to be a great trader.

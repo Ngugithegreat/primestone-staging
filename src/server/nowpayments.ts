@@ -59,7 +59,7 @@ export async function createCryptoPayment(input: {
         pay_currency: input.payCurrency,
         ipn_callback_url: input.callbackUrl,
         order_id: input.orderId,
-        order_description: "PrimeStone deposit",
+        order_description: "Meridian deposit",
       }),
     });
     const data = (await res.json().catch(() => ({}))) as Record<string, unknown>;

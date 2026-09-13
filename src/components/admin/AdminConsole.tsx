@@ -314,7 +314,7 @@ export function AdminConsole() {
                     >
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
-                          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950" style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}>
+                          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950" style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}>
                             {initialsOf(`${u.firstName} ${u.lastName}`)}
                           </span>
                           <div className="min-w-0">
@@ -440,7 +440,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
       >
         <div className="flex items-start justify-between gap-4 border-b border-white/[0.07] p-5">
           <div className="flex items-center gap-3">
-            <span className="grid h-12 w-12 place-items-center rounded-full text-[15px] font-semibold text-ink-950" style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}>
+            <span className="grid h-12 w-12 place-items-center rounded-full text-[15px] font-semibold text-ink-950" style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}>
               {initialsOf(`${user.firstName} ${user.lastName}`)}
             </span>
             <div>

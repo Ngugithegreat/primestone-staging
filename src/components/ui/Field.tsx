@@ -4,7 +4,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const CONTROL =
-  "w-full rounded-xl border border-white/10 bg-ink-900/70 px-3.5 text-[14px] text-white placeholder:text-slate-500 transition-all duration-200 outline-none focus:border-mint-500/60 focus:bg-ink-900 focus:shadow-[0_0_0_3px_rgba(0,223,164,0.12)] disabled:opacity-50";
+  "w-full rounded-xl border border-white/10 bg-ink-900/70 px-3.5 text-[14px] text-white placeholder:text-slate-500 transition-all duration-200 outline-none focus:border-mint-500/60 focus:bg-ink-900 focus:shadow-[0_0_0_3px_rgba(207,166,83,0.12)] disabled:opacity-50";
 
 export function Field({
   label,

@@ -221,7 +221,7 @@ export function Sparkline({
 
   const line = coords.map(([x, y], i) => `${i === 0 ? "M" : "L"}${x.toFixed(1)},${y.toFixed(1)}`).join(" ");
   const area = `${line} L${width},${height} L0,${height} Z`;
-  const color = positive ? "#00dfa4" : "#f43f5e";
+  const color = positive ? "#cfa653" : "#e5493a";
   const gid = `spark-${positive ? "u" : "d"}-${points.length}-${Math.round(min)}`;
 
   return (

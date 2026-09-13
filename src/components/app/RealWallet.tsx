@@ -120,7 +120,7 @@ export function RealWallet() {
         <div className="relative p-6">
           <div
             className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full blur-[70px]"
-            style={{ background: "radial-gradient(closest-side, rgba(0,223,164,0.22), transparent 70%)" }}
+            style={{ background: "radial-gradient(closest-side, rgba(207,166,83,0.22), transparent 70%)" }}
           />
           <div className="relative flex flex-wrap items-end justify-between gap-4">
             <div>
@@ -839,7 +839,7 @@ function Providers({
             <div className="flex items-center gap-3">
               <span
                 className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950"
-                style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}
+                style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
               >
                 {initialsOf(p.name)}
               </span>

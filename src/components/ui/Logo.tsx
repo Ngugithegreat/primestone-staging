@@ -6,9 +6,9 @@ export function LogoMark({ className }: { className?: string }) {
     <svg viewBox="0 0 40 40" className={cn("h-9 w-9", className)} aria-hidden="true">
       <defs>
         <linearGradient id="ps-mark" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#2ff0bd" />
-          <stop offset="55%" stopColor="#00dfa4" />
-          <stop offset="100%" stopColor="#6366f1" />
+          <stop offset="0%" stopColor="#e3c583" />
+          <stop offset="55%" stopColor="#cfa653" />
+          <stop offset="100%" stopColor="#279d6c" />
         </linearGradient>
       </defs>
       <rect
@@ -40,8 +40,8 @@ export function LogoMark({ className }: { className?: string }) {
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <circle cx="30" cy="11" r="3" fill="#2ff0bd" />
-      <circle cx="30" cy="11" r="3" fill="none" stroke="#2ff0bd" strokeWidth="1" opacity="0.4">
+      <circle cx="30" cy="11" r="3" fill="#e3c583" />
+      <circle cx="30" cy="11" r="3" fill="none" stroke="#e3c583" strokeWidth="1" opacity="0.4">
         <animate attributeName="r" values="3;7;3" dur="2.4s" repeatCount="indefinite" />
         <animate attributeName="opacity" values="0.5;0;0.5" dur="2.4s" repeatCount="indefinite" />
       </circle>
@@ -63,7 +63,7 @@ export function Logo({
       <LogoMark className="transition-transform duration-300 group-hover:scale-105" />
       {!compact && (
         <span className="font-display text-[19px] font-semibold tracking-tight text-white">
-          Prime<span className="text-mint-400">Stone</span>
+          Meri<span className="text-mint-400">dian</span>
         </span>
       )}
     </Link>

@@ -109,7 +109,7 @@ export function LiveCandles() {
             const bottom = yOf(Math.min(c.open, c.close));
             const wick = 5 + (c.id % 4) * 3;
             const cx = i * SLOT + 11;
-            const color = up ? "#00dfa4" : "#f43f5e";
+            const color = up ? "#cfa653" : "#e5493a";
             return (
               <g key={c.id}>
                 <line x1={cx} x2={cx} y1={top - wick} y2={bottom + wick} stroke={color} strokeWidth="1.2" opacity="0.75" />
@@ -134,7 +134,7 @@ export function LiveCandles() {
         x2={W}
         y1={yOf(lastClose)}
         y2={yOf(lastClose)}
-        stroke={rising ? "rgba(0,223,164,0.45)" : "rgba(244,63,94,0.45)"}
+        stroke={rising ? "rgba(207,166,83,0.45)" : "rgba(229,73,58,0.45)"}
         strokeDasharray="3 4"
         strokeWidth="1"
       />

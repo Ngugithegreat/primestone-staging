@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora, JetBrains_Mono } from "next/font/google";
+import { Inter, Fraunces, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { MarketProvider } from "@/components/providers/MarketProvider";
 import { Toaster } from "@/components/ui/Toaster";
@@ -10,10 +10,11 @@ const inter = Inter({
   display: "swap",
 });
 
-const sora = Sora({
+const fraunces = Fraunces({
   subsets: ["latin"],
-  weight: ["500", "600", "700", "800"],
-  variable: "--font-display",
+  weight: ["500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -44,11 +45,11 @@ const SITE = SITE_HOST.startsWith("localhost")
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: "PrimeStone — Copy the world's best traders, automatically",
-    template: "%s · PrimeStone",
+    default: "Meridian — Copy the world's best traders, automatically",
+    template: "%s · Meridian",
   },
   description:
-    "PrimeStone mirrors verified strategy providers straight into your account. Transparent track records, real risk controls, M-Pesa, card and crypto funding, and a full demo desk to practise on.",
+    "Meridian mirrors verified strategy providers straight into your account. Transparent track records, real risk controls, M-Pesa, card and crypto funding, and a full demo desk to practise on.",
   keywords: [
     "copy trading",
     "social trading",
@@ -60,14 +61,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: SITE,
-    siteName: "PrimeStone",
-    title: "PrimeStone — Copy the world's best traders, automatically",
+    siteName: "Meridian",
+    title: "Meridian — Copy the world's best traders, automatically",
     description:
       "Mirror verified strategy providers into your account in one click. Audited track records, real risk controls, instant funding.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PrimeStone — Copy the world's best traders",
+    title: "Meridian — Copy the world's best traders",
     description:
       "Mirror verified strategy providers into your account in one click.",
   },
@@ -75,14 +76,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#04060a",
+  themeColor: "#0a0907",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${sora.variable} ${mono.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${mono.variable}`}>
       <body className="min-h-dvh antialiased">
         <MarketProvider>
           {children}

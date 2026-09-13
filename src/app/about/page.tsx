@@ -34,7 +34,7 @@ const VALUES = [
   {
     icon: Compass,
     title: "Access, not gatekeeping",
-    body: "A professional track record used to require a private bank and a six-figure minimum. We built PrimeStone so anyone with a phone and a hundred dollars can allocate to the same strategies.",
+    body: "A professional track record used to require a private bank and a six-figure minimum. We built Meridian so anyone with a phone and a hundred dollars can allocate to the same strategies.",
   },
 ];
 
@@ -45,7 +45,7 @@ export default function AboutPage() {
   return (
     <PageShell>
       <PageHero
-        eyebrow="About PrimeStone"
+        eyebrow="About Meridian"
         title="We help people invest alongside traders who have earned the right to be followed."
         lead={`${COMPANY.name} is a copy-trading platform regulated by the ${COMPANY.regulator}. We connect everyday investors with verified, independently audited strategy providers — and give them the tools to copy those strategies on their own terms.`}
       />
@@ -73,7 +73,7 @@ export default function AboutPage() {
           <h2 className="font-display text-[22px] font-bold text-white">Our story</h2>
           <div className="space-y-4 text-[15px] leading-relaxed text-slate-300">
             <p>
-              PrimeStone started with a simple frustration: the best traders most people
+              Meridian started with a simple frustration: the best traders most people
               had access to were the loudest ones on social media, not the most consistent
               ones. Track records were screenshots. &ldquo;Signals&rdquo; arrived in group chats with
               no way to verify whether they had ever actually worked.

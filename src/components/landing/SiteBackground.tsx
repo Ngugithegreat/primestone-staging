@@ -44,7 +44,7 @@ export function SiteBackground({
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(0,223,164,0.16), transparent 62%)",
+            "radial-gradient(ellipse 90% 60% at 50% -10%, rgba(207,166,83,0.16), transparent 62%)",
         }}
       />
 
@@ -57,7 +57,7 @@ export function SiteBackground({
           className="h-full w-full rounded-full"
           style={{
             background:
-              "radial-gradient(closest-side, rgba(0,223,164,0.46), rgba(0,223,164,0) 72%)",
+              "radial-gradient(closest-side, rgba(207,166,83,0.46), rgba(207,166,83,0) 72%)",
           }}
         />
       </motion.div>
@@ -72,7 +72,7 @@ export function SiteBackground({
           style={{
             animationDelay: "-7s",
             background:
-              "radial-gradient(closest-side, rgba(99,102,241,0.38), rgba(99,102,241,0) 72%)",
+              "radial-gradient(closest-side, rgba(39,157,108,0.38), rgba(39,157,108,0) 72%)",
           }}
         />
       </motion.div>
@@ -86,7 +86,7 @@ export function SiteBackground({
           style={{
             animationDelay: "-13s",
             background:
-              "radial-gradient(closest-side, rgba(34,211,238,0.28), rgba(34,211,238,0) 72%)",
+              "radial-gradient(closest-side, rgba(194,112,58,0.28), rgba(194,112,58,0) 72%)",
           }}
         />
       </motion.div>
@@ -100,7 +100,7 @@ export function SiteBackground({
           style={{
             animationDelay: "-19s",
             background:
-              "radial-gradient(closest-side, rgba(0,223,164,0.26), rgba(0,223,164,0) 72%)",
+              "radial-gradient(closest-side, rgba(207,166,83,0.26), rgba(207,166,83,0) 72%)",
           }}
         />
       </motion.div>
@@ -125,7 +125,7 @@ export function SiteBackground({
           className="absolute inset-y-0 -left-1/3 w-1/3 opacity-[0.55]"
           style={{
             background:
-              "linear-gradient(100deg, transparent, rgba(0,223,164,0.055) 45%, rgba(129,140,248,0.045) 60%, transparent)",
+              "linear-gradient(100deg, transparent, rgba(207,166,83,0.055) 45%, rgba(79,185,139,0.045) 60%, transparent)",
           }}
           animate={{ x: ["0%", "420%"] }}
           transition={{ duration: 26, repeat: Infinity, ease: "linear", repeatDelay: 6 }}
@@ -133,7 +133,7 @@ export function SiteBackground({
       )}
 
       {/* Vignette so foreground type always wins */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,transparent_28%,rgba(4,6,10,0.55)_88%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_35%,transparent_28%,rgba(10,9,7,0.55)_88%)]" />
     </div>
   );
 }

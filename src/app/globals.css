@@ -1,41 +1,42 @@
 @import "tailwindcss";
 
 /* ==========================================================================
-   AlphaSync design tokens
-   A single dark, high-contrast trading-desk palette. Mint = profit/brand,
-   rose = loss, iris = secondary accent, ink = surfaces.
+   Meridian design tokens
+   A warm-obsidian, quiet-luxury trading-desk palette. Gold ("mint" token
+   name kept for low-risk component reuse) = profit/brand, rose = loss,
+   emerald ("iris" token name kept) = secondary accent, ink = surfaces.
    ========================================================================== */
 
 @theme {
-  --color-ink-950: #04060a;
-  --color-ink-900: #070a11;
-  --color-ink-880: #090d15;
-  --color-ink-850: #0c111b;
-  --color-ink-800: #101724;
-  --color-ink-750: #141c2b;
-  --color-ink-700: #1a2333;
-  --color-ink-600: #24304333;
-  --color-ink-500: #64748b;
+  --color-ink-950: #0a0907;
+  --color-ink-900: #0d0b09;
+  --color-ink-880: #100e0b;
+  --color-ink-850: #14110d;
+  --color-ink-800: #19150f;
+  --color-ink-750: #201a13;
+  --color-ink-700: #292118;
+  --color-ink-600: #4a3c2b40;
+  --color-ink-500: #8a7862;
 
-  --color-mint-300: #6affd6;
-  --color-mint-400: #2ff0bd;
-  --color-mint-500: #00dfa4;
-  --color-mint-600: #00b585;
-  --color-mint-700: #058a68;
+  --color-mint-300: #f3e3b8;
+  --color-mint-400: #e3c583;
+  --color-mint-500: #cfa653;
+  --color-mint-600: #ab8339;
+  --color-mint-700: #86642c;
 
-  --color-iris-300: #a5b4fc;
-  --color-iris-400: #818cf8;
-  --color-iris-500: #6366f1;
-  --color-iris-600: #4f46e5;
+  --color-iris-300: #8fd6b4;
+  --color-iris-400: #4fb98b;
+  --color-iris-500: #279d6c;
+  --color-iris-600: #1c7c56;
 
-  --color-rose-400: #ff6b83;
-  --color-rose-500: #f43f5e;
-  --color-rose-600: #e11d48;
+  --color-rose-400: #ff8577;
+  --color-rose-500: #e5493a;
+  --color-rose-600: #c2362a;
 
-  --color-amber-450: #fbbf24;
+  --color-amber-450: #f0b429;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-display: var(--font-display), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-mono: var(--font-mono), ui-monospace, "SF Mono", monospace;
 
   --radius-4xl: 2rem;
@@ -253,7 +254,7 @@
   background: linear-gradient(
     100deg,
     #ffffff 0%,
-    #d8e6ff 38%,
+    #f3ead8 38%,
     var(--color-mint-400) 78%,
     var(--color-mint-500) 100%
   );

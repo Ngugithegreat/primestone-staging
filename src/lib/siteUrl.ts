@@ -1,6 +1,6 @@
 /**
  * Canonical site origin for building links inside emails.
- * Set NEXT_PUBLIC_SITE_URL (e.g. https://primestonemarkets.com) in production;
+ * Set NEXT_PUBLIC_SITE_URL (e.g. https://meridiancapital.example) in production;
  * otherwise falls back to Vercel's deployment URL, then localhost.
  */
 export function siteUrl(): string {

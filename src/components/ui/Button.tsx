@@ -9,14 +9,14 @@ type Size = "sm" | "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
   primary:
-    "bg-mint-500 text-ink-950 font-semibold shadow-[0_8px_28px_-8px_rgba(0,223,164,0.65)] hover:bg-mint-400 hover:shadow-[0_12px_36px_-8px_rgba(0,223,164,0.8)] active:scale-[0.98]",
+    "bg-mint-500 text-ink-950 font-semibold shadow-[0_8px_28px_-8px_rgba(207,166,83,0.65)] hover:bg-mint-400 hover:shadow-[0_12px_36px_-8px_rgba(207,166,83,0.8)] active:scale-[0.98]",
   secondary:
     "bg-white/[0.06] text-white border border-white/10 hover:bg-white/[0.11] hover:border-white/20 active:scale-[0.98]",
   outline:
     "bg-transparent text-white border border-white/15 hover:bg-white/[0.06] hover:border-white/30 active:scale-[0.98]",
   ghost: "bg-transparent text-slate-300 hover:text-white hover:bg-white/[0.06]",
   danger:
-    "bg-rose-500 text-white font-semibold shadow-[0_8px_28px_-8px_rgba(244,63,94,0.6)] hover:bg-rose-400 active:scale-[0.98]",
+    "bg-rose-500 text-white font-semibold shadow-[0_8px_28px_-8px_rgba(229,73,58,0.6)] hover:bg-rose-400 active:scale-[0.98]",
   success:
     "bg-mint-600 text-white font-semibold hover:bg-mint-500 active:scale-[0.98]",
 };

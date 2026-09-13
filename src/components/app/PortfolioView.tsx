@@ -32,11 +32,11 @@ import { getTrader } from "@/lib/traders";
 import { cn, initialsOf } from "@/lib/utils";
 
 const SLICE_COLORS = [
-  "#00dfa4",
-  "#6366f1",
-  "#22d3ee",
-  "#fbbf24",
-  "#f43f5e",
+  "#cfa653",
+  "#279d6c",
+  "#c2703a",
+  "#f0b429",
+  "#e5493a",
   "#a855f7",
   "#84cc16",
   "#fb923c",
@@ -132,7 +132,7 @@ function DemoPortfolio() {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "primestone-statement.csv";
+    a.download = "meridian-statement.csv";
     a.click();
     URL.revokeObjectURL(url);
   };
@@ -164,7 +164,7 @@ function DemoPortfolio() {
           label="Equity"
           value={money(equity)}
           icon={Coins}
-          accent="#00dfa4"
+          accent="#cfa653"
           delta={{ value: `${signed(floating)} floating`, positive: floating >= 0 }}
           footer={`Balance ${money(balance)}`}
         />
@@ -173,7 +173,7 @@ function DemoPortfolio() {
           label="Realised P&L"
           value={signed(stats.gross)}
           icon={stats.gross >= 0 ? TrendingUp : TrendingDown}
-          accent={stats.gross >= 0 ? "#2ff0bd" : "#f43f5e"}
+          accent={stats.gross >= 0 ? "#e3c583" : "#e5493a"}
           delta={{
             value: `Profit factor ${stats.profitFactor.toFixed(2)}`,
             positive: stats.profitFactor >= 1,
@@ -185,7 +185,7 @@ function DemoPortfolio() {
           label="Win rate"
           value={`${stats.winRate.toFixed(1)}%`}
           icon={Target}
-          accent="#818cf8"
+          accent="#4fb98b"
           delta={{ value: `${stats.wins}W / ${stats.losses}L`, positive: stats.winRate >= 50 }}
           footer={`${stats.total} trades`}
         />
@@ -194,7 +194,7 @@ function DemoPortfolio() {
           label="Avg win / avg loss"
           value={`${(stats.avgLoss > 0 ? stats.avgWin / stats.avgLoss : 0).toFixed(2)}`}
           icon={Scale}
-          accent="#fbbf24"
+          accent="#f0b429"
           delta={{
             value: `${money(stats.avgWin)} vs ${money(stats.avgLoss)}`,
             positive: stats.avgWin >= stats.avgLoss,
@@ -231,7 +231,7 @@ function DemoPortfolio() {
                   </Pie>
                   <Tooltip
                     contentStyle={{
-                      background: "#0c111b",
+                      background: "#14110d",
                       border: "1px solid rgba(255,255,255,0.1)",
                       borderRadius: 10,
                       fontSize: 12,
@@ -242,7 +242,7 @@ function DemoPortfolio() {
                     verticalAlign="bottom"
                     height={44}
                     formatter={(v: string) => (
-                      <span style={{ color: "#94a3b8", fontSize: 11.5 }}>{v}</span>
+                      <span style={{ color: "#a89a86", fontSize: 11.5 }}>{v}</span>
                     )}
                   />
                 </PieChart>

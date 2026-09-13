@@ -76,10 +76,10 @@ export function TradingDesk() {
       out.push({
         price: p.entry,
         label: `${p.side === "buy" ? "▲" : "▼"} ${p.lots}`,
-        color: p.side === "buy" ? "#00dfa4" : "#f43f5e",
+        color: p.side === "buy" ? "#cfa653" : "#e5493a",
       });
-      if (p.sl) out.push({ price: p.sl, label: "SL", color: "#f43f5e", dashed: true });
-      if (p.tp) out.push({ price: p.tp, label: "TP", color: "#2ff0bd", dashed: true });
+      if (p.sl) out.push({ price: p.sl, label: "SL", color: "#e5493a", dashed: true });
+      if (p.tp) out.push({ price: p.tp, label: "TP", color: "#e3c583", dashed: true });
     }
     return out;
   }, [positions, symbol]);

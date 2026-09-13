@@ -110,7 +110,7 @@ export function WithdrawalsQueue() {
                   <div className="flex items-center gap-3">
                     <span
                       className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950"
-                      style={{ background: "linear-gradient(140deg,#2ff0bd,#6366f1)" }}
+                      style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
                     >
                       {initialsOf(w.user.name)}
                     </span>

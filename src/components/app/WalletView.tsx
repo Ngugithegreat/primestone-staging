@@ -45,10 +45,10 @@ const DEPOSIT_METHODS: {
   fee: string;
   min: number;
 }[] = [
-  { id: "mpesa", name: "M-Pesa", icon: Smartphone, color: "#00dfa4", speed: "Instant", fee: "Free", min: 10 },
-  { id: "crypto", name: "Crypto", icon: Bitcoin, color: "#fbbf24", speed: "1–3 confirmations", fee: "Network only", min: 20 },
-  { id: "card", name: "Card", icon: CreditCard, color: "#818cf8", speed: "Instant", fee: "Free", min: 10 },
-  { id: "bank", name: "Bank transfer", icon: Building2, color: "#22d3ee", speed: "1–2 working days", fee: "Free", min: 100 },
+  { id: "mpesa", name: "M-Pesa", icon: Smartphone, color: "#cfa653", speed: "Instant", fee: "Free", min: 10 },
+  { id: "crypto", name: "Crypto", icon: Bitcoin, color: "#f0b429", speed: "1–3 confirmations", fee: "Network only", min: 20 },
+  { id: "card", name: "Card", icon: CreditCard, color: "#4fb98b", speed: "Instant", fee: "Free", min: 10 },
+  { id: "bank", name: "Bank transfer", icon: Building2, color: "#c2703a", speed: "1–2 working days", fee: "Free", min: 100 },
 ];
 
 const CHAINS = [
@@ -99,7 +99,7 @@ export function WalletView() {
           label="Available balance"
           value={money(balance)}
           icon={WalletIcon}
-          accent="#00dfa4"
+          accent="#cfa653"
           footer="Free to withdraw or allocate"
         />
         <StatTile
@@ -107,7 +107,7 @@ export function WalletView() {
           label="Account equity"
           value={money(equity)}
           icon={Banknote}
-          accent="#2ff0bd"
+          accent="#e3c583"
           delta={{
             value: `${floating >= 0 ? "+" : ""}${money(floating)} floating`,
             positive: floating >= 0,
@@ -118,7 +118,7 @@ export function WalletView() {
           label="Total deposited"
           value={money(deposited)}
           icon={ArrowDownLeft}
-          accent="#818cf8"
+          accent="#4fb98b"
           footer={`${txns.filter((t) => t.kind === "deposit").length} deposits`}
         />
         <StatTile
@@ -126,7 +126,7 @@ export function WalletView() {
           label="Total withdrawn"
           value={money(withdrawn)}
           icon={ArrowUpRight}
-          accent="#fbbf24"
+          accent="#f0b429"
           footer={pending.length ? `${pending.length} pending` : "Nothing pending"}
         />
       </div>
@@ -454,7 +454,7 @@ function DepositPanel() {
           </p>
           <dl className="mt-2 space-y-1.5">
             {[
-              ["Beneficiary", "PrimeStone Markets Ltd"],
+              ["Beneficiary", "Meridian Markets Ltd"],
               ["IBAN", "GB29 PRIM 6016 1331 9268 19"],
               ["SWIFT / BIC", "PRIMGB2LXXX"],
               ["Reference", `PS-${user?.email.slice(0, 6).toUpperCase() ?? "ACCOUNT"}`],
