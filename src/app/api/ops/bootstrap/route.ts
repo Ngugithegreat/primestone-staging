@@ -138,6 +138,16 @@ export async function GET(req: NextRequest) {
   }
   try {
     const db = getDb();
+    if (req.nextUrl.searchParams.get("action") === "list-providers") {
+      const providers = await db
+        .select({
+          id: schema.signalProviders.id,
+          name: schema.signalProviders.name,
+          handle: schema.signalProviders.handle,
+        })
+        .from(schema.signalProviders);
+      return NextResponse.json({ ok: true, providers });
+    }
     const count = await db.$count(schema.users);
     return NextResponse.json({ ok: true, usersTableExists: true, userCount: count });
   } catch (err) {
