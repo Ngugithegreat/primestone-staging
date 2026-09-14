@@ -206,7 +206,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1.1 }}
-            className="absolute -left-6 -bottom-6 hidden rounded border border-white/[0.12] bg-ink-880/90 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl sm:block"
+            className="absolute -right-6 top-14 hidden rounded border border-white/[0.12] bg-ink-880/90 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl sm:block"
           >
             <p className="text-[10px] uppercase tracking-[0.14em] text-slate-400">Signal latency</p>
             <p className="tnum text-[19px] font-bold text-white">
