@@ -103,7 +103,7 @@ export function LiveChart({
   }, [symbol, timeframe, containerId]);
 
   return (
-    <div className="relative h-full w-full overflow-hidden rounded-sm border border-white/[0.07] bg-ink-900">
+    <div className="relative h-full w-full overflow-hidden rounded-none border border-white/[0.07] bg-ink-900">
       <div id={containerId} ref={ref} className="h-full w-full" />
     </div>
   );

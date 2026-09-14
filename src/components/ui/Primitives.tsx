@@ -22,9 +22,9 @@ export function Card({
   return (
     <Tag
       className={cn(
-        "card-sheen relative rounded-sm border border-white/[0.07] bg-ink-880/70 backdrop-blur-xl",
+        "card-sheen relative rounded-none border border-white/[0.07] bg-ink-880 ",
         hover &&
-          "transition-all duration-300 hover:border-white/[0.14] hover:bg-ink-850/80 hover:shadow-[0_18px_50px_-24px_rgba(0,0,0,0.9)]",
+          "transition-all duration-300 hover:border-white/[0.14] hover:bg-ink-850 hover:shadow-[0_18px_50px_-24px_rgba(0,0,0,0.9)]",
         className,
       )}
     >
@@ -298,7 +298,7 @@ export function Eyebrow({ children, className }: { children: ReactNode; classNam
   return (
     <span
       className={cn(
-        "inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-mint-300",
+        "stamp inline-flex items-center gap-2 px-3 py-1 text-[11px] tracking-[0.18em]",
         className,
       )}
     >

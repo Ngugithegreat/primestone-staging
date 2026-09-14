@@ -14,7 +14,7 @@ function SideTag({ side }: { side: "buy" | "sell" }) {
   return (
     <span
       className={cn(
-        "rounded px-1.5 py-0.5 text-[10px] font-bold tracking-wide",
+        "rounded-none px-1.5 py-0.5 text-[10px] font-bold tracking-wide",
         side === "buy" ? "bg-mint-500/15 text-mint-400" : "bg-rose-500/15 text-rose-400",
       )}
     >
@@ -147,7 +147,7 @@ export function OpenPositionsTable({ compact = false }: { compact?: boolean }) {
                         });
                       }}
                       aria-label={`Close ${p.symbol} position`}
-                      className="focus-ring grid h-7 w-7 place-items-center rounded-sm border border-white/[0.08] text-slate-500 opacity-60 transition-all hover:border-rose-500/40 hover:bg-rose-500/10 hover:text-rose-400 group-hover:opacity-100"
+                      className="focus-ring grid h-7 w-7 place-items-center rounded-none border border-white/[0.08] text-slate-500 opacity-60 transition-all hover:border-rose-500/40 hover:bg-rose-500/10 hover:text-rose-400 group-hover:opacity-100"
                     >
                       <X className="h-3.5 w-3.5" />
                     </button>
@@ -249,7 +249,7 @@ export function HistoryTable({ rows }: { rows: ClosedPosition[] }) {
 export function Empty({ title, body }: { title: string; body: string }) {
   return (
     <div className="grid place-items-center px-6 py-14 text-center">
-      <div className="grid h-12 w-12 place-items-center rounded-sm border border-white/[0.08] bg-white/[0.03]">
+      <div className="grid h-12 w-12 place-items-center rounded-none border border-white/[0.08] bg-white/[0.03]">
         <span className="h-2 w-2 rounded-full bg-slate-600" />
       </div>
       <p className="mt-4 text-[14px] font-medium text-slate-300">{title}</p>

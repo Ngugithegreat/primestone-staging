@@ -103,7 +103,7 @@ export default function AboutPage() {
           <div className="mt-8 grid gap-5 md:grid-cols-3">
             {VALUES.map((v) => (
               <Card key={v.title} className="p-6">
-                <div className="grid h-11 w-11 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10">
+                <div className="grid h-11 w-11 place-items-center rounded-none border border-mint-500/25 bg-mint-500/10">
                   <v.icon className="h-5 w-5 text-mint-400" />
                 </div>
                 <h3 className="mt-4 text-[16px] font-semibold text-white">{v.title}</h3>
@@ -118,7 +118,7 @@ export default function AboutPage() {
       <section className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         <div className="grid gap-5 lg:grid-cols-2">
           <Card className="p-7">
-            <div className="grid h-11 w-11 place-items-center rounded-sm border border-white/10 bg-white/[0.03]">
+            <div className="grid h-11 w-11 place-items-center rounded-none border border-white/10 bg-white/[0.03]">
               <ScrollText className="h-5 w-5 text-mint-400" />
             </div>
             <h3 className="mt-4 text-[18px] font-semibold text-white">Regulation</h3>
@@ -144,7 +144,7 @@ export default function AboutPage() {
           </Card>
 
           <Card className="p-7">
-            <div className="grid h-11 w-11 place-items-center rounded-sm border border-white/10 bg-white/[0.03]">
+            <div className="grid h-11 w-11 place-items-center rounded-none border border-white/10 bg-white/[0.03]">
               <Building2 className="h-5 w-5 text-mint-400" />
             </div>
             <h3 className="mt-4 text-[18px] font-semibold text-white">Head office</h3>

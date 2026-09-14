@@ -40,7 +40,7 @@ export function Modal({
       {open && (
         <div className="fixed inset-0 z-100 grid place-items-center overflow-y-auto p-4 sm:p-6">
           <motion.div
-            className="fixed inset-0 bg-ink-950/80 backdrop-blur-md"
+            className="fixed inset-0 bg-ink-950 "
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -50,7 +50,7 @@ export function Modal({
             role="dialog"
             aria-modal="true"
             className={cn(
-              "card-sheen relative w-full rounded-sm border border-white/[0.09] bg-ink-880 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.95)]",
+              "card-sheen relative w-full rounded-none border border-white/[0.09] bg-ink-880 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.95)]",
               widths[size],
             )}
             initial={{ opacity: 0, y: 24, scale: 0.97 }}
@@ -66,7 +66,7 @@ export function Modal({
               <button
                 onClick={onClose}
                 aria-label="Close"
-                className="focus-ring -mr-1 -mt-1 grid h-8 w-8 place-items-center rounded-sm text-slate-400 transition-colors hover:bg-white/[0.07] hover:text-white"
+                className="focus-ring -mr-1 -mt-1 grid h-8 w-8 place-items-center rounded-none text-slate-400 transition-colors hover:bg-white/[0.07] hover:text-white"
               >
                 <X className="h-4 w-4" />
               </button>

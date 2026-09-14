@@ -305,7 +305,7 @@ export function CandleChart({
       <canvas ref={canvasRef} className="block cursor-crosshair" />
 
       {hovered && (
-        <div className="pointer-events-none absolute left-2 top-2 flex flex-wrap gap-x-3 gap-y-0.5 rounded-sm border border-white/[0.08] bg-ink-900/92 px-2.5 py-1.5 text-[11px] backdrop-blur-md">
+        <div className="pointer-events-none absolute left-2 top-2 flex flex-wrap gap-x-3 gap-y-0.5 rounded-none border border-white/[0.08] bg-ink-900 px-2.5 py-1.5 text-[11px] ">
           {(
             [
               ["O", hovered.o],

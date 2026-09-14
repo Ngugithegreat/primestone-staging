@@ -77,7 +77,7 @@ export function RealPortfolio() {
               return (
                 <div
                   key={a.id}
-                  className="flex items-center justify-between gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5"
+                  className="flex items-center justify-between gap-3 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5"
                 >
                   <div className="flex items-center gap-3">
                     <span
@@ -182,7 +182,7 @@ export function RealPortfolio() {
                 <div className="flex items-center gap-2.5">
                   <span
                     className={cn(
-                      "grid h-8 w-8 place-items-center rounded-sm",
+                      "grid h-8 w-8 place-items-center rounded-none",
                       p.kind === "deposit" ? "bg-mint-500/12 text-mint-400" : "bg-rose-500/12 text-rose-400",
                     )}
                   >

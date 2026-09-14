@@ -42,7 +42,7 @@ export function TickerTape({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative flex overflow-hidden border-y border-white/[0.06] bg-ink-900/60 py-2 backdrop-blur-xl",
+        "relative flex overflow-hidden border-y border-white/[0.06] bg-ink-900 py-2 ",
         className,
       )}
     >

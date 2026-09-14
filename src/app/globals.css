@@ -215,39 +215,44 @@
    Composed utilities
    ========================================================================== */
 
+/* Flat, opaque panel — no translucency, no blur. The ledger look reads as
+   paper stacked on a desk, not glass floating over a photo. */
 @utility glass {
-  background: linear-gradient(
-    180deg,
-    rgb(255 255 255 / 0.055) 0%,
-    rgb(255 255 255 / 0.022) 100%
-  );
-  border: 1px solid rgb(255 255 255 / 0.08);
-  backdrop-filter: blur(18px) saturate(140%);
+  background: var(--color-ink-880);
+  border: 1px solid rgb(255 255 255 / 0.09);
 }
 
+/* Signature motif: a solid brand-to-secondary rule across the TOP edge only
+   (never a soft all-round glow/sheen). This is the one repeating graphic
+   device that should make every panel instantly recognisable as this
+   product's, the way a coloured spine identifies a ledger book. */
 @utility card-sheen {
   position: relative;
-  overflow: hidden;
-  &::after {
+  &::before {
     content: "";
     position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 1px;
-    background: linear-gradient(
-      140deg,
-      rgb(255 255 255 / 0.16),
-      rgb(255 255 255 / 0) 42%,
-      rgb(255 255 255 / 0) 62%,
-      rgb(255 255 255 / 0.08)
-    );
-    -webkit-mask:
-      linear-gradient(#000 0 0) content-box,
-      linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
+    inset: 0 0 auto 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-mint-500), var(--color-iris-500));
   }
+}
+
+/* Ledger double-rule — a thin line, a gap, a thinner line. Used under
+   section headers instead of a faint single border. */
+@utility rule-double {
+  border-top: 2px solid rgb(255 255 255 / 0.16);
+  padding-top: 5px;
+  border-bottom: 1px solid rgb(255 255 255 / 0.16);
+}
+
+/* A small solid "stamped" tag — flat fill, square corners, heavy tracking.
+   Used for the platform's numbered/labelled accents instead of a soft pill. */
+@utility stamp {
+  background: var(--color-mint-500);
+  color: var(--color-ink-950);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 @utility text-gradient {

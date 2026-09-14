@@ -89,7 +89,7 @@ export function CopyModal({
     >
       <div className="space-y-5">
         {/* Provider summary */}
-        <div className="flex items-center gap-3.5 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5">
+        <div className="flex items-center gap-3.5 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5">
           <Avatar initials={initialsOf(trader.name)} gradient={trader.gradient} size={46} />
           <div className="min-w-0 flex-1">
             <p className="truncate text-[14px] font-semibold text-white">{trader.name}</p>
@@ -137,7 +137,7 @@ export function CopyModal({
                   setError(undefined);
                 }}
                 className={cn(
-                  "rounded-sm py-1.5 text-[12px] font-medium transition-colors",
+                  "rounded-none py-1.5 text-[12px] font-medium transition-colors",
                   amount === v
                     ? "bg-white/[0.10] text-white"
                     : "bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]",
@@ -160,7 +160,7 @@ export function CopyModal({
                 key={m}
                 onClick={() => setMultiplier(m)}
                 className={cn(
-                  "focus-ring rounded-sm border py-2 text-[12.5px] font-semibold transition-all",
+                  "focus-ring rounded-none border py-2 text-[12.5px] font-semibold transition-all",
                   multiplier === m
                     ? "border-mint-500/50 bg-mint-500/10 text-mint-300"
                     : "border-white/[0.08] bg-white/[0.02] text-slate-400 hover:bg-white/[0.06]",
@@ -171,7 +171,7 @@ export function CopyModal({
             ))}
           </div>
           {multiplier > 1 && (
-            <p className="mt-2 flex items-start gap-2 rounded-sm border border-amber-450/25 bg-amber-450/[0.08] p-2.5 text-[12px] leading-snug text-amber-450">
+            <p className="mt-2 flex items-start gap-2 rounded-none border border-amber-450/25 bg-amber-450/[0.08] p-2.5 text-[12px] leading-snug text-amber-450">
               <AlertTriangle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
               Above 1× you take more risk per trade than the provider does. Their{" "}
               {trader.maxDrawdown.toFixed(1)}% worst drawdown becomes{" "}
@@ -194,7 +194,7 @@ export function CopyModal({
               animate={{ opacity: 1, height: "auto" }}
               className="overflow-hidden"
             >
-              <div className="flex items-center gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5">
+              <div className="flex items-center gap-3 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5">
                 <input
                   type="range"
                   min={10}
@@ -216,7 +216,7 @@ export function CopyModal({
         </div>
 
         {/* Projection */}
-        <div className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-4">
+        <div className="rounded-none border border-white/[0.07] bg-white/[0.02] p-4">
           <div className="flex items-center gap-2">
             <TrendingUp className="h-4 w-4 text-slate-400" />
             <p className="text-[13px] font-semibold text-white">

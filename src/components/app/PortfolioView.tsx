@@ -150,7 +150,7 @@ function DemoPortfolio() {
         </div>
         <button
           onClick={exportCsv}
-          className="focus-ring flex h-9 items-center gap-2 rounded-sm border border-white/10 bg-white/[0.04] px-3.5 text-[13px] font-medium text-slate-200 transition-colors hover:bg-white/[0.09]"
+          className="focus-ring flex h-9 items-center gap-2 rounded-none border border-white/10 bg-white/[0.04] px-3.5 text-[13px] font-medium text-slate-200 transition-colors hover:bg-white/[0.09]"
         >
           <Download className="h-3.5 w-3.5" />
           Export statement
@@ -320,9 +320,9 @@ function DemoPortfolio() {
         ].map((s) => (
           <div
             key={s.label}
-            className="flex items-center gap-3 rounded-sm border border-white/[0.07] bg-ink-880/70 p-4"
+            className="flex items-center gap-3 rounded-none border border-white/[0.07] bg-ink-880 p-4"
           >
-            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-white/[0.08] bg-white/[0.03]">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-none border border-white/[0.08] bg-white/[0.03]">
               <s.icon className={cn("h-4 w-4", s.tone)} />
             </span>
             <div className="min-w-0">

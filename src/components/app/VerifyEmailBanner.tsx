@@ -52,9 +52,9 @@ export function VerifyEmailBanner() {
   };
 
   return (
-    <div className="mb-4 rounded-sm border border-amber-450/25 bg-amber-450/[0.06] p-4">
+    <div className="mb-4 rounded-none border border-amber-450/25 bg-amber-450/[0.06] p-4">
       <div className="flex flex-wrap items-center gap-3">
-        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-amber-450/25 bg-amber-450/10">
+        <span className="grid h-9 w-9 shrink-0 place-items-center rounded-none border border-amber-450/25 bg-amber-450/10">
           <MailCheck className="h-4.5 w-4.5 text-amber-400" />
         </span>
         <div className="min-w-0 flex-1">
@@ -82,7 +82,7 @@ export function VerifyEmailBanner() {
           </Button>
           <button
             onClick={resend}
-            className="focus-ring rounded-sm px-2 py-1 text-[12.5px] font-medium text-amber-300 hover:text-amber-200"
+            className="focus-ring rounded-none px-2 py-1 text-[12.5px] font-medium text-amber-300 hover:text-amber-200"
           >
             Resend
           </button>

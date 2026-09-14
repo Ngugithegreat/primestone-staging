@@ -260,7 +260,7 @@ export function DashboardView() {
                 <motion.div
                   key={c.id}
                   layout
-                  className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-3"
+                  className="rounded-none border border-white/[0.07] bg-white/[0.02] p-3"
                 >
                   <div className="flex items-center gap-2.5">
                     <Avatar
@@ -285,7 +285,7 @@ export function DashboardView() {
                       onClick={() => toggleCopy(c.id)}
                       aria-label={c.status === "active" ? "Pause copying" : "Resume copying"}
                       className={cn(
-                        "focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-sm border transition-colors",
+                        "focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-none border transition-colors",
                         c.status === "active"
                           ? "border-white/[0.08] text-slate-400 hover:bg-white/[0.07] hover:text-white"
                           : "border-mint-500/30 bg-mint-500/10 text-mint-400 hover:bg-mint-500/20",
@@ -408,7 +408,7 @@ export function DashboardView() {
                   <div key={h.id} className="flex items-center gap-3 px-4 py-2.5">
                     <span
                       className={cn(
-                        "grid h-7 w-7 shrink-0 place-items-center rounded-sm",
+                        "grid h-7 w-7 shrink-0 place-items-center rounded-none",
                         h.pnl >= 0
                           ? "bg-mint-500/12 text-mint-400"
                           : "bg-rose-500/12 text-rose-400",

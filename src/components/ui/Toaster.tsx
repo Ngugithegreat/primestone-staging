@@ -33,7 +33,7 @@ export function Toaster() {
               animate={{ opacity: 1, x: 0, scale: 1 }}
               exit={{ opacity: 0, x: 40, scale: 0.96 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className={`card-sheen pointer-events-auto flex items-start gap-3 rounded-sm border bg-ink-850/95 p-3.5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl ${TONES[t.tone]}`}
+              className={`card-sheen pointer-events-auto flex items-start gap-3 rounded-none border bg-ink-850 p-3.5 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)]  ${TONES[t.tone]}`}
             >
               <Icon className="mt-0.5 h-[18px] w-[18px] shrink-0" />
               <div className="min-w-0 flex-1">

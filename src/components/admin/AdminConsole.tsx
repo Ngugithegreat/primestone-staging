@@ -186,7 +186,7 @@ export function AdminConsole() {
 
   return (
     <div className="min-h-dvh bg-ink-950">
-      <header className="sticky top-0 z-30 border-b border-white/[0.07] bg-ink-950/85 backdrop-blur-xl">
+      <header className="sticky top-0 z-30 border-b border-white/[0.07] bg-ink-950 ">
         <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6">
           <div className="flex items-center gap-3">
             <Logo href="/admin" />
@@ -195,14 +195,14 @@ export function AdminConsole() {
           <div className="flex items-center gap-2">
             <button
               onClick={() => { setLoading(true); load(); }}
-              className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-sm border border-white/10 bg-white/[0.04] px-3 text-[12.5px] text-slate-300 hover:bg-white/[0.08]"
+              className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-none border border-white/10 bg-white/[0.04] px-3 text-[12.5px] text-slate-300 hover:bg-white/[0.08]"
             >
               <RotateCcw className="h-3.5 w-3.5" />
               Refresh
             </button>
             <button
               onClick={signOut}
-              className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-sm border border-white/10 bg-white/[0.04] px-3 text-[12.5px] text-slate-300 hover:bg-white/[0.08]"
+              className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-none border border-white/10 bg-white/[0.04] px-3 text-[12.5px] text-slate-300 hover:bg-white/[0.08]"
             >
               <LogOut className="h-3.5 w-3.5" />
               Sign out
@@ -213,7 +213,7 @@ export function AdminConsole() {
 
       <main className="mx-auto max-w-[1600px] px-4 py-6 sm:px-6">
         {/* Tabs */}
-        <div className="mb-5 inline-flex rounded-sm border border-white/[0.08] bg-white/[0.02] p-1">
+        <div className="mb-5 inline-flex rounded-none border border-white/[0.08] bg-white/[0.02] p-1">
           {([
             { id: "users", label: "Users", icon: Users2 },
             { id: "engine", label: "Copy engine", icon: Activity },
@@ -224,7 +224,7 @@ export function AdminConsole() {
               key={t.id}
               onClick={() => setView(t.id)}
               className={cn(
-                "focus-ring inline-flex items-center gap-1.5 rounded-sm px-3.5 py-1.5 text-[13px] font-medium transition-colors",
+                "focus-ring inline-flex items-center gap-1.5 rounded-none px-3.5 py-1.5 text-[13px] font-medium transition-colors",
                 view === t.id ? "bg-white/[0.10] text-white" : "text-slate-400 hover:text-slate-200",
               )}
             >
@@ -248,14 +248,14 @@ export function AdminConsole() {
         </p>
 
         {loadError && (
-          <div className="mt-4 rounded-sm border border-rose-500/25 bg-rose-500/[0.07] px-4 py-3 text-[13px] text-rose-200">
+          <div className="mt-4 rounded-none border border-rose-500/25 bg-rose-500/[0.07] px-4 py-3 text-[13px] text-rose-200">
             {loadError}
           </div>
         )}
 
         <div className="mt-5 grid grid-cols-2 gap-3 lg:grid-cols-4">
           {STATS.map((s) => (
-            <div key={s.label} className="card-sheen rounded-sm border border-white/[0.07] bg-ink-880/70 p-4">
+            <div key={s.label} className="card-sheen rounded-none border border-white/[0.07] bg-ink-880 p-4">
               <div className="flex items-center justify-between">
                 <span className="text-[12px] text-slate-500">{s.label}</span>
                 <s.icon className={cn("h-4 w-4", s.tone)} />
@@ -276,7 +276,7 @@ export function AdminConsole() {
                 key={f.id}
                 onClick={() => setFilter(f.id)}
                 className={cn(
-                  "focus-ring rounded-sm px-3 py-1.5 text-[12.5px] font-medium transition-colors",
+                  "focus-ring rounded-none px-3 py-1.5 text-[12.5px] font-medium transition-colors",
                   filter === f.id ? "bg-white/[0.10] text-white" : "text-slate-400 hover:bg-white/[0.05] hover:text-slate-200",
                 )}
               >
@@ -287,7 +287,7 @@ export function AdminConsole() {
           </div>
         </div>
 
-        <div className="mt-4 overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/50">
+        <div className="mt-4 overflow-hidden rounded-none border border-white/[0.07] bg-ink-880">
           {loading ? (
             <div className="grid place-items-center py-20"><Loader2 className="h-6 w-6 animate-spin text-mint-400" /></div>
           ) : (
@@ -433,7 +433,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
 
   return (
     <>
-      <motion.div className="fixed inset-0 z-50 bg-ink-950/70 backdrop-blur-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
+      <motion.div className="fixed inset-0 z-50 bg-ink-950 " initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} />
       <motion.aside
         className="fixed inset-y-0 right-0 z-50 flex w-full max-w-xl flex-col border-l border-white/[0.09] bg-ink-900"
         initial={{ x: "100%" }} animate={{ x: 0 }} exit={{ x: "100%" }} transition={{ duration: 0.32, ease: [0.16, 1, 0.3, 1] }}
@@ -454,11 +454,11 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
               </p>
             </div>
           </div>
-          <button onClick={onClose} className="focus-ring grid h-8 w-8 place-items-center rounded-sm text-slate-400 hover:bg-white/[0.07] hover:text-white"><X className="h-4 w-4" /></button>
+          <button onClick={onClose} className="focus-ring grid h-8 w-8 place-items-center rounded-none text-slate-400 hover:bg-white/[0.07] hover:text-white"><X className="h-4 w-4" /></button>
         </div>
 
         <div className="flex-1 overflow-y-auto p-5">
-          <div className={cn("flex items-center justify-between rounded-sm border p-3.5",
+          <div className={cn("flex items-center justify-between rounded-none border p-3.5",
             user.kycStatus === "verified" ? "border-mint-500/25 bg-mint-500/[0.06]" : user.kycStatus === "pending" ? "border-amber-450/25 bg-amber-450/[0.06]" : user.kycStatus === "rejected" ? "border-rose-500/25 bg-rose-500/[0.06]" : "border-white/[0.08] bg-white/[0.02]")}>
             <div>
               <p className="text-[11px] uppercase tracking-[0.1em] text-slate-500">KYC status</p>
@@ -551,7 +551,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
                           target="_blank"
                           rel="noopener noreferrer"
                           className={cn(
-                            "group block overflow-hidden rounded-sm border border-white/[0.07] bg-white/[0.02] transition-colors",
+                            "group block overflow-hidden rounded-none border border-white/[0.07] bg-white/[0.02] transition-colors",
                             url ? "hover:border-mint-500/40" : "cursor-default",
                           )}
                         >
@@ -567,7 +567,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
                               <FileText className="h-8 w-8 text-slate-500" />
                             )}
                             {url && (
-                              <span className="absolute right-1.5 top-1.5 rounded-sm bg-black/60 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+                              <span className="absolute right-1.5 top-1.5 rounded-none bg-black/60 px-1.5 py-0.5 text-[10px] font-medium text-white opacity-0  transition-opacity group-hover:opacity-100">
                                 Open ↗
                               </span>
                             )}
@@ -586,7 +586,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
               </Section>
             </>
           ) : (
-            <div className="mt-5 rounded-sm border border-white/[0.07] bg-white/[0.02] p-4 text-center">
+            <div className="mt-5 rounded-none border border-white/[0.07] bg-white/[0.02] p-4 text-center">
               <p className="text-[13px] text-slate-400">This user has not submitted identity documents yet.</p>
             </div>
           )}
@@ -598,7 +598,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
               <p className="text-[13px] font-medium text-white">Reason for rejection</p>
               <div className="space-y-1.5">
                 {REJECT_REASONS.map((r) => (
-                  <button key={r} onClick={() => setReason(r)} className={cn("focus-ring flex w-full items-center gap-2 rounded-sm border px-3 py-2 text-left text-[12.5px] transition-colors", reason === r ? "border-rose-500/40 bg-rose-500/[0.08] text-white" : "border-white/[0.07] text-slate-400 hover:bg-white/[0.04]")}>
+                  <button key={r} onClick={() => setReason(r)} className={cn("focus-ring flex w-full items-center gap-2 rounded-none border px-3 py-2 text-left text-[12.5px] transition-colors", reason === r ? "border-rose-500/40 bg-rose-500/[0.08] text-white" : "border-white/[0.07] text-slate-400 hover:bg-white/[0.04]")}>
                     <span className={cn("grid h-4 w-4 shrink-0 place-items-center rounded-full border", reason === r ? "border-rose-500 bg-rose-500" : "border-white/20")}>{reason === r && <Check className="h-2.5 w-2.5 text-white" strokeWidth={3} />}</span>
                     {r}
                   </button>
@@ -611,7 +611,7 @@ function UserDrawer({ user, onClose, onChanged }: { user: AdminUser; onClose: ()
             </div>
           ) : (
             <div className="flex items-center gap-2">
-              <button onClick={toggleFlag} className={cn("focus-ring grid h-11 w-11 shrink-0 place-items-center rounded-sm border transition-colors", user.flagged ? "border-rose-500/40 bg-rose-500/10 text-rose-400" : "border-white/10 bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]")} title={user.flagged ? "Remove flag" : "Flag account"}>
+              <button onClick={toggleFlag} className={cn("focus-ring grid h-11 w-11 shrink-0 place-items-center rounded-none border transition-colors", user.flagged ? "border-rose-500/40 bg-rose-500/10 text-rose-400" : "border-white/10 bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]")} title={user.flagged ? "Remove flag" : "Flag account"}>
                 <Flag className="h-4 w-4" />
               </button>
               {canReview ? (
@@ -652,7 +652,7 @@ function Row({ icon: Icon, label, value, mono }: { icon?: typeof Mail; label: st
 
 function Metric({ label, value }: { label: string; value: string }) {
   return (
-    <div className="rounded-sm border border-white/[0.06] bg-white/[0.02] p-2.5">
+    <div className="rounded-none border border-white/[0.06] bg-white/[0.02] p-2.5">
       <p className="text-[10.5px] text-slate-500">{label}</p>
       <p className="tnum mt-0.5 text-[13.5px] font-semibold text-white">{value}</p>
     </div>

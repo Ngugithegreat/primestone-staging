@@ -249,7 +249,7 @@ export function HowItWorks() {
               <Card hover className="relative h-full p-6">
                 <div className="flex items-center gap-3.5">
                   <div
-                    className="grid h-12 w-12 shrink-0 place-items-center rounded-sm border"
+                    className="grid h-12 w-12 shrink-0 place-items-center rounded-none border"
                     style={{
                       background: `linear-gradient(140deg, ${step.accent}26, transparent)`,
                       borderColor: `${step.accent}40`,
@@ -363,7 +363,7 @@ export function Features() {
                   <div
                     key={row.label}
                     className={cn(
-                      "rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5",
+                      "rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5",
                       i === 2 && "border-mint-500/25 bg-mint-500/[0.07]",
                     )}
                   >
@@ -386,7 +386,7 @@ export function Features() {
           <Reveal delay={0.08} className="lg:col-span-2">
             <Card hover className="flex h-full flex-col justify-between p-7">
               <div>
-                <div className="grid h-11 w-11 place-items-center rounded-sm border border-rose-500/25 bg-rose-500/10">
+                <div className="grid h-11 w-11 place-items-center rounded-none border border-rose-500/25 bg-rose-500/10">
                   <ShieldCheck className="h-5 w-5 text-rose-400" />
                 </div>
                 <h3 className="mt-4 text-[17px] font-semibold text-white">
@@ -397,7 +397,7 @@ export function Features() {
                   position is closed and the link is cut — without you being awake.
                 </p>
               </div>
-              <div className="mt-6 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5">
+              <div className="mt-6 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5">
                 <div className="flex items-center justify-between text-[12px]">
                   <span className="text-slate-500">Allocation drawdown</span>
                   <span className="tnum font-semibold text-amber-450">-18.4%</span>
@@ -433,7 +433,7 @@ export function Features() {
             <Reveal key={f.title} delay={0.12 + i * 0.06} className="lg:col-span-2">
               <Card hover className="h-full p-6">
                 <div
-                  className="grid h-11 w-11 place-items-center rounded-sm border"
+                  className="grid h-11 w-11 place-items-center rounded-none border"
                   style={{
                     background: `linear-gradient(140deg, ${f.color}22, transparent)`,
                     borderColor: `${f.color}38`,
@@ -591,7 +591,7 @@ export function Funding() {
               <Card hover className="h-full p-6">
                 <div className="flex items-center justify-between">
                   <div
-                    className="grid h-12 w-12 place-items-center rounded-sm border"
+                    className="grid h-12 w-12 place-items-center rounded-none border"
                     style={{
                       background: `linear-gradient(140deg, ${m.color}22, transparent)`,
                       borderColor: `${m.color}38`,
@@ -612,7 +612,7 @@ export function Funding() {
                   {m.tags.map((t) => (
                     <span
                       key={t}
-                      className="rounded-sm border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[11px] text-slate-400"
+                      className="rounded-none border border-white/[0.08] bg-white/[0.03] px-2 py-1 text-[11px] text-slate-400"
                     >
                       {t}
                     </span>
@@ -624,7 +624,7 @@ export function Funding() {
         </div>
 
         <Reveal delay={0.2}>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-sm border border-white/[0.07] bg-white/[0.02] px-6 py-5 text-[13px] text-slate-400">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 rounded-none border border-white/[0.07] bg-white/[0.02] px-6 py-5 text-[13px] text-slate-400">
             <span className="flex items-center gap-2">
               <Lock className="h-4 w-4 text-mint-400" /> Client funds held in segregated tier-1 accounts
             </span>
@@ -698,7 +698,7 @@ export function PlatformShowcase() {
                 key={s.id}
                 onClick={() => setActive(i)}
                 className={cn(
-                  "focus-ring w-full rounded-sm border p-5 text-left transition-all duration-300",
+                  "focus-ring w-full rounded-none border p-5 text-left transition-all duration-300",
                   active === i
                     ? "border-mint-500/30 bg-mint-500/[0.06]"
                     : "border-white/[0.07] bg-white/[0.015] hover:bg-white/[0.04]",
@@ -759,12 +759,12 @@ export function PlatformShowcase() {
 /** A stylised in-browser mock of the product, built from real markup. */
 function ShowcaseFrame({ variant }: { variant: string }) {
   return (
-    <div className="card-sheen overflow-hidden rounded-sm border border-white/[0.09] bg-ink-900/80 shadow-[0_50px_120px_-40px_rgba(0,0,0,0.95)] backdrop-blur-xl">
-      <div className="flex items-center gap-2 border-b border-white/[0.06] bg-ink-880/80 px-4 py-3">
+    <div className="card-sheen overflow-hidden rounded-none border border-white/[0.09] bg-ink-900 shadow-[0_50px_120px_-40px_rgba(0,0,0,0.95)] ">
+      <div className="flex items-center gap-2 border-b border-white/[0.06] bg-ink-880 px-4 py-3">
         <span className="h-2.5 w-2.5 rounded-full bg-rose-500/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-amber-450/70" />
         <span className="h-2.5 w-2.5 rounded-full bg-mint-500/70" />
-        <div className="ml-3 flex-1 rounded-sm border border-white/[0.06] bg-ink-950/60 px-3 py-1 text-[11px] text-slate-500">
+        <div className="ml-3 flex-1 rounded-none border border-white/[0.06] bg-ink-950 px-3 py-1 text-[11px] text-slate-500">
           app.meridiancapital.example/{variant === "chart" ? "trade" : variant}
         </div>
       </div>
@@ -805,7 +805,7 @@ function MockChart() {
           <div
             key={label}
             className={cn(
-              "rounded-sm border p-2.5",
+              "rounded-none border p-2.5",
               tone === "mint"
                 ? "border-mint-500/25 bg-mint-500/[0.08]"
                 : tone === "rose"
@@ -845,7 +845,7 @@ function MockPortfolio() {
           ["Open P&L", "+$712.30", "text-mint-400"],
           ["Win rate", "72.4%", "text-white"],
         ].map(([label, value, tone]) => (
-          <div key={label} className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-3">
+          <div key={label} className="rounded-none border border-white/[0.07] bg-white/[0.02] p-3">
             <p className="text-[10.5px] text-slate-500">{label}</p>
             <p className={cn("tnum mt-1 text-[15px] font-semibold", tone)}>{value}</p>
           </div>
@@ -868,7 +868,7 @@ function MockPortfolio() {
               <td className="py-2.5">
                 <span
                   className={cn(
-                    "rounded px-1.5 py-0.5 text-[10px] font-bold",
+                    "rounded-none px-1.5 py-0.5 text-[10px] font-bold",
                     side === "Buy"
                       ? "bg-mint-500/15 text-mint-400"
                       : "bg-rose-500/15 text-rose-400",
@@ -908,7 +908,7 @@ function MockSignals() {
       {signals.map(([who, action, sym, price, when, up], i) => (
         <div
           key={i}
-          className="flex items-center gap-3 rounded-sm border border-white/[0.06] bg-white/[0.02] p-3"
+          className="flex items-center gap-3 rounded-none border border-white/[0.06] bg-white/[0.02] p-3"
         >
           <Avatar
             initials={initialsOf(who)}
@@ -921,7 +921,7 @@ function MockSignals() {
           </div>
           <span
             className={cn(
-              "rounded px-1.5 py-0.5 text-[10px] font-bold",
+              "rounded-none px-1.5 py-0.5 text-[10px] font-bold",
               action === "BUY"
                 ? "bg-mint-500/15 text-mint-400"
                 : action === "SELL"
@@ -1007,7 +1007,7 @@ export function Testimonials() {
                     <p className="truncate text-[11.5px] text-slate-500">{q.role}</p>
                   </div>
                 </div>
-                <p className="mt-3 rounded-sm bg-mint-500/[0.08] px-3 py-1.5 text-center text-[12px] font-semibold text-mint-400">
+                <p className="mt-3 rounded-none bg-mint-500/[0.08] px-3 py-1.5 text-center text-[12px] font-semibold text-mint-400">
                   {q.stat}
                 </p>
               </Card>
@@ -1067,7 +1067,7 @@ export function Faq() {
             <Reveal key={f.q} delay={Math.min(i * 0.05, 0.3)}>
               <div
                 className={cn(
-                  "overflow-hidden rounded-sm border transition-colors duration-300",
+                  "overflow-hidden rounded-none border transition-colors duration-300",
                   open === i
                     ? "border-white/[0.14] bg-white/[0.04]"
                     : "border-white/[0.07] bg-white/[0.015]",
@@ -1117,7 +1117,7 @@ export function CtaBand() {
     <section className="relative py-24 lg:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <div className="card-sheen noise relative overflow-hidden rounded-lg border border-white/[0.09] bg-ink-880/70 px-6 py-16 text-center backdrop-blur-2xl sm:px-12">
+          <div className="card-sheen noise relative overflow-hidden rounded-none border border-white/[0.09] bg-ink-880 px-6 py-16 text-center  sm:px-12">
             <div
               className="pointer-events-none absolute inset-0"
               style={{
@@ -1202,7 +1202,7 @@ const FOOTER_LINKS: { title: string; links: { label: string; href: string }[] }[
 
 export function SiteFooter() {
   return (
-    <footer className="relative border-t border-white/[0.07] bg-ink-900/40">
+    <footer className="relative border-t border-white/[0.07] bg-ink-900">
       <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2.6fr]">
           <div>

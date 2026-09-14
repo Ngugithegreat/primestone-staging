@@ -123,7 +123,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 {trader.markets.map((m) => (
                   <span
                     key={m}
-                    className="rounded-sm border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11.5px] text-slate-300"
+                    className="rounded-none border border-white/[0.08] bg-white/[0.03] px-2 py-0.5 text-[11.5px] text-slate-300"
                   >
                     {m}
                   </span>
@@ -135,7 +135,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
           {/* Copy control */}
           <div className="w-full shrink-0 lg:w-[280px]">
             {copy ? (
-              <div className="rounded-sm border border-mint-500/25 bg-mint-500/[0.06] p-4">
+              <div className="rounded-none border border-mint-500/25 bg-mint-500/[0.06] p-4">
                 <div className="flex items-center justify-between">
                   <Badge tone={copy.status === "active" ? "mint" : "slate"} dot>
                     {copy.status === "active" ? "Copying" : "Paused"}
@@ -196,7 +196,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
                 </div>
               </div>
             ) : (
-              <div className="rounded-sm border border-white/[0.08] bg-white/[0.02] p-4">
+              <div className="rounded-none border border-white/[0.08] bg-white/[0.02] p-4">
                 <p className="text-[11.5px] uppercase tracking-[0.1em] text-slate-500">
                   Return · 12 months
                 </p>
@@ -252,7 +252,7 @@ export function TraderProfile({ traderId }: { traderId: string }) {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: i * 0.05 }}
-            className="rounded-sm border border-white/[0.07] bg-ink-880/70 p-3.5"
+            className="rounded-none border border-white/[0.07] bg-ink-880 p-3.5"
           >
             <div className="flex items-center gap-1.5 text-slate-500">
               <m.icon className="h-3.5 w-3.5" />

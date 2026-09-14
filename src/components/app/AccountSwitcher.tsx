@@ -46,7 +46,7 @@ export function AccountSwitcher() {
           setOpen((v) => !v);
         }}
         className={cn(
-          "focus-ring flex items-center gap-2 rounded-sm border py-1.5 pl-2.5 pr-2 transition-colors",
+          "focus-ring flex items-center gap-2 rounded-none border py-1.5 pl-2.5 pr-2 transition-colors",
           isDemo
             ? "border-amber-450/30 bg-amber-450/[0.08] hover:bg-amber-450/[0.12]"
             : "border-mint-500/30 bg-mint-500/[0.08] hover:bg-mint-500/[0.12]",
@@ -72,7 +72,7 @@ export function AccountSwitcher() {
       {open && (
         <div
           onClick={(e) => e.stopPropagation()}
-          className="absolute right-0 top-[calc(100%+8px)] z-50 w-64 overflow-hidden rounded-sm border border-white/[0.09] bg-ink-850/97 p-1.5 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.95)] backdrop-blur-2xl"
+          className="absolute right-0 top-[calc(100%+8px)] z-50 w-64 overflow-hidden rounded-none border border-white/[0.09] bg-ink-850 p-1.5 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.95)] "
         >
           <p className="px-2.5 py-1.5 text-[10.5px] uppercase tracking-[0.12em] text-slate-500">
             Switch account
@@ -122,13 +122,13 @@ function AccountRow({
     <button
       onClick={onClick}
       className={cn(
-        "flex w-full items-center gap-3 rounded-sm px-2.5 py-2.5 text-left transition-colors",
+        "flex w-full items-center gap-3 rounded-none px-2.5 py-2.5 text-left transition-colors",
         active ? "bg-white/[0.06]" : "hover:bg-white/[0.04]",
       )}
     >
       <span
         className={cn(
-          "grid h-8 w-8 shrink-0 place-items-center rounded-sm border border-white/10 bg-white/[0.03]",
+          "grid h-8 w-8 shrink-0 place-items-center rounded-none border border-white/10 bg-white/[0.03]",
           tone === "mint" ? "text-mint-400" : "text-amber-450",
         )}
       >

@@ -37,7 +37,7 @@ export function TraderCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.55, delay: Math.min(index * 0.06, 0.4), ease: [0.16, 1, 0.3, 1] }}
-      className="card-sheen group relative flex flex-col overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/70 backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.15] hover:shadow-[0_30px_70px_-30px_rgba(0,0,0,0.95)]"
+      className="card-sheen group relative flex flex-col overflow-hidden rounded-none border border-white/[0.07] bg-ink-880  transition-all duration-300 hover:-translate-y-1 hover:border-white/[0.15] hover:shadow-[0_30px_70px_-30px_rgba(0,0,0,0.95)]"
     >
       {/* Accent wash keyed to the trader's own gradient */}
       <div
@@ -134,7 +134,7 @@ export function TraderCard({
       <div className="mt-auto flex gap-2 border-t border-white/[0.06] p-3.5">
         <Link
           href={href}
-          className="focus-ring flex h-10 flex-1 items-center justify-center rounded-sm border border-white/10 bg-white/[0.04] text-[13px] font-medium text-slate-200 transition-colors hover:bg-white/[0.09] hover:text-white"
+          className="focus-ring flex h-10 flex-1 items-center justify-center rounded-none border border-white/10 bg-white/[0.04] text-[13px] font-medium text-slate-200 transition-colors hover:bg-white/[0.09] hover:text-white"
         >
           View profile
         </Link>
@@ -142,7 +142,7 @@ export function TraderCard({
           <button
             onClick={() => onCopy(trader)}
             disabled={copying}
-            className="focus-ring flex h-10 flex-1 items-center justify-center gap-1.5 rounded-sm bg-mint-500 text-[13px] font-semibold text-ink-950 transition-all hover:bg-mint-400 disabled:opacity-50"
+            className="focus-ring flex h-10 flex-1 items-center justify-center gap-1.5 rounded-none bg-mint-500 text-[13px] font-semibold text-ink-950 transition-all hover:bg-mint-400 disabled:opacity-50"
           >
             <Copy className="h-3.5 w-3.5" />
             {copying ? "Copying" : "Copy trader"}
@@ -150,7 +150,7 @@ export function TraderCard({
         ) : (
           <Link
             href="/signup"
-            className="focus-ring flex h-10 flex-1 items-center justify-center gap-1.5 rounded-sm bg-mint-500 text-[13px] font-semibold text-ink-950 transition-all hover:bg-mint-400"
+            className="focus-ring flex h-10 flex-1 items-center justify-center gap-1.5 rounded-none bg-mint-500 text-[13px] font-semibold text-ink-950 transition-all hover:bg-mint-400"
           >
             <Copy className="h-3.5 w-3.5" />
             Copy trader

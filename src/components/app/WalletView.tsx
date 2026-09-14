@@ -188,7 +188,7 @@ export function WalletView() {
 
           <Card className="p-4">
             <div className="flex items-start gap-3">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10">
+              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-none border border-mint-500/25 bg-mint-500/10">
                 <Shield className="h-4 w-4 text-mint-400" />
               </span>
               <div>
@@ -294,7 +294,7 @@ function DepositPanel() {
               setError(undefined);
             }}
             className={cn(
-              "focus-ring rounded-sm border p-3 text-left transition-all duration-200",
+              "focus-ring rounded-none border p-3 text-left transition-all duration-200",
               method === m.id
                 ? "border-mint-500/45 bg-mint-500/[0.08]"
                 : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05]",
@@ -328,7 +328,7 @@ function DepositPanel() {
               key={q}
               onClick={() => setAmount(q)}
               className={cn(
-                "rounded-sm py-1.5 text-[12px] font-medium transition-colors",
+                "rounded-none py-1.5 text-[12px] font-medium transition-colors",
                 amount === q
                   ? "bg-white/[0.10] text-white"
                   : "bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]",
@@ -351,7 +351,7 @@ function DepositPanel() {
               placeholder="+254 7XX XXX XXX"
             />
           </Field>
-          <div className="rounded-sm border border-mint-500/25 bg-mint-500/[0.07] p-3.5 text-[12.5px] leading-relaxed text-slate-300">
+          <div className="rounded-none border border-mint-500/25 bg-mint-500/[0.07] p-3.5 text-[12.5px] leading-relaxed text-slate-300">
             <p className="font-semibold text-mint-300">What happens next</p>
             <ol className="mt-1.5 list-decimal space-y-0.5 pl-4 text-slate-400">
               <li>A payment prompt appears on your phone.</li>
@@ -373,12 +373,12 @@ function DepositPanel() {
               ))}
             </Select>
           </Field>
-          <div className="rounded-sm border border-white/[0.08] bg-white/[0.02] p-3.5">
+          <div className="rounded-none border border-white/[0.08] bg-white/[0.02] p-3.5">
             <p className="text-[11.5px] uppercase tracking-[0.1em] text-slate-500">
               Your deposit address
             </p>
             <div className="mt-2 flex items-center gap-2">
-              <code className="min-w-0 flex-1 truncate rounded-sm bg-ink-950/60 px-2.5 py-2 font-mono text-[12px] text-mint-300">
+              <code className="min-w-0 flex-1 truncate rounded-none bg-ink-950 px-2.5 py-2 font-mono text-[12px] text-mint-300">
                 {selectedChain.address}
               </code>
               <button
@@ -387,7 +387,7 @@ function DepositPanel() {
                   pushToast({ tone: "info", title: "Address copied" });
                 }}
                 aria-label="Copy address"
-                className="focus-ring grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-white/[0.08] text-slate-300 transition-colors hover:bg-white/[0.08]"
+                className="focus-ring grid h-9 w-9 shrink-0 place-items-center rounded-none border border-white/[0.08] text-slate-300 transition-colors hover:bg-white/[0.08]"
               >
                 <CopyIcon className="h-3.5 w-3.5" />
               </button>
@@ -448,7 +448,7 @@ function DepositPanel() {
       )}
 
       {method === "bank" && (
-        <div className="rounded-sm border border-white/[0.08] bg-white/[0.02] p-3.5 text-[12.5px]">
+        <div className="rounded-none border border-white/[0.08] bg-white/[0.02] p-3.5 text-[12.5px]">
           <p className="text-[11.5px] uppercase tracking-[0.1em] text-slate-500">
             Transfer to
           </p>
@@ -563,7 +563,7 @@ function WithdrawPanel({ balance }: { balance: number }) {
               setError(undefined);
             }}
             className={cn(
-              "focus-ring rounded-sm border p-3 text-left transition-all duration-200",
+              "focus-ring rounded-none border p-3 text-left transition-all duration-200",
               method === m.id
                 ? "border-mint-500/45 bg-mint-500/[0.08]"
                 : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05]",
@@ -598,7 +598,7 @@ function WithdrawPanel({ balance }: { balance: number }) {
             <button
               key={f}
               onClick={() => setAmount(Math.max(0, Math.floor((balance - fee) * f * 100) / 100))}
-              className="rounded-sm bg-white/[0.03] py-1.5 text-[12px] font-medium text-slate-400 transition-colors hover:bg-white/[0.07]"
+              className="rounded-none bg-white/[0.03] py-1.5 text-[12px] font-medium text-slate-400 transition-colors hover:bg-white/[0.07]"
             >
               {f === 1 ? "Max" : `${f * 100}%`}
             </button>
@@ -622,7 +622,7 @@ function WithdrawPanel({ balance }: { balance: number }) {
         />
       </Field>
 
-      <dl className="space-y-1.5 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5 text-[12.5px]">
+      <dl className="space-y-1.5 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5 text-[12.5px]">
         <div className="flex justify-between">
           <dt className="text-slate-500">Withdrawal amount</dt>
           <dd className="tnum font-medium text-white">{money(amount)}</dd>
@@ -660,7 +660,7 @@ function WithdrawKycGate({ status }: { status: KycStatus }) {
     <div className="p-4">
       <div
         className={cn(
-          "rounded-sm border p-6 text-center",
+          "rounded-none border p-6 text-center",
           pending
             ? "border-amber-450/25 bg-amber-450/[0.05]"
             : rejected
@@ -670,7 +670,7 @@ function WithdrawKycGate({ status }: { status: KycStatus }) {
       >
         <div
           className={cn(
-            "mx-auto grid h-14 w-14 place-items-center rounded-sm",
+            "mx-auto grid h-14 w-14 place-items-center rounded-none",
             pending ? "bg-amber-450/12 text-amber-450" : rejected ? "bg-rose-500/12 text-rose-400" : "bg-mint-500/12 text-mint-400",
           )}
         >
@@ -699,7 +699,7 @@ function WithdrawKycGate({ status }: { status: KycStatus }) {
         {!pending && (
           <Link
             href="/verify"
-            className="focus-ring mt-6 inline-flex h-11 items-center gap-2 rounded-sm bg-mint-500 px-6 text-[14px] font-semibold text-ink-950 transition-colors hover:bg-mint-400"
+            className="focus-ring mt-6 inline-flex h-11 items-center gap-2 rounded-none bg-mint-500 px-6 text-[14px] font-semibold text-ink-950 transition-colors hover:bg-mint-400"
           >
             <ShieldCheck className="h-4 w-4" />
             {rejected ? "Re-submit documents" : "Start verification"}
@@ -736,7 +736,7 @@ function TxnRow({ txn }: { txn: Txn }) {
     <div className="flex items-center gap-3 px-4 py-3">
       <span
         className={cn(
-          "grid h-9 w-9 shrink-0 place-items-center rounded-sm border",
+          "grid h-9 w-9 shrink-0 place-items-center rounded-none border",
           isDeposit
             ? "border-mint-500/25 bg-mint-500/10 text-mint-400"
             : "border-white/[0.08] bg-white/[0.03] text-slate-300",

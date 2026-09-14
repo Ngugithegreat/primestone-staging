@@ -117,7 +117,7 @@ export function OrderTicket({
                 key={s}
                 onClick={() => setSide(s)}
                 className={cn(
-                  "focus-ring relative overflow-hidden rounded-sm border px-3 py-2.5 text-left transition-all duration-200",
+                  "focus-ring relative overflow-hidden rounded-none border px-3 py-2.5 text-left transition-all duration-200",
                   active
                     ? isBuy
                       ? "border-mint-500/50 bg-mint-500/[0.12]"
@@ -170,7 +170,7 @@ export function OrderTicket({
                 setLimitTouched(true);
                 setLimitPrice(Number(e.target.value));
               }}
-              className="tnum mt-1.5 h-10 w-full rounded-sm border border-white/[0.08] bg-ink-900/70 px-3 text-[14px] text-white outline-none transition-colors focus:border-mint-500/50"
+              className="tnum mt-1.5 h-10 w-full rounded-none border border-white/[0.08] bg-ink-900 px-3 text-[14px] text-white outline-none transition-colors focus:border-mint-500/50"
             />
           </div>
         )}
@@ -187,7 +187,7 @@ export function OrderTicket({
             <button
               onClick={() => adjust(-0.01)}
               aria-label="Decrease volume"
-              className="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-sm border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:bg-white/[0.08]"
+              className="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-none border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:bg-white/[0.08]"
             >
               <Minus className="h-3.5 w-3.5" />
             </button>
@@ -197,12 +197,12 @@ export function OrderTicket({
               min="0.01"
               value={lots}
               onChange={(e) => setLots(Math.max(0.01, Number(e.target.value) || 0.01))}
-              className="tnum h-10 min-w-0 flex-1 rounded-sm border border-white/[0.08] bg-ink-900/70 px-3 text-center text-[15px] font-semibold text-white outline-none transition-colors focus:border-mint-500/50"
+              className="tnum h-10 min-w-0 flex-1 rounded-none border border-white/[0.08] bg-ink-900 px-3 text-center text-[15px] font-semibold text-white outline-none transition-colors focus:border-mint-500/50"
             />
             <button
               onClick={() => adjust(0.01)}
               aria-label="Increase volume"
-              className="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-sm border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:bg-white/[0.08]"
+              className="focus-ring grid h-10 w-10 shrink-0 place-items-center rounded-none border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-colors hover:bg-white/[0.08]"
             >
               <Plus className="h-3.5 w-3.5" />
             </button>
@@ -213,7 +213,7 @@ export function OrderTicket({
                 key={p}
                 onClick={() => setLots(p)}
                 className={cn(
-                  "rounded-sm py-1.5 text-[11.5px] font-medium transition-colors",
+                  "rounded-none py-1.5 text-[11.5px] font-medium transition-colors",
                   lots === p
                     ? "bg-white/[0.10] text-white"
                     : "bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]",
@@ -252,7 +252,7 @@ export function OrderTicket({
         </div>
 
         {/* Summary */}
-        <dl className="space-y-1.5 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3 text-[12px]">
+        <dl className="space-y-1.5 rounded-none border border-white/[0.07] bg-white/[0.02] p-3 text-[12px]">
           <SummaryRow label="Notional" value={money(notional)} />
           <SummaryRow
             label="Required margin"
@@ -275,7 +275,7 @@ export function OrderTicket({
           <motion.p
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
-            className="flex items-start gap-2 rounded-sm border border-rose-500/25 bg-rose-500/10 p-2.5 text-[12px] leading-snug text-rose-300"
+            className="flex items-start gap-2 rounded-none border border-rose-500/25 bg-rose-500/10 p-2.5 text-[12px] leading-snug text-rose-300"
           >
             <Info className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             This order needs {money(margin)} of margin but only {money(freeMargin)} is free.
@@ -287,7 +287,7 @@ export function OrderTicket({
           onClick={submit}
           disabled={insufficient}
           className={cn(
-            "focus-ring h-12 w-full rounded-sm text-[15px] font-bold transition-all duration-200 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-45",
+            "focus-ring h-12 w-full rounded-none text-[15px] font-bold transition-all duration-200 active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-45",
             side === "buy"
               ? "bg-mint-500 text-ink-950 shadow-[0_8px_28px_-10px_rgba(207,166,83,0.7)] hover:bg-mint-400"
               : "bg-rose-500 text-white shadow-[0_8px_28px_-10px_rgba(229,73,58,0.7)] hover:bg-rose-400",
@@ -328,7 +328,7 @@ function RiskRow({
   return (
     <div
       className={cn(
-        "rounded-sm border p-2.5 transition-colors",
+        "rounded-none border p-2.5 transition-colors",
         enabled
           ? tone === "rose"
             ? "border-rose-500/25 bg-rose-500/[0.06]"
@@ -343,7 +343,7 @@ function RiskRow({
         >
           <span
             className={cn(
-              "grid h-4 w-4 place-items-center rounded border transition-colors",
+              "grid h-4 w-4 place-items-center rounded-none border transition-colors",
               enabled
                 ? tone === "rose"
                   ? "border-rose-500 bg-rose-500"
@@ -374,7 +374,7 @@ function RiskRow({
               min="1"
               value={pips}
               onChange={(e) => onPips(Math.max(1, Number(e.target.value) || 1))}
-              className="tnum h-7 w-16 rounded-sm border border-white/[0.08] bg-ink-900/70 px-2 text-right text-[12px] text-white outline-none focus:border-white/25"
+              className="tnum h-7 w-16 rounded-none border border-white/[0.08] bg-ink-900 px-2 text-right text-[12px] text-white outline-none focus:border-white/25"
             />
             <span className="text-[11px] text-slate-500">pips</span>
           </div>

@@ -125,8 +125,8 @@ export function LiveOverview() {
         </div>
 
         {subs.length === 0 ? (
-          <div className="mt-4 grid place-items-center rounded-sm border border-white/[0.07] bg-white/[0.02] px-6 py-12 text-center">
-            <span className="grid h-12 w-12 place-items-center rounded-sm border border-white/[0.07] bg-white/[0.03]">
+          <div className="mt-4 grid place-items-center rounded-none border border-white/[0.07] bg-white/[0.02] px-6 py-12 text-center">
+            <span className="grid h-12 w-12 place-items-center rounded-none border border-white/[0.07] bg-white/[0.03]">
               <Users className="h-6 w-6 text-slate-500" />
             </span>
             <p className="mt-3 text-[14px] font-medium text-white">No subscriptions yet</p>
@@ -146,7 +146,7 @@ export function LiveOverview() {
               return (
                 <div
                   key={a.id}
-                  className="flex items-center justify-between gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5 transition-colors hover:border-white/[0.12] hover:bg-white/[0.03]"
+                  className="flex items-center justify-between gap-3 rounded-none border border-white/[0.07] bg-white/[0.02] p-3.5 transition-colors hover:border-white/[0.12] hover:bg-white/[0.03]"
                 >
                   <div className="flex items-center gap-3">
                     <span

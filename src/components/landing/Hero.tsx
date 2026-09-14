@@ -66,7 +66,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.05] py-1.5 pl-3 pr-4 backdrop-blur-md"
+            className="inline-flex items-center gap-2.5 rounded-full border border-white/12 bg-white/[0.05] py-1.5 pl-3 pr-4 "
           >
             <LiveDot label="" />
             <span className="text-[12.5px] font-medium tracking-wide text-slate-200">
@@ -119,7 +119,7 @@ export function Hero() {
               href="/#how"
               variant="secondary"
               size="lg"
-              className="border-white/15 bg-white/[0.06] backdrop-blur-md"
+              className="border-white/15 bg-white/[0.06] "
             >
               <PlayCircle className="h-4.5 w-4.5" />
               How it works
@@ -171,7 +171,7 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
           className="relative"
         >
-          <div className="card-sheen relative overflow-hidden rounded border border-white/[0.1] bg-ink-900/60 backdrop-blur-xl">
+          <div className="card-sheen relative overflow-hidden rounded-none border border-white/[0.1] bg-ink-900 ">
             <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
               <span className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-slate-400">
                 Live desk
@@ -206,7 +206,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 1.1 }}
-            className="absolute -right-6 top-14 hidden rounded border border-white/[0.12] bg-ink-880/90 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl sm:block"
+            className="absolute -right-6 top-14 hidden rounded-none border border-white/[0.12] bg-ink-880 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)]  sm:block"
           >
             <p className="text-[10px] uppercase tracking-[0.14em] text-slate-400">Signal latency</p>
             <p className="tnum text-[19px] font-bold text-white">

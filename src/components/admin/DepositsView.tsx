@@ -108,7 +108,7 @@ export function DepositsView() {
         <button
           onClick={() => setPendingOnly((v) => !v)}
           className={cn(
-            "focus-ring rounded-sm border px-3 py-1.5 text-[12.5px] font-medium transition-colors",
+            "focus-ring rounded-none border px-3 py-1.5 text-[12.5px] font-medium transition-colors",
             pendingOnly
               ? "border-amber-450/40 bg-amber-450/10 text-amber-300"
               : "border-white/[0.08] bg-white/[0.02] text-slate-400 hover:bg-white/[0.06]",
@@ -133,12 +133,12 @@ export function DepositsView() {
       )}
 
       {err && (
-        <div className="rounded-sm border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
+        <div className="rounded-none border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
           {err}
         </div>
       )}
 
-      <div className="overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/50">
+      <div className="overflow-hidden rounded-none border border-white/[0.07] bg-ink-880">
         {shown.length === 0 ? (
           <p className="px-4 py-16 text-center text-[14px] text-slate-500">
             {pendingOnly ? "No pending deposits." : "No deposits yet."}
@@ -164,7 +164,7 @@ export function DepositsView() {
                     <div className="min-w-0">
                       <p className="flex items-center gap-2 truncate text-[13.5px] font-medium text-white">
                         {d.user.flag} {d.user.name || d.user.email}
-                        <span className="shrink-0 rounded bg-white/[0.06] px-1.5 py-0.5 font-mono text-[11px] font-semibold tracking-wide text-mint-300">
+                        <span className="shrink-0 rounded-none bg-white/[0.06] px-1.5 py-0.5 font-mono text-[11px] font-semibold tracking-wide text-mint-300">
                           {d.user.account}
                         </span>
                       </p>
@@ -197,7 +197,7 @@ export function DepositsView() {
                         <button
                           onClick={() => act(d.id, "reconcile")}
                           disabled={busy !== null}
-                          className="focus-ring inline-flex items-center gap-1 rounded-sm border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[12.5px] font-medium text-slate-200 hover:bg-white/[0.09]"
+                          className="focus-ring inline-flex items-center gap-1 rounded-none border border-white/10 bg-white/[0.04] px-3 py-1.5 text-[12.5px] font-medium text-slate-200 hover:bg-white/[0.09]"
                         >
                           {busy === d.id + "reconcile" ? (
                             <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -209,7 +209,7 @@ export function DepositsView() {
                         <button
                           onClick={() => act(d.id, "credit")}
                           disabled={busy !== null}
-                          className="focus-ring inline-flex items-center gap-1 rounded-sm border border-mint-500/30 bg-mint-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-mint-300 hover:bg-mint-500/[0.18]"
+                          className="focus-ring inline-flex items-center gap-1 rounded-none border border-mint-500/30 bg-mint-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-mint-300 hover:bg-mint-500/[0.18]"
                         >
                           {busy === d.id + "credit" ? (
                             <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -256,7 +256,7 @@ export function DepositsView() {
 
 function Stat({ label, value, tone }: { label: string; value: string; tone: string }) {
   return (
-    <div className="rounded-sm border border-white/[0.07] bg-ink-880/60 p-4">
+    <div className="rounded-none border border-white/[0.07] bg-ink-880 p-4">
       <p className="text-[11px] uppercase tracking-[0.1em] text-slate-500">{label}</p>
       <p className={cn("tnum mt-1.5 text-[20px] font-bold", tone)}>{value}</p>
     </div>
