@@ -32,7 +32,7 @@ export function StatTile({
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45, delay: index * 0.06, ease: [0.16, 1, 0.3, 1] }}
-      className="card-sheen relative overflow-hidden rounded-2xl border border-white/[0.07] bg-ink-880/70 p-4 backdrop-blur-xl"
+      className="card-sheen relative overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/70 p-4 backdrop-blur-xl"
     >
       <div
         className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full blur-[46px] opacity-40"
@@ -49,7 +49,7 @@ export function StatTile({
           </p>
         </div>
         <span
-          className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border"
+          className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border"
           style={{
             background: `linear-gradient(140deg, ${accent}20, transparent)`,
             borderColor: `${accent}35`,

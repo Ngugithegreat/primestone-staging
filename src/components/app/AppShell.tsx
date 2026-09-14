@@ -199,7 +199,7 @@ function Sidebar({ className, onClose }: { className?: string; onClose?: () => v
           <button
             onClick={onClose}
             aria-label="Close menu"
-            className="focus-ring grid h-8 w-8 place-items-center rounded-lg text-slate-400 hover:bg-white/[0.07] hover:text-white"
+            className="focus-ring grid h-8 w-8 place-items-center rounded-sm text-slate-400 hover:bg-white/[0.07] hover:text-white"
           >
             <X className="h-4 w-4" />
           </button>
@@ -216,7 +216,7 @@ function Sidebar({ className, onClose }: { className?: string; onClose?: () => v
               key={item.href}
               href={item.href}
               className={cn(
-                "group relative flex items-center gap-3 rounded-xl px-3.5 py-2.5 text-[14px] font-medium transition-all duration-200",
+                "group relative flex items-center gap-3 rounded-sm px-3.5 py-2.5 text-[14px] font-medium transition-all duration-200",
                 active
                   ? "bg-white/[0.07] text-white"
                   : "text-slate-400 hover:bg-white/[0.04] hover:text-slate-200",
@@ -246,7 +246,7 @@ function Sidebar({ className, onClose }: { className?: string; onClose?: () => v
                 />
               )}
               {count ? (
-                <span className="tnum rounded-md bg-white/[0.08] px-1.5 py-0.5 text-[11px] text-slate-300">
+                <span className="tnum rounded-sm bg-white/[0.08] px-1.5 py-0.5 text-[11px] text-slate-300">
                   {count}
                 </span>
               ) : null}
@@ -256,7 +256,7 @@ function Sidebar({ className, onClose }: { className?: string; onClose?: () => v
       </nav>
 
       <div className="shrink-0 space-y-3 border-t border-white/[0.06] p-3">
-        <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5">
+        <div className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5">
           <div className="flex items-center justify-between">
             <span className="text-[11px] uppercase tracking-[0.12em] text-slate-500">
               Account
@@ -286,7 +286,7 @@ function Sidebar({ className, onClose }: { className?: string; onClose?: () => v
 
         <Link
           href="/wallet"
-          className="focus-ring flex h-10 w-full items-center justify-center gap-2 rounded-xl bg-mint-500 text-[13.5px] font-semibold text-ink-950 transition-colors hover:bg-mint-400"
+          className="focus-ring flex h-10 w-full items-center justify-center gap-2 rounded-sm bg-mint-500 text-[13.5px] font-semibold text-ink-950 transition-colors hover:bg-mint-400"
         >
           <Wallet className="h-4 w-4" />
           Deposit funds
@@ -335,7 +335,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
         <button
           onClick={onMenu}
           aria-label="Open menu"
-          className="focus-ring grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-white lg:hidden"
+          className="focus-ring grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-white/10 bg-white/[0.04] text-white lg:hidden"
         >
           <Menu className="h-4 w-4" />
         </button>
@@ -403,10 +403,10 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
               e.stopPropagation();
               setMenuOpen((v) => !v);
             }}
-            className="focus-ring flex items-center gap-2.5 rounded-xl border border-white/[0.08] bg-white/[0.03] py-1.5 pl-1.5 pr-2.5 transition-colors hover:bg-white/[0.07]"
+            className="focus-ring flex items-center gap-2.5 rounded-sm border border-white/[0.08] bg-white/[0.03] py-1.5 pl-1.5 pr-2.5 transition-colors hover:bg-white/[0.07]"
           >
             <span
-              className="grid h-8 w-8 place-items-center rounded-lg text-[12px] font-semibold text-ink-950"
+              className="grid h-8 w-8 place-items-center rounded-sm text-[12px] font-semibold text-ink-950"
               style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}
             >
               {initialsOf(`${user?.firstName ?? "A"} ${user?.lastName ?? "S"}`)}
@@ -430,7 +430,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
                 exit={{ opacity: 0, y: -6, scale: 0.97 }}
                 transition={{ duration: 0.18 }}
                 onClick={(e) => e.stopPropagation()}
-                className="card-sheen absolute right-0 top-[calc(100%+10px)] w-64 overflow-hidden rounded-xl border border-white/[0.09] bg-ink-850/97 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.95)] backdrop-blur-2xl"
+                className="card-sheen absolute right-0 top-[calc(100%+10px)] w-64 overflow-hidden rounded-sm border border-white/[0.09] bg-ink-850/97 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.95)] backdrop-blur-2xl"
               >
                 <div className="border-b border-white/[0.06] p-4">
                   <p className="text-[14px] font-semibold text-white">
@@ -447,7 +447,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
                 <div className="p-1.5">
                   <Link
                     href="/settings"
-                    className="flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13.5px] text-slate-300 transition-colors hover:bg-white/[0.06] hover:text-white"
+                    className="flex items-center gap-2.5 rounded-sm px-3 py-2.5 text-[13.5px] text-slate-300 transition-colors hover:bg-white/[0.06] hover:text-white"
                   >
                     <Settings className="h-4 w-4" />
                     Account settings
@@ -459,7 +459,7 @@ function TopBar({ onMenu }: { onMenu: () => void }) {
                       signOut();
                       router.push("/");
                     }}
-                    className="flex w-full items-center gap-2.5 rounded-lg px-3 py-2.5 text-[13.5px] text-rose-400 transition-colors hover:bg-rose-500/10"
+                    className="flex w-full items-center gap-2.5 rounded-sm px-3 py-2.5 text-[13.5px] text-rose-400 transition-colors hover:bg-rose-500/10"
                   >
                     <LogOut className="h-4 w-4" />
                     Sign out

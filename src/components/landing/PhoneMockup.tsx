@@ -34,7 +34,7 @@ export function PhoneMockup() {
             </div>
 
             {/* balance card */}
-            <div className="mt-3 rounded-2xl border border-white/[0.08] bg-ink-880/80 p-3.5">
+            <div className="mt-3 rounded-sm border border-white/[0.08] bg-ink-880/80 p-3.5">
               <p className="text-[9.5px] uppercase tracking-[0.14em] text-slate-500">Account value</p>
               <p className="mt-0.5 font-display text-[22px] font-bold leading-none text-white">
                 $<AnimatedNumber value={12480.35} decimals={2} duration={2} />
@@ -52,7 +52,7 @@ export function PhoneMockup() {
                 ["Open P&L", "+$312"],
                 ["Win rate", "71%"],
               ].map(([l, v], i) => (
-                <div key={l} className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-2">
+                <div key={l} className="rounded-sm border border-white/[0.06] bg-white/[0.02] p-2">
                   <p className="text-[8.5px] text-slate-500">{l}</p>
                   <p className={`mt-0.5 text-[11px] font-semibold ${i === 1 ? "text-mint-400" : "text-white"}`}>
                     {v}
@@ -70,7 +70,7 @@ export function PhoneMockup() {
               ].map(([who, sym, pnl, up]) => (
                 <div
                   key={who as string}
-                  className="flex items-center justify-between rounded-xl border border-white/[0.05] bg-white/[0.02] px-2.5 py-1.5"
+                  className="flex items-center justify-between rounded-sm border border-white/[0.05] bg-white/[0.02] px-2.5 py-1.5"
                 >
                   <div className="flex items-center gap-2">
                     <span className="grid h-6 w-6 place-items-center rounded-full text-[8px] font-bold text-ink-950" style={{ background: "linear-gradient(140deg,#e3c583,#279d6c)" }}>
@@ -89,7 +89,7 @@ export function PhoneMockup() {
             </div>
 
             {/* CTA */}
-            <div className="mt-3 flex items-center justify-center gap-1.5 rounded-xl bg-mint-500 py-2 text-[11px] font-semibold text-ink-950">
+            <div className="mt-3 flex items-center justify-center gap-1.5 rounded-sm bg-mint-500 py-2 text-[11px] font-semibold text-ink-950">
               Deposit & copy <ArrowUpRight className="h-3.5 w-3.5" />
             </div>
           </div>

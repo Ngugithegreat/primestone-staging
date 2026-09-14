@@ -31,7 +31,7 @@ export function VerifyView() {
         {status === "verified" && (
           <Link
             href="/wallet"
-            className="focus-ring inline-flex h-10 items-center gap-1.5 rounded-xl bg-mint-500 px-4 text-[13.5px] font-semibold text-ink-950 hover:bg-mint-400"
+            className="focus-ring inline-flex h-10 items-center gap-1.5 rounded-sm bg-mint-500 px-4 text-[13.5px] font-semibold text-ink-950 hover:bg-mint-400"
           >
             Go to wallet
             <ArrowRight className="h-4 w-4" />
@@ -43,7 +43,7 @@ export function VerifyView() {
         <div className="grid gap-3 sm:grid-cols-3">
           {STEPS.map((s) => (
             <Card key={s.n} className="p-4">
-              <div className="grid h-8 w-8 place-items-center rounded-lg bg-mint-500/12 text-[13px] font-bold text-mint-400">
+              <div className="grid h-8 w-8 place-items-center rounded-sm bg-mint-500/12 text-[13px] font-bold text-mint-400">
                 {s.n}
               </div>
               <p className="mt-3 text-[13.5px] font-semibold text-white">{s.title}</p>

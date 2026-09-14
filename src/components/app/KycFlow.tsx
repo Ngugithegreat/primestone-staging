@@ -175,7 +175,7 @@ export function KycFlow({ compact = false }: { compact?: boolean }) {
             {serverDocs.map((d) => (
               <div
                 key={d.type}
-                className="flex items-center gap-2 rounded-lg border border-white/[0.07] bg-white/[0.02] px-3 py-2"
+                className="flex items-center gap-2 rounded-sm border border-white/[0.07] bg-white/[0.02] px-3 py-2"
               >
                 <FileCheck2 className="h-3.5 w-3.5 shrink-0 text-mint-400" />
                 <span className="truncate text-[11.5px] text-slate-400">
@@ -193,7 +193,7 @@ export function KycFlow({ compact = false }: { compact?: boolean }) {
   return (
     <div className={cn(!compact && "space-y-5")}>
       {status === "rejected" && (
-        <div className="mb-5 flex items-start gap-3 rounded-xl border border-rose-500/25 bg-rose-500/[0.07] p-4">
+        <div className="mb-5 flex items-start gap-3 rounded-sm border border-rose-500/25 bg-rose-500/[0.07] p-4">
           <ShieldAlert className="mt-0.5 h-4.5 w-4.5 shrink-0 text-rose-400" />
           <div>
             <p className="text-[13.5px] font-semibold text-white">Your last submission was rejected</p>
@@ -204,7 +204,7 @@ export function KycFlow({ compact = false }: { compact?: boolean }) {
         </div>
       )}
 
-      <div className="flex items-center gap-2 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3">
+      <div className="flex items-center gap-2 rounded-sm border border-white/[0.07] bg-white/[0.02] px-4 py-3">
         <Lock className="h-4 w-4 shrink-0 text-mint-400" />
         <p className="text-[12.5px] leading-snug text-slate-400">
           Your documents are encrypted in transit and stored in access-controlled storage —
@@ -317,7 +317,7 @@ function DocDrop({
   return (
     <div
       className={cn(
-        "relative rounded-xl border border-dashed p-4 transition-colors",
+        "relative rounded-sm border border-dashed p-4 transition-colors",
         doc
           ? "border-mint-500/40 bg-mint-500/[0.06]"
           : uploading
@@ -334,7 +334,7 @@ function DocDrop({
       />
       {uploading ? (
         <div className="flex items-center gap-3">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-iris-500/15">
+          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-iris-500/15">
             <Loader2 className="h-4.5 w-4.5 animate-spin text-iris-300" />
           </div>
           <div className="min-w-0">
@@ -344,7 +344,7 @@ function DocDrop({
         </div>
       ) : doc ? (
         <div className="flex items-center gap-3">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-mint-500/15">
+          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-sm bg-mint-500/15">
             <FileCheck2 className="h-4.5 w-4.5 text-mint-400" />
           </div>
           <div className="min-w-0 flex-1">
@@ -356,14 +356,14 @@ function DocDrop({
           <button
             onClick={onClear}
             aria-label="Remove"
-            className="grid h-6 w-6 shrink-0 place-items-center rounded-md text-slate-400 hover:bg-white/10 hover:text-white"
+            className="grid h-6 w-6 shrink-0 place-items-center rounded-sm text-slate-400 hover:bg-white/10 hover:text-white"
           >
             <X className="h-3.5 w-3.5" />
           </button>
         </div>
       ) : (
         <button onClick={() => ref.current?.click()} className="flex w-full items-center gap-3 text-left">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-white/10 bg-white/[0.03]">
+          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-white/10 bg-white/[0.03]">
             <Upload className="h-4 w-4 text-slate-400" />
           </div>
           <div className="min-w-0">
@@ -399,10 +399,10 @@ function StatusPanel({
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className={cn("rounded-2xl border p-6", toneCls)}
+      className={cn("rounded-sm border p-6", toneCls)}
     >
       <div className="flex items-start gap-4">
-        <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-current/10">
+        <div className="grid h-12 w-12 shrink-0 place-items-center rounded-sm bg-current/10">
           <Icon className="h-6 w-6" />
         </div>
         <div className="min-w-0">

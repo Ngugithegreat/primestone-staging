@@ -182,7 +182,7 @@ export function TradersDirectory() {
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder="Search by name, strategy or country"
-              className="h-10 w-full rounded-xl border border-white/[0.08] bg-ink-900/70 pl-10 pr-9 text-[13.5px] text-white outline-none transition-colors placeholder:text-slate-500 focus:border-mint-500/50"
+              className="h-10 w-full rounded-sm border border-white/[0.08] bg-ink-900/70 pl-10 pr-9 text-[13.5px] text-white outline-none transition-colors placeholder:text-slate-500 focus:border-mint-500/50"
             />
             {query && (
               <button
@@ -200,7 +200,7 @@ export function TradersDirectory() {
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value as SortKey)}
-              className="h-10 rounded-xl border border-white/[0.08] bg-ink-900/70 px-3 text-[13.5px] text-white outline-none focus:border-mint-500/50 [&>option]:bg-ink-800"
+              className="h-10 rounded-sm border border-white/[0.08] bg-ink-900/70 px-3 text-[13.5px] text-white outline-none focus:border-mint-500/50 [&>option]:bg-ink-800"
             >
               {SORTS.map((s) => (
                 <option key={s.value} value={s.value}>
@@ -228,7 +228,7 @@ export function TradersDirectory() {
                   key={m}
                   onClick={() => setMarket(m)}
                   className={cn(
-                    "rounded-lg px-2.5 py-1 text-[12px] font-medium transition-colors",
+                    "rounded-sm px-2.5 py-1 text-[12px] font-medium transition-colors",
                     market === m
                       ? "bg-white/[0.10] text-white"
                       : "bg-white/[0.03] text-slate-400 hover:bg-white/[0.07]",
@@ -243,7 +243,7 @@ export function TradersDirectory() {
           <button
             onClick={() => setVerifiedOnly((v) => !v)}
             className={cn(
-              "focus-ring rounded-lg border px-3 py-1.5 text-[12px] font-medium transition-colors",
+              "focus-ring rounded-sm border px-3 py-1.5 text-[12px] font-medium transition-colors",
               verifiedOnly
                 ? "border-mint-500/40 bg-mint-500/10 text-mint-300"
                 : "border-white/[0.08] bg-white/[0.02] text-slate-400 hover:bg-white/[0.06]",
@@ -298,7 +298,7 @@ export function TradersDirectory() {
               </p>
               <button
                 onClick={() => setVisible((v) => v + PAGE)}
-                className="focus-ring rounded-xl border border-white/10 bg-white/[0.04] px-6 py-2.5 text-[13.5px] font-medium text-white transition-colors hover:bg-white/[0.09]"
+                className="focus-ring rounded-sm border border-white/10 bg-white/[0.04] px-6 py-2.5 text-[13.5px] font-medium text-white transition-colors hover:bg-white/[0.09]"
               >
                 Load more providers
               </button>

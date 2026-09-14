@@ -275,7 +275,7 @@ export function EngineMonitor() {
       </div>
 
       {/* Risk control */}
-      <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-white/[0.09] bg-ink-880/70 p-4">
+      <div className="flex flex-wrap items-center gap-3 rounded-sm border border-white/[0.09] bg-ink-880/70 p-4">
         <div className="min-w-0 flex-1">
           <p className="text-[13px] font-semibold text-white">Risk per trade</p>
           <p className="text-[11.5px] text-slate-500">
@@ -306,7 +306,7 @@ export function EngineMonitor() {
       </div>
 
       {err && (
-        <div className="rounded-lg border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
+        <div className="rounded-sm border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
           {err}
         </div>
       )}
@@ -335,7 +335,7 @@ export function EngineMonitor() {
       )}
 
       {/* Open positions */}
-      <div className="overflow-hidden rounded-2xl border border-white/[0.07] bg-ink-880/50">
+      <div className="overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/50">
         <div className="border-b border-white/[0.06] px-4 py-3">
           <h2 className="text-[14px] font-semibold text-white">Open positions</h2>
         </div>
@@ -392,7 +392,7 @@ export function EngineMonitor() {
                       <button
                         onClick={() => act({ action: "close", positionId: p.id }, p.id)}
                         disabled={busy !== null}
-                        className="focus-ring inline-flex items-center gap-1 rounded-lg border border-rose-500/25 bg-rose-500/[0.08] px-2.5 py-1.5 text-[12px] font-medium text-rose-300 transition-colors hover:bg-rose-500/[0.16] disabled:opacity-40"
+                        className="focus-ring inline-flex items-center gap-1 rounded-sm border border-rose-500/25 bg-rose-500/[0.08] px-2.5 py-1.5 text-[12px] font-medium text-rose-300 transition-colors hover:bg-rose-500/[0.16] disabled:opacity-40"
                       >
                         {busy === p.id ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <X className="h-3.5 w-3.5" />}
                         Close
@@ -408,7 +408,7 @@ export function EngineMonitor() {
 
       {/* Recently closed */}
       {data.recentClosed.length > 0 && (
-        <div className="rounded-2xl border border-white/[0.07] bg-ink-880/50 p-4">
+        <div className="rounded-sm border border-white/[0.07] bg-ink-880/50 p-4">
           <h2 className="text-[14px] font-semibold text-white">Recently closed</h2>
           <div className="mt-3 space-y-1.5">
             {data.recentClosed.map((c) => (
@@ -436,7 +436,7 @@ export function EngineMonitor() {
       )}
 
       {/* Testing tools — remove before public launch */}
-      <div className="rounded-2xl border border-amber-450/30 bg-amber-450/[0.05] p-4">
+      <div className="rounded-sm border border-amber-450/30 bg-amber-450/[0.05] p-4">
         <p className="text-[13px] font-semibold text-amber-300">Testing tools</p>
         <p className="mb-3 text-[11.5px] text-amber-200/70">
           For pre-launch testing only — remove before you go public. No real payment involved.
@@ -464,7 +464,7 @@ export function EngineMonitor() {
           <button
             onClick={() => runTest("blow")}
             disabled={testBusy !== null}
-            className="focus-ring inline-flex items-center gap-1.5 rounded-lg border border-rose-500/40 bg-rose-500/[0.1] px-3.5 py-2 text-[12.5px] font-semibold text-rose-300 hover:bg-rose-500/[0.18]"
+            className="focus-ring inline-flex items-center gap-1.5 rounded-sm border border-rose-500/40 bg-rose-500/[0.1] px-3.5 py-2 text-[12.5px] font-semibold text-rose-300 hover:bg-rose-500/[0.18]"
           >
             {testBusy === "blow" ? <Loader2 className="h-4 w-4 animate-spin" /> : null}
             Blow now{testEmail.trim() ? "" : " (all)"}
@@ -543,7 +543,7 @@ function Stat({
   tone: string;
 }) {
   return (
-    <div className="card-sheen rounded-2xl border border-white/[0.07] bg-ink-880/70 p-4">
+    <div className="card-sheen rounded-sm border border-white/[0.07] bg-ink-880/70 p-4">
       <div className="flex items-center justify-between">
         <span className="text-[12px] text-slate-500">{label}</span>
         <Icon className={cn("h-4 w-4", tone)} />
@@ -594,7 +594,7 @@ function AddProviderForm({
   const num = (v: string) => Number(v.replace(/[^0-9.]/g, "")) || 0;
 
   return (
-    <div className="rounded-2xl border border-white/[0.09] bg-ink-880/70 p-5">
+    <div className="rounded-sm border border-white/[0.09] bg-ink-880/70 p-5">
       <div className="flex items-center justify-between">
         <h3 className="text-[14px] font-semibold text-white">Add a strategy provider</h3>
         <button onClick={onClose} className="text-slate-400 hover:text-white">
@@ -702,7 +702,7 @@ function OpenForm({
   const noSymbols = data.symbols.length === 0;
 
   return (
-    <div className="rounded-2xl border border-white/[0.09] bg-ink-880/70 p-5">
+    <div className="rounded-sm border border-white/[0.09] bg-ink-880/70 p-5">
       <div className="flex items-center justify-between">
         <h3 className="text-[14px] font-semibold text-white">Open a provider position</h3>
         <button onClick={onClose} className="text-slate-400 hover:text-white">
@@ -752,7 +752,7 @@ function OpenForm({
                     key={s}
                     onClick={() => setSide(s)}
                     className={cn(
-                      "flex-1 rounded-lg border py-2 text-[12.5px] font-medium capitalize transition-colors",
+                      "flex-1 rounded-sm border py-2 text-[12.5px] font-medium capitalize transition-colors",
                       side === s
                         ? s === "buy"
                           ? "border-mint-500/50 bg-mint-500/10 text-mint-300"

@@ -41,7 +41,7 @@ export function ContactForm() {
 
   if (sent) {
     return (
-      <div className="grid place-items-center rounded-xl border border-mint-500/25 bg-mint-500/[0.06] px-6 py-12 text-center">
+      <div className="grid place-items-center rounded-sm border border-mint-500/25 bg-mint-500/[0.06] px-6 py-12 text-center">
         <div className="grid h-12 w-12 place-items-center rounded-full border border-mint-500/30 bg-mint-500/15">
           <CheckCircle2 className="h-6 w-6 text-mint-400" />
         </div>

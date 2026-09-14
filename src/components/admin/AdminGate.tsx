@@ -79,10 +79,10 @@ export function AdminGate({ children }: { children: ReactNode }) {
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
-        className="card-sheen relative w-full max-w-sm rounded-2xl border border-white/[0.09] bg-ink-880/80 p-7 backdrop-blur-xl"
+        className="card-sheen relative w-full max-w-sm rounded-sm border border-white/[0.09] bg-ink-880/80 p-7 backdrop-blur-xl"
       >
         <div className="flex items-center gap-3">
-          <div className="grid h-11 w-11 place-items-center rounded-xl border border-iris-500/25 bg-iris-500/10">
+          <div className="grid h-11 w-11 place-items-center rounded-sm border border-iris-500/25 bg-iris-500/10">
             <ShieldCheck className="h-5 w-5 text-iris-300" />
           </div>
           <div>
@@ -92,7 +92,7 @@ export function AdminGate({ children }: { children: ReactNode }) {
         </div>
 
         {!configured ? (
-          <p className="mt-6 rounded-lg border border-amber-450/25 bg-amber-450/[0.07] p-3 text-[12.5px] leading-relaxed text-amber-200">
+          <p className="mt-6 rounded-sm border border-amber-450/25 bg-amber-450/[0.07] p-3 text-[12.5px] leading-relaxed text-amber-200">
             Admin access is not configured yet. Set an{" "}
             <code className="rounded bg-white/10 px-1">ADMIN_PASSWORD</code> environment variable in
             Vercel and redeploy.

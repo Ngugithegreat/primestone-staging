@@ -4,7 +4,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
 const CONTROL =
-  "w-full rounded-xl border border-white/10 bg-ink-900/70 px-3.5 text-[14px] text-white placeholder:text-slate-500 transition-all duration-200 outline-none focus:border-mint-500/60 focus:bg-ink-900 focus:shadow-[0_0_0_3px_rgba(207,166,83,0.12)] disabled:opacity-50";
+  "w-full rounded-sm border border-white/10 bg-ink-900/70 px-3.5 text-[14px] text-white placeholder:text-slate-500 transition-all duration-200 outline-none focus:border-mint-500/60 focus:bg-ink-900 focus:shadow-[0_0_0_3px_rgba(207,166,83,0.12)] disabled:opacity-50";
 
 export function Field({
   label,
@@ -83,7 +83,7 @@ export function Toggle({
       role="switch"
       aria-checked={checked}
       onClick={() => onChange(!checked)}
-      className="focus-ring flex w-full items-center justify-between gap-4 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]"
+      className="focus-ring flex w-full items-center justify-between gap-4 rounded-sm border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]"
     >
       <span className="min-w-0">
         <span className="block text-[14px] font-medium text-white">{label}</span>
@@ -126,7 +126,7 @@ export function SegmentedControl<T extends string>({
   return (
     <div
       className={cn(
-        "inline-flex rounded-xl border border-white/[0.07] bg-ink-900/60 p-1",
+        "inline-flex rounded-sm border border-white/[0.07] bg-ink-900/60 p-1",
         className,
       )}
     >
@@ -136,7 +136,7 @@ export function SegmentedControl<T extends string>({
           type="button"
           onClick={() => onChange(o.value)}
           className={cn(
-            "focus-ring flex-1 rounded-lg font-medium transition-all duration-200",
+            "focus-ring flex-1 rounded-sm font-medium transition-all duration-200",
             size === "sm" ? "px-2.5 py-1 text-[12px]" : "px-3.5 py-1.5 text-[13px]",
             value === o.value
               ? "bg-white/[0.10] text-white shadow-[0_1px_0_rgba(255,255,255,0.08)_inset]"

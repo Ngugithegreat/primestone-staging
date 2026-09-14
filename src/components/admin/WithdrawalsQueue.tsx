@@ -94,12 +94,12 @@ export function WithdrawalsQueue() {
       </div>
 
       {err && (
-        <div className="rounded-lg border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
+        <div className="rounded-sm border border-rose-500/25 bg-rose-500/[0.07] px-3.5 py-2.5 text-[12.5px] text-rose-300">
           {err}
         </div>
       )}
 
-      <div className="overflow-hidden rounded-2xl border border-white/[0.07] bg-ink-880/50">
+      <div className="overflow-hidden rounded-sm border border-white/[0.07] bg-ink-880/50">
         {rows.length === 0 ? (
           <p className="px-4 py-16 text-center text-[14px] text-slate-500">No withdrawals yet.</p>
         ) : (
@@ -156,7 +156,7 @@ export function WithdrawalsQueue() {
                             onClick={() => act(w.id, "send-mpesa")}
                             disabled={busy !== null}
                             title="Pay this out automatically via M-Pesa (B2C)"
-                            className="focus-ring inline-flex items-center gap-1 rounded-lg border border-iris-500/30 bg-iris-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-iris-200 hover:bg-iris-500/[0.18]"
+                            className="focus-ring inline-flex items-center gap-1 rounded-sm border border-iris-500/30 bg-iris-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-iris-200 hover:bg-iris-500/[0.18]"
                           >
                             {busy === w.id + "send-mpesa" ? (
                               <Loader2 className="h-3.5 w-3.5 animate-spin" />
@@ -172,7 +172,7 @@ export function WithdrawalsQueue() {
                             setErr(undefined);
                           }}
                           disabled={busy !== null}
-                          className="focus-ring inline-flex items-center gap-1 rounded-lg border border-mint-500/30 bg-mint-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-mint-300 hover:bg-mint-500/[0.18]"
+                          className="focus-ring inline-flex items-center gap-1 rounded-sm border border-mint-500/30 bg-mint-500/[0.1] px-3 py-1.5 text-[12.5px] font-medium text-mint-300 hover:bg-mint-500/[0.18]"
                         >
                           <Check className="h-3.5 w-3.5" />
                           Mark paid
@@ -183,7 +183,7 @@ export function WithdrawalsQueue() {
                             setErr(undefined);
                           }}
                           disabled={busy !== null}
-                          className="focus-ring inline-flex items-center gap-1 rounded-lg border border-rose-500/25 bg-rose-500/[0.08] px-3 py-1.5 text-[12.5px] font-medium text-rose-300 hover:bg-rose-500/[0.16]"
+                          className="focus-ring inline-flex items-center gap-1 rounded-sm border border-rose-500/25 bg-rose-500/[0.08] px-3 py-1.5 text-[12.5px] font-medium text-rose-300 hover:bg-rose-500/[0.16]"
                         >
                           <X className="h-3.5 w-3.5" />
                           Reject
@@ -196,7 +196,7 @@ export function WithdrawalsQueue() {
                 </div>
 
                 {active?.id === w.id && (
-                  <div className="mt-3 rounded-xl border border-white/[0.08] bg-white/[0.02] p-3.5">
+                  <div className="mt-3 rounded-sm border border-white/[0.08] bg-white/[0.02] p-3.5">
                     {active.mode === "pay" ? (
                       <>
                         <p className="text-[12.5px] text-slate-300">
@@ -220,12 +220,12 @@ export function WithdrawalsQueue() {
                           <button
                             onClick={() => act(w.id, "complete")}
                             disabled={busy === w.id + "complete"}
-                            className="focus-ring inline-flex items-center gap-1.5 rounded-lg bg-mint-500 px-3.5 py-2 text-[12.5px] font-semibold text-ink-950 hover:bg-mint-400"
+                            className="focus-ring inline-flex items-center gap-1.5 rounded-sm bg-mint-500 px-3.5 py-2 text-[12.5px] font-semibold text-ink-950 hover:bg-mint-400"
                           >
                             {busy === w.id + "complete" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <Check className="h-3.5 w-3.5" />}
                             Confirm paid
                           </button>
-                          <button onClick={() => setActive(null)} className="rounded-lg px-3 py-2 text-[12.5px] text-slate-400 hover:text-white">
+                          <button onClick={() => setActive(null)} className="rounded-sm px-3 py-2 text-[12.5px] text-slate-400 hover:text-white">
                             Cancel
                           </button>
                         </div>
@@ -246,12 +246,12 @@ export function WithdrawalsQueue() {
                           <button
                             onClick={() => act(w.id, "reject")}
                             disabled={busy === w.id + "reject"}
-                            className="focus-ring inline-flex items-center gap-1.5 rounded-lg bg-rose-500 px-3.5 py-2 text-[12.5px] font-semibold text-white hover:bg-rose-400"
+                            className="focus-ring inline-flex items-center gap-1.5 rounded-sm bg-rose-500 px-3.5 py-2 text-[12.5px] font-semibold text-white hover:bg-rose-400"
                           >
                             {busy === w.id + "reject" ? <Loader2 className="h-3.5 w-3.5 animate-spin" /> : <X className="h-3.5 w-3.5" />}
                             Reject & refund
                           </button>
-                          <button onClick={() => setActive(null)} className="rounded-lg px-3 py-2 text-[12.5px] text-slate-400 hover:text-white">
+                          <button onClick={() => setActive(null)} className="rounded-sm px-3 py-2 text-[12.5px] text-slate-400 hover:text-white">
                             Cancel
                           </button>
                         </div>

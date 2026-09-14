@@ -51,9 +51,9 @@ export default function ContactPage() {
               <a
                 key={c.label}
                 href={c.href}
-                className="focus-ring flex items-start gap-4 rounded-2xl border border-white/[0.07] bg-white/[0.02] p-5 transition-colors hover:bg-white/[0.05]"
+                className="focus-ring flex items-start gap-4 rounded-sm border border-white/[0.07] bg-white/[0.02] p-5 transition-colors hover:bg-white/[0.05]"
               >
-                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl border border-mint-500/25 bg-mint-500/10">
+                <div className="grid h-11 w-11 shrink-0 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10">
                   <c.icon className="h-5 w-5 text-mint-400" />
                 </div>
                 <div className="min-w-0">
@@ -91,7 +91,7 @@ export default function ContactPage() {
               </p>
             </Card>
 
-            <p className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 text-[12.5px] leading-relaxed text-slate-500">
+            <p className="rounded-sm border border-white/[0.06] bg-white/[0.02] p-4 text-[12.5px] leading-relaxed text-slate-500">
               For a formal complaint, email{" "}
               <a
                 href={`mailto:${COMPANY.email.complaints}`}

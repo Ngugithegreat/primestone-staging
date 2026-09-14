@@ -192,13 +192,13 @@ function DepositPanel({
   const [tab, setTab] = useState<"mpesa" | "crypto">("mpesa");
   return (
     <div className="space-y-3">
-      <div className="inline-flex rounded-xl border border-white/[0.08] bg-white/[0.03] p-1">
+      <div className="inline-flex rounded-sm border border-white/[0.08] bg-white/[0.03] p-1">
         {(["mpesa", "crypto"] as const).map((t) => (
           <button
             key={t}
             onClick={() => setTab(t)}
             className={cn(
-              "rounded-lg px-4 py-1.5 text-[13px] font-medium transition-colors",
+              "rounded-sm px-4 py-1.5 text-[13px] font-medium transition-colors",
               tab === t ? "bg-white/[0.09] text-white" : "text-slate-400 hover:text-slate-200",
             )}
           >
@@ -332,7 +332,7 @@ function MpesaDeposit({
   return (
     <Card className="p-6">
       <div className="flex items-center gap-2.5">
-        <span className="grid h-9 w-9 place-items-center rounded-lg border border-mint-500/25 bg-mint-500/10">
+        <span className="grid h-9 w-9 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10">
           <Smartphone className="h-4.5 w-4.5 text-mint-400" />
         </span>
         <div>
@@ -342,7 +342,7 @@ function MpesaDeposit({
       </div>
 
       {state === "done" ? (
-        <div className="mt-5 grid place-items-center rounded-xl border border-mint-500/25 bg-mint-500/[0.07] px-4 py-8 text-center">
+        <div className="mt-5 grid place-items-center rounded-sm border border-mint-500/25 bg-mint-500/[0.07] px-4 py-8 text-center">
           <CheckCircle2 className="h-9 w-9 text-mint-400" />
           <p className="mt-3 text-[14px] font-semibold text-white">Deposit successful</p>
           <p className="mt-1 text-[12.5px] text-slate-400">{message}</p>
@@ -354,7 +354,7 @@ function MpesaDeposit({
           </button>
         </div>
       ) : inProgress ? (
-        <div className="mt-5 rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5">
+        <div className="mt-5 rounded-sm border border-white/[0.08] bg-white/[0.02] p-5">
           <div className="flex items-center gap-2.5">
             {state === "slow" ? (
               <Clock className="h-5 w-5 text-amber-400" />
@@ -413,7 +413,7 @@ function MpesaDeposit({
           {message && (
             <div
               className={cn(
-                "mt-4 rounded-lg border p-3 text-[12.5px] leading-relaxed",
+                "mt-4 rounded-sm border p-3 text-[12.5px] leading-relaxed",
                 state === "slow"
                   ? "border-amber-450/25 bg-amber-450/[0.06] text-amber-300"
                   : "border-white/[0.06] bg-white/[0.02] text-slate-400",
@@ -464,7 +464,7 @@ function MpesaDeposit({
                 disabled={busy}
                 onClick={() => setAmount(v)}
                 className={cn(
-                  "rounded-lg border px-3 py-1.5 text-[12.5px] transition-colors",
+                  "rounded-sm border px-3 py-1.5 text-[12.5px] transition-colors",
                   amount === v
                     ? "border-mint-500/50 bg-mint-500/10 text-mint-300"
                     : "border-white/10 bg-white/[0.02] text-slate-300 hover:bg-white/[0.06]",
@@ -475,7 +475,7 @@ function MpesaDeposit({
             ))}
           </div>
 
-          <div className="flex items-center justify-between rounded-lg border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
+          <div className="flex items-center justify-between rounded-sm border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
             <span className="text-[12px] text-slate-500">You&rsquo;ll pay on M-Pesa</span>
             <span className="tnum text-[13.5px] font-semibold text-white">
               ≈ KES {Math.round(amount * rate).toLocaleString()}
@@ -497,7 +497,7 @@ function MpesaDeposit({
           </Field>
 
           {message && state === "failed" && (
-            <div className="flex items-start gap-2 rounded-lg border border-rose-500/25 bg-rose-500/[0.06] p-3 text-[12.5px] text-rose-300">
+            <div className="flex items-start gap-2 rounded-sm border border-rose-500/25 bg-rose-500/[0.06] p-3 text-[12.5px] text-rose-300">
               <XCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
               {message}
             </div>
@@ -598,7 +598,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
   return (
     <Card className="p-6">
       <div className="flex items-center gap-2.5">
-        <span className="grid h-9 w-9 place-items-center rounded-lg border border-iris-500/25 bg-iris-500/10">
+        <span className="grid h-9 w-9 place-items-center rounded-sm border border-iris-500/25 bg-iris-500/10">
           <Coins className="h-4.5 w-4.5 text-iris-300" />
         </span>
         <div>
@@ -608,7 +608,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
       </div>
 
       {state === "done" ? (
-        <div className="mt-5 grid place-items-center rounded-xl border border-mint-500/25 bg-mint-500/[0.07] px-4 py-8 text-center">
+        <div className="mt-5 grid place-items-center rounded-sm border border-mint-500/25 bg-mint-500/[0.07] px-4 py-8 text-center">
           <CheckCircle2 className="h-9 w-9 text-mint-400" />
           <p className="mt-3 text-[14px] font-semibold text-white">Deposit received</p>
           <p className="mt-1 text-[12.5px] text-slate-400">{message}</p>
@@ -621,7 +621,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
         </div>
       ) : state === "awaiting" ? (
         <div className="mt-5 space-y-3">
-          <div className="rounded-xl border border-iris-500/20 bg-iris-500/[0.05] p-4">
+          <div className="rounded-sm border border-iris-500/20 bg-iris-500/[0.05] p-4">
             <p className="text-[12px] text-slate-400">Send at least (for ${amount.toLocaleString()})</p>
             <p className="tnum mt-0.5 text-[20px] font-bold text-white">
               {payAmount}{" "}
@@ -629,20 +629,20 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
             </p>
             <p className="mt-1 text-[11.5px] text-slate-500">on {network.net} · to the address below</p>
           </div>
-          <div className="rounded-xl border border-white/[0.08] bg-white/[0.02] p-3">
+          <div className="rounded-sm border border-white/[0.08] bg-white/[0.02] p-3">
             <p className="mb-1 text-[11px] uppercase tracking-[0.1em] text-slate-500">Deposit address</p>
             <div className="flex items-center gap-2">
               <code className="min-w-0 flex-1 break-all text-[12.5px] text-white">{addr}</code>
               <button
                 onClick={copy}
                 aria-label="Copy address"
-                className="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-lg border border-white/10 bg-white/[0.04] text-slate-300 hover:bg-white/[0.09]"
+                className="focus-ring grid h-8 w-8 shrink-0 place-items-center rounded-sm border border-white/10 bg-white/[0.04] text-slate-300 hover:bg-white/[0.09]"
               >
                 {copied ? <Check className="h-4 w-4 text-mint-400" /> : <Copy className="h-4 w-4" />}
               </button>
             </div>
           </div>
-          <div className="flex items-start gap-2 rounded-lg border border-amber-450/30 bg-amber-450/[0.08] p-3 text-[12px] text-amber-200">
+          <div className="flex items-start gap-2 rounded-sm border border-amber-450/30 bg-amber-450/[0.08] p-3 text-[12px] text-amber-200">
             <ShieldCheck className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             <span>
               <span className="font-semibold">Send the full amount above (or a little more).</span>{" "}
@@ -651,7 +651,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
               withdraw, or the deposit can be held as underpaid. We credit exactly what arrives.
             </span>
           </div>
-          <div className="flex items-start gap-2 rounded-lg border border-amber-450/25 bg-amber-450/[0.06] p-3 text-[12px] text-amber-300">
+          <div className="flex items-start gap-2 rounded-sm border border-amber-450/25 bg-amber-450/[0.06] p-3 text-[12px] text-amber-300">
             <Clock className="mt-0.5 h-3.5 w-3.5 shrink-0 animate-pulse" />
             Waiting for your transfer… it credits automatically once the network confirms (usually
             1–2 min). You can safely leave this page.
@@ -686,7 +686,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
                 type="button"
                 onClick={() => setAmount(v)}
                 className={cn(
-                  "rounded-lg border px-3 py-1.5 text-[12.5px] transition-colors",
+                  "rounded-sm border px-3 py-1.5 text-[12.5px] transition-colors",
                   amount === v
                     ? "border-iris-500/50 bg-iris-500/10 text-iris-200"
                     : "border-white/10 bg-white/[0.02] text-slate-300 hover:bg-white/[0.06]",
@@ -704,7 +704,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
                   key={n.id}
                   onClick={() => setCoin(n.id)}
                   className={cn(
-                    "flex w-full items-center justify-between rounded-xl border px-3.5 py-2.5 text-left transition-colors",
+                    "flex w-full items-center justify-between rounded-sm border px-3.5 py-2.5 text-left transition-colors",
                     coin === n.id
                       ? "border-iris-500/50 bg-iris-500/[0.08]"
                       : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05]",
@@ -723,7 +723,7 @@ function CryptoDeposit({ onCredited }: { onCredited: () => Promise<void> }) {
             </div>
           </div>
           {message && state === "failed" && (
-            <div className="flex items-start gap-2 rounded-lg border border-rose-500/25 bg-rose-500/[0.06] p-3 text-[12.5px] text-rose-300">
+            <div className="flex items-start gap-2 rounded-sm border border-rose-500/25 bg-rose-500/[0.06] p-3 text-[12.5px] text-rose-300">
               <XCircle className="mt-0.5 h-3.5 w-3.5 shrink-0" />
               {message}
             </div>
@@ -821,7 +821,7 @@ function Providers({
   return (
     <Card className="p-6">
       <div className="flex items-center gap-2.5">
-        <span className="grid h-9 w-9 place-items-center rounded-lg border border-iris-500/25 bg-iris-500/10">
+        <span className="grid h-9 w-9 place-items-center rounded-sm border border-iris-500/25 bg-iris-500/10">
           <TrendingUp className="h-4.5 w-4.5 text-iris-300" />
         </span>
         <div>
@@ -835,7 +835,7 @@ function Providers({
           <p className="text-[13px] text-slate-500">No providers available yet.</p>
         )}
         {providers.map((p) => (
-          <div key={p.id} className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5">
+          <div key={p.id} className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5">
             <div className="flex items-center gap-3">
               <span
                 className="grid h-9 w-9 shrink-0 place-items-center rounded-full text-[12px] font-semibold text-ink-950"
@@ -912,7 +912,7 @@ function Providers({
                       setOpenId(p.id);
                     }
                   }}
-                  className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-lg border border-white/10 bg-white/[0.03] py-2 text-[12.5px] font-medium text-slate-200 transition-colors hover:bg-white/[0.07]"
+                  className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-sm border border-white/10 bg-white/[0.03] py-2 text-[12.5px] font-medium text-slate-200 transition-colors hover:bg-white/[0.07]"
                 >
                   {balanceMinor <= 0 ? `Deposit & copy ${p.name}` : "Copy this provider"}
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -962,7 +962,7 @@ function Allocations({
         {active.map((a) => (
           <div
             key={a.id}
-            className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5"
+            className="flex items-center justify-between gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5"
           >
             <div className="min-w-0">
               <p className="truncate text-[13.5px] font-medium text-white">{a.provider.name}</p>
@@ -1013,7 +1013,7 @@ function History({ account }: { account: AccountSnapshot | null }) {
             <div className="flex items-center gap-2.5">
               <span
                 className={cn(
-                  "grid h-8 w-8 place-items-center rounded-lg",
+                  "grid h-8 w-8 place-items-center rounded-sm",
                   p.kind === "deposit" ? "bg-mint-500/12 text-mint-400" : "bg-rose-500/12 text-rose-400",
                 )}
               >

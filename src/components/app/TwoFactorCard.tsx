@@ -32,14 +32,14 @@ export function TwoFactorCard() {
   }, []);
 
   return (
-    <div className="rounded-xl border border-white/[0.07] bg-white/[0.02] p-4">
+    <div className="rounded-sm border border-white/[0.07] bg-white/[0.02] p-4">
       <div className="flex items-start justify-between gap-3">
         <div className="flex items-start gap-3">
           <span
             className={
               enabled
-                ? "grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-mint-500/25 bg-mint-500/10"
-                : "grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-white/[0.08] bg-white/[0.03]"
+                ? "grid h-10 w-10 shrink-0 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10"
+                : "grid h-10 w-10 shrink-0 place-items-center rounded-sm border border-white/[0.08] bg-white/[0.03]"
             }
           >
             <ShieldCheck className={enabled ? "h-5 w-5 text-mint-400" : "h-5 w-5 text-slate-400"} />
@@ -161,7 +161,7 @@ function SetupModal({ onClose, onEnabled }: { onClose: () => void; onEnabled: ()
     >
       {backupCodes ? (
         <div>
-          <div className="grid grid-cols-2 gap-2 rounded-xl border border-white/[0.08] bg-ink-950/40 p-4">
+          <div className="grid grid-cols-2 gap-2 rounded-sm border border-white/[0.08] bg-ink-950/40 p-4">
             {backupCodes.map((c) => (
               <span key={c} className="font-mono text-[13px] tracking-wider text-slate-200">
                 {c}
@@ -185,7 +185,7 @@ function SetupModal({ onClose, onEnabled }: { onClose: () => void; onEnabled: ()
       ) : (
         <div className="space-y-4">
           <div className="flex flex-col items-center gap-3 sm:flex-row sm:items-start">
-            <div className="shrink-0 rounded-xl border border-white/10 bg-white p-2">
+            <div className="shrink-0 rounded-sm border border-white/10 bg-white p-2">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={data.qr} alt="2FA QR code" width={180} height={180} />
             </div>
@@ -193,7 +193,7 @@ function SetupModal({ onClose, onEnabled }: { onClose: () => void; onEnabled: ()
               <p className="text-[12.5px] text-slate-400">
                 Can&rsquo;t scan? Enter this key manually:
               </p>
-              <p className="mt-1 break-all rounded-lg border border-white/[0.08] bg-white/[0.02] px-3 py-2 font-mono text-[12.5px] tracking-wide text-slate-200">
+              <p className="mt-1 break-all rounded-sm border border-white/[0.08] bg-white/[0.02] px-3 py-2 font-mono text-[12.5px] tracking-wide text-slate-200">
                 {data.secret}
               </p>
             </div>

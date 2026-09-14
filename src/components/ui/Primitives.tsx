@@ -22,7 +22,7 @@ export function Card({
   return (
     <Tag
       className={cn(
-        "card-sheen relative rounded-2xl border border-white/[0.07] bg-ink-880/70 backdrop-blur-xl",
+        "card-sheen relative rounded-sm border border-white/[0.07] bg-ink-880/70 backdrop-blur-xl",
         hover &&
           "transition-all duration-300 hover:border-white/[0.14] hover:bg-ink-850/80 hover:shadow-[0_18px_50px_-24px_rgba(0,0,0,0.9)]",
         className,

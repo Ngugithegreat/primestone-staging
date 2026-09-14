@@ -120,7 +120,7 @@ export function WithdrawPanel({
           style={{ background: "radial-gradient(closest-side, rgba(39,157,108,0.18), transparent 70%)" }}
         />
         <div className="relative flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-lg border border-iris-500/25 bg-iris-500/10">
+          <span className="grid h-9 w-9 place-items-center rounded-sm border border-iris-500/25 bg-iris-500/10">
             <ArrowUpRight className="h-4.5 w-4.5 text-iris-300" />
           </span>
           <div>
@@ -131,8 +131,8 @@ export function WithdrawPanel({
 
         {/* ---- Verify step (shown after submit when unverified) ------------- */}
         {state === "verify" ? (
-          <div className="relative mt-5 grid place-items-center rounded-2xl border border-amber-450/25 bg-amber-450/[0.05] px-5 py-9 text-center">
-            <span className="grid h-14 w-14 place-items-center rounded-2xl bg-amber-450/12">
+          <div className="relative mt-5 grid place-items-center rounded-sm border border-amber-450/25 bg-amber-450/[0.05] px-5 py-9 text-center">
+            <span className="grid h-14 w-14 place-items-center rounded-sm bg-amber-450/12">
               <ShieldAlert className="h-7 w-7 text-amber-400" />
             </span>
             <p className="mt-4 text-[15px] font-semibold text-white">Verify your identity to withdraw</p>
@@ -147,7 +147,7 @@ export function WithdrawPanel({
               </Button>
               <Link
                 href="/verify"
-                className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-xl bg-mint-500 px-4 text-[13px] font-semibold text-ink-950 hover:bg-mint-400"
+                className="focus-ring inline-flex h-9 items-center gap-1.5 rounded-sm bg-mint-500 px-4 text-[13px] font-semibold text-ink-950 hover:bg-mint-400"
               >
                 Verify identity
                 <ArrowRight className="h-3.5 w-3.5" />
@@ -156,8 +156,8 @@ export function WithdrawPanel({
           </div>
         ) : state === "twofa" ? (
           /* ---- 2FA code step --------------------------------------------- */
-          <div className="relative mt-5 grid place-items-center rounded-2xl border border-iris-500/25 bg-iris-500/[0.05] px-5 py-8 text-center">
-            <span className="grid h-14 w-14 place-items-center rounded-2xl bg-iris-500/12">
+          <div className="relative mt-5 grid place-items-center rounded-sm border border-iris-500/25 bg-iris-500/[0.05] px-5 py-8 text-center">
+            <span className="grid h-14 w-14 place-items-center rounded-sm bg-iris-500/12">
               <ShieldCheck className="h-7 w-7 text-iris-300" />
             </span>
             <p className="mt-4 text-[15px] font-semibold text-white">Confirm with your authenticator</p>
@@ -190,7 +190,7 @@ export function WithdrawPanel({
             </div>
           </div>
         ) : state === "done" ? (
-          <div className="relative mt-5 grid place-items-center rounded-2xl border border-mint-500/25 bg-mint-500/[0.07] px-5 py-9 text-center">
+          <div className="relative mt-5 grid place-items-center rounded-sm border border-mint-500/25 bg-mint-500/[0.07] px-5 py-9 text-center">
             <CheckCircle2 className="h-10 w-10 text-mint-400" />
             <p className="mt-3 text-[15px] font-semibold text-white">Withdrawal requested</p>
             <p className="mt-1 text-[13px] text-slate-400">
@@ -210,7 +210,7 @@ export function WithdrawPanel({
         ) : (
           /* ---- Form ------------------------------------------------------- */
           <div className="relative mt-5 space-y-4">
-            <div className="flex items-center justify-between rounded-xl border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
+            <div className="flex items-center justify-between rounded-sm border border-white/[0.06] bg-white/[0.02] px-3.5 py-2.5">
               <span className="text-[12px] text-slate-500">Available to withdraw</span>
               <span className="tnum text-[14px] font-semibold text-white">{usd(balanceMinor)}</span>
             </div>
@@ -229,7 +229,7 @@ export function WithdrawPanel({
                     setError(undefined);
                   }}
                   className={cn(
-                    "focus-ring flex items-center justify-center gap-2 rounded-xl border px-3 py-2.5 text-[13px] font-medium transition",
+                    "focus-ring flex items-center justify-center gap-2 rounded-sm border px-3 py-2.5 text-[13px] font-medium transition",
                     method === m.key
                       ? "border-iris-500/40 bg-iris-500/10 text-white"
                       : "border-white/[0.06] bg-white/[0.02] text-slate-400 hover:text-slate-200",
@@ -264,7 +264,7 @@ export function WithdrawPanel({
                   <button
                     type="button"
                     onClick={() => setAmount(maxUsd)}
-                    className="focus-ring absolute right-2 top-1/2 -translate-y-1/2 rounded-md border border-white/10 bg-white/[0.05] px-2 py-1 text-[11px] font-medium text-slate-300 hover:bg-white/[0.1]"
+                    className="focus-ring absolute right-2 top-1/2 -translate-y-1/2 rounded-sm border border-white/10 bg-white/[0.05] px-2 py-1 text-[11px] font-medium text-slate-300 hover:bg-white/[0.1]"
                   >
                     Max
                   </button>

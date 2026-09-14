@@ -8,10 +8,15 @@ import { Avatar, LiveDot } from "@/components/ui/Primitives";
 import { PLATFORM_STATS, TRADERS } from "@/lib/traders";
 import { initialsOf } from "@/lib/utils";
 import { TickerTape } from "./TickerTape";
-import { LiveEquityStream } from "./LiveEquityStream";
+import { LiveCandles } from "./LiveCandles";
 
 /* -------------------------------------------------------------------------- */
 /*  Hero                                                                       */
+/*                                                                              */
+/*  No photograph anywhere in this section — the "showpiece" is a live         */
+/*  candlestick tape, not a stock photo of a person. Two-column editorial      */
+/*  layout (headline + copy on the left, a standing trading-floor panel on     */
+/*  the right) rather than a full-bleed image with text laid over it.          */
 /* -------------------------------------------------------------------------- */
 
 const HEADLINE_WORDS = ["Copy", "the", "traders"];
@@ -49,50 +54,14 @@ function RotatingPhrase() {
   );
 }
 
-// Friendly hero photo. To use your own, drop an image at /public/hero.jpg and
-// set HERO_IMAGE = "/hero.jpg".
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1500&q=80";
-
 export function Hero() {
-  const topProvider = [...TRADERS].sort((a, b) => b.roi30d - a.roi30d)[0]!;
+  const board = [...TRADERS].sort((a, b) => b.roi30d - a.roi30d).slice(0, 3);
 
   return (
-    <section className="relative overflow-hidden pt-17">
-      {/* Full-bleed photo */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
-        <div
-          className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: `url("${HERO_IMAGE}")`, backgroundPosition: "72% 28%" }}
-        />
-        {/* Cinematic scrim — deep on the left for crisp type, lifting toward the subject */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(96deg, #0a0907 0%, rgba(10,9,7,0.95) 28%, rgba(10,9,7,0.74) 50%, rgba(10,9,7,0.34) 76%, rgba(10,9,7,0.55) 100%)",
-          }}
-        />
-        <div
-          className="absolute inset-x-0 top-0 h-40"
-          style={{ background: "linear-gradient(to bottom, #0a0907, transparent)" }}
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-52"
-          style={{ background: "linear-gradient(to top, #0a0907 12%, transparent)" }}
-        />
-        {/* Soft brand glow */}
-        <div
-          className="absolute -left-[8%] top-[10%] h-[44vw] w-[44vw] rounded-full blur-[140px]"
-          style={{
-            background: "radial-gradient(closest-side, rgba(207,166,83,0.16), transparent 70%)",
-          }}
-        />
-      </div>
-
-      {/* Content — vertically centred, everything above the ticker */}
-      <div className="relative mx-auto flex min-h-[80vh] w-full max-w-7xl items-center px-6 py-14 sm:px-8">
-        <div className="max-w-2xl">
+    <section className="relative overflow-hidden pt-32 pb-10">
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1.05fr_0.95fr] lg:gap-8 sm:px-8">
+        {/* Left — editorial headline column */}
+        <div className="max-w-xl">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,8 +74,8 @@ export function Hero() {
             </span>
           </motion.div>
 
-          <h1 className="mt-6 font-display text-[clamp(2.2rem,4.6vw,3.7rem)] font-bold leading-[1.02] tracking-tight text-white">
-            <span className="block">
+          <h1 className="mt-7 font-display text-[clamp(2.4rem,4.4vw,4.1rem)] font-semibold italic leading-[1.03] tracking-tight text-white">
+            <span className="block not-italic">
               {HEADLINE_WORDS.map((word, i) => (
                 <motion.span
                   key={word + i}
@@ -194,43 +163,62 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-      </div>
 
-      {/* Floating credibility card over the photo */}
-      <motion.div
-        initial={{ opacity: 0, y: 24, scale: 0.96 }}
-        animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ duration: 0.9, delay: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="absolute bottom-28 right-8 z-10 hidden w-64 xl:block"
-      >
-        <div className="card-sheen rounded-2xl border border-white/[0.12] bg-ink-900/70 p-4 shadow-[0_30px_70px_-25px_rgba(0,0,0,0.9)] backdrop-blur-2xl">
-          <div className="flex items-center justify-between">
-            <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-slate-400">
-              Top provider · 30d
-            </span>
-            <LiveDot />
-          </div>
-          <div className="mt-3 flex items-center gap-2.5">
-            <Avatar initials={initialsOf(topProvider.name)} gradient={topProvider.gradient} size={38} />
-            <div className="min-w-0">
-              <p className="truncate text-[13.5px] font-semibold text-white">{topProvider.name}</p>
-              <p className="truncate text-[11px] text-slate-400">{topProvider.strategy}</p>
+        {/* Right — a standing trading-floor panel. No photograph. */}
+        <motion.div
+          initial={{ opacity: 0, y: 24, scale: 0.97 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="relative"
+        >
+          <div className="card-sheen relative overflow-hidden rounded border border-white/[0.1] bg-ink-900/60 backdrop-blur-xl">
+            <div className="flex items-center justify-between border-b border-white/[0.08] px-5 py-4">
+              <span className="text-[10.5px] font-semibold uppercase tracking-[0.16em] text-slate-400">
+                Live desk
+              </span>
+              <LiveDot />
+            </div>
+
+            <div className="h-56 px-1 pt-4">
+              <LiveCandles />
+            </div>
+
+            <div className="grid grid-cols-3 divide-x divide-white/[0.08] border-t border-white/[0.08]">
+              {board.map((t) => (
+                <div key={t.id} className="px-4 py-4">
+                  <div className="flex items-center gap-2">
+                    <Avatar initials={initialsOf(t.name)} gradient={t.gradient} size={22} ring={false} />
+                    <span className="truncate text-[12px] font-medium text-slate-200">
+                      {t.name.split(" ")[0]}
+                    </span>
+                  </div>
+                  <p className="tnum mt-2 text-[15px] font-semibold text-mint-400">
+                    +{t.roi30d.toFixed(1)}%
+                  </p>
+                  <p className="text-[10.5px] text-slate-500">30d return</p>
+                </div>
+              ))}
             </div>
           </div>
-          {/* Live, always-moving equity sparkline */}
-          <div className="mt-3 h-14 overflow-hidden">
-            <LiveEquityStream />
-          </div>
-          <div className="mt-1 flex items-end justify-between border-t border-white/[0.08] pt-3">
-            <span className="text-[11.5px] text-slate-400">Return this month</span>
-            <span className="tnum text-[18px] font-bold text-mint-400">
-              +{topProvider.roi30d.toFixed(1)}%
-            </span>
-          </div>
-        </div>
-      </motion.div>
 
-      <TickerTape />
+          {/* Small floating stat, not overlapping any image now — just the panel. */}
+          <motion.div
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.1 }}
+            className="absolute -left-6 -bottom-6 hidden rounded border border-white/[0.12] bg-ink-880/90 px-4 py-3 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-xl sm:block"
+          >
+            <p className="text-[10px] uppercase tracking-[0.14em] text-slate-400">Signal latency</p>
+            <p className="tnum text-[19px] font-bold text-white">
+              18<span className="text-[12px] font-medium text-slate-400">ms</span>
+            </p>
+          </motion.div>
+        </motion.div>
+      </div>
+
+      <div className="mt-14">
+        <TickerTape />
+      </div>
     </section>
   );
 }

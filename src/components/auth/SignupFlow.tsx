@@ -280,7 +280,7 @@ export function SignupFlow() {
                       type="button"
                       onClick={() => set("accountType", a.id)}
                       className={cn(
-                        "focus-ring relative rounded-2xl border p-5 text-left transition-all duration-250",
+                        "focus-ring relative rounded-sm border p-5 text-left transition-all duration-250",
                         active
                           ? "border-mint-500/50 bg-mint-500/[0.07] shadow-[0_0_0_1px_rgba(207,166,83,0.25)]"
                           : "border-white/[0.08] bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05]",
@@ -348,7 +348,7 @@ export function SignupFlow() {
                           disabled={disabled}
                           onClick={() => set("leverage", l)}
                           className={cn(
-                            "focus-ring rounded-xl border py-2.5 text-[13.5px] font-medium transition-all",
+                            "focus-ring rounded-sm border py-2.5 text-[13.5px] font-medium transition-all",
                             disabled
                               ? "cursor-not-allowed border-white/[0.05] text-slate-600"
                               : form.leverage === l
@@ -371,7 +371,7 @@ export function SignupFlow() {
                         type="button"
                         onClick={() => set("experience", x.value)}
                         className={cn(
-                          "focus-ring flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition-all",
+                          "focus-ring flex w-full items-center justify-between rounded-sm border px-4 py-3 text-left transition-all",
                           form.experience === x.value
                             ? "border-mint-500/50 bg-mint-500/[0.07]"
                             : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05]",
@@ -400,7 +400,7 @@ export function SignupFlow() {
                   </div>
                 </Field>
 
-                <div className="rounded-xl border border-mint-500/25 bg-mint-500/[0.07] p-4">
+                <div className="rounded-sm border border-mint-500/25 bg-mint-500/[0.07] p-4">
                   <div className="flex items-center gap-2 text-mint-300">
                     <Sparkles className="h-4 w-4" />
                     <span className="text-[13px] font-semibold">
@@ -435,7 +435,7 @@ export function SignupFlow() {
                   ].map(([k, v]) => (
                     <div
                       key={k}
-                      className="flex items-center justify-between rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3"
+                      className="flex items-center justify-between rounded-sm border border-white/[0.07] bg-white/[0.02] px-4 py-3"
                     >
                       <span className="text-[13px] text-slate-400">{k}</span>
                       <span className="text-[13.5px] font-semibold text-white">{v}</span>

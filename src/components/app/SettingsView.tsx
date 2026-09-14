@@ -142,7 +142,7 @@ export function SettingsView() {
                     key={a.id}
                     onClick={() => changeAccountType(a.id)}
                     className={cn(
-                      "focus-ring rounded-xl border p-4 text-left transition-all duration-200",
+                      "focus-ring rounded-sm border p-4 text-left transition-all duration-200",
                       active
                         ? "border-mint-500/45 bg-mint-500/[0.07]"
                         : "border-white/[0.08] bg-white/[0.02] hover:bg-white/[0.05]",
@@ -182,7 +182,7 @@ export function SettingsView() {
                           pushToast({ tone: "info", title: `Leverage set to 1:${l}` });
                         }}
                         className={cn(
-                          "focus-ring rounded-lg border py-2 text-[12.5px] font-medium transition-all",
+                          "focus-ring rounded-sm border py-2 text-[12.5px] font-medium transition-all",
                           disabled
                             ? "cursor-not-allowed border-white/[0.05] text-slate-600"
                             : user.leverage === l
@@ -197,7 +197,7 @@ export function SettingsView() {
                 </div>
               </Field>
 
-              <p className="rounded-lg border border-amber-450/25 bg-amber-450/[0.07] p-3 text-[12px] leading-relaxed text-amber-450">
+              <p className="rounded-sm border border-amber-450/25 bg-amber-450/[0.07] p-3 text-[12px] leading-relaxed text-amber-450">
                 Higher leverage does not increase your profit potential — it reduces the
                 margin each position ties up, which makes it easier to over-size. Most
                 copiers should sit at 1:100 or below.
@@ -221,7 +221,7 @@ export function SettingsView() {
               <div className="flex items-center gap-3">
                 <span
                   className={cn(
-                    "grid h-11 w-11 shrink-0 place-items-center rounded-xl border",
+                    "grid h-11 w-11 shrink-0 place-items-center rounded-sm border",
                     user.kycVerified
                       ? "border-mint-500/25 bg-mint-500/10"
                       : "border-amber-450/25 bg-amber-450/10",
@@ -272,7 +272,7 @@ export function SettingsView() {
             />
             <div className="space-y-2.5 p-4">
               <TwoFactorCard />
-              <button className="focus-ring flex w-full items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]">
+              <button className="focus-ring flex w-full items-center gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]">
                 <KeyRound className="h-4 w-4 shrink-0 text-slate-400" />
                 <span>
                   <span className="block text-[14px] font-medium text-white">
@@ -317,7 +317,7 @@ export function SettingsView() {
             <div className="space-y-2.5 p-4">
               <button
                 onClick={() => setResetOpen(true)}
-                className="focus-ring flex w-full items-center gap-3 rounded-xl border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]"
+                className="focus-ring flex w-full items-center gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] px-4 py-3 text-left transition-colors hover:bg-white/[0.05]"
               >
                 <RotateCcw className="h-4 w-4 shrink-0 text-amber-450" />
                 <span>
@@ -331,7 +331,7 @@ export function SettingsView() {
               </button>
               <button
                 onClick={() => setCloseOpen(true)}
-                className="focus-ring flex w-full items-center gap-3 rounded-xl border border-rose-500/20 bg-rose-500/[0.05] px-4 py-3 text-left transition-colors hover:bg-rose-500/10"
+                className="focus-ring flex w-full items-center gap-3 rounded-sm border border-rose-500/20 bg-rose-500/[0.05] px-4 py-3 text-left transition-colors hover:bg-rose-500/10"
               >
                 <Trash2 className="h-4 w-4 shrink-0 text-rose-400" />
                 <span>

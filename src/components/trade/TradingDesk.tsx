@@ -98,7 +98,7 @@ export function TradingDesk() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search instruments"
-                className="h-9 w-full rounded-lg border border-white/[0.08] bg-ink-900/70 pl-9 pr-3 text-[13px] text-white outline-none transition-colors placeholder:text-slate-500 focus:border-mint-500/50"
+                className="h-9 w-full rounded-sm border border-white/[0.08] bg-ink-900/70 pl-9 pr-3 text-[13px] text-white outline-none transition-colors placeholder:text-slate-500 focus:border-mint-500/50"
               />
             </div>
             <div className="mt-2.5 flex flex-wrap gap-1.5">
@@ -107,7 +107,7 @@ export function TradingDesk() {
                   key={c}
                   onClick={() => setFilter(c)}
                   className={cn(
-                    "rounded-md px-2 py-1 text-[11px] font-medium capitalize transition-colors",
+                    "rounded-sm px-2 py-1 text-[11px] font-medium capitalize transition-colors",
                     filter === c
                       ? "bg-white/[0.10] text-white"
                       : "text-slate-500 hover:bg-white/[0.05] hover:text-slate-300",
@@ -139,7 +139,7 @@ export function TradingDesk() {
                 <div
                   key={i.id}
                   className={cn(
-                    "group flex items-center gap-2 rounded-lg px-2.5 py-2 transition-colors",
+                    "group flex items-center gap-2 rounded-sm px-2.5 py-2 transition-colors",
                     active ? "bg-white/[0.08]" : "hover:bg-white/[0.04]",
                   )}
                 >
@@ -340,7 +340,7 @@ function CloseAllButton({ prices }: { prices: Record<string, number> }) {
           body: "Every open position was closed at the current market price.",
         });
       }}
-      className="focus-ring rounded-lg border border-rose-500/30 bg-rose-500/10 px-3 py-1.5 text-[12.5px] font-medium text-rose-400 transition-colors hover:bg-rose-500/20"
+      className="focus-ring rounded-sm border border-rose-500/30 bg-rose-500/10 px-3 py-1.5 text-[12.5px] font-medium text-rose-400 transition-colors hover:bg-rose-500/20"
     >
       Close all
     </button>

@@ -103,7 +103,7 @@ export function AuthLayout({
                   transition={{ duration: 0.6, delay: 0.25 + i * 0.12 }}
                   className="flex items-center gap-3 text-[14px] text-slate-300"
                 >
-                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-mint-500/25 bg-mint-500/10">
+                  <span className="grid h-9 w-9 shrink-0 place-items-center rounded-sm border border-mint-500/25 bg-mint-500/10">
                     <h.icon className="h-4 w-4 text-mint-400" />
                   </span>
                   {h.text}
@@ -116,7 +116,7 @@ export function AuthLayout({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="card-sheen rounded-2xl border border-white/[0.09] bg-ink-880/80 p-5 backdrop-blur-xl"
+            className="card-sheen rounded-sm border border-white/[0.09] bg-ink-880/80 p-5 backdrop-blur-xl"
           >
             <Quote className="h-5 w-5 text-mint-400/50" />
             <blockquote className="mt-3 text-[14px] leading-relaxed text-slate-300">

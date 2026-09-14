@@ -154,8 +154,8 @@ type Dot = {
 };
 
 const COLORS: Record<Dot["hue"], string> = {
-  mint: "0,223,164",
-  iris: "129,140,248",
+  mint: "207,166,83",
+  iris: "79,185,139",
   white: "226,236,247",
 };
 

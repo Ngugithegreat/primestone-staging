@@ -50,7 +50,7 @@ export function Modal({
             role="dialog"
             aria-modal="true"
             className={cn(
-              "card-sheen relative w-full rounded-2xl border border-white/[0.09] bg-ink-880 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.95)]",
+              "card-sheen relative w-full rounded-sm border border-white/[0.09] bg-ink-880 shadow-[0_40px_120px_-30px_rgba(0,0,0,0.95)]",
               widths[size],
             )}
             initial={{ opacity: 0, y: 24, scale: 0.97 }}
@@ -66,7 +66,7 @@ export function Modal({
               <button
                 onClick={onClose}
                 aria-label="Close"
-                className="focus-ring -mr-1 -mt-1 grid h-8 w-8 place-items-center rounded-lg text-slate-400 transition-colors hover:bg-white/[0.07] hover:text-white"
+                className="focus-ring -mr-1 -mt-1 grid h-8 w-8 place-items-center rounded-sm text-slate-400 transition-colors hover:bg-white/[0.07] hover:text-white"
               >
                 <X className="h-4 w-4" />
               </button>

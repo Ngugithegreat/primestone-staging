@@ -51,7 +51,7 @@ export function SiteNav() {
             <Link
               key={l.href}
               href={l.href}
-              className="rounded-lg px-3.5 py-2 text-[13.5px] font-medium text-slate-300 transition-colors hover:bg-white/[0.05] hover:text-white"
+              className="rounded-sm px-3.5 py-2 text-[13.5px] font-medium text-slate-300 transition-colors hover:bg-white/[0.05] hover:text-white"
             >
               {l.label}
             </Link>
@@ -71,7 +71,7 @@ export function SiteNav() {
         <button
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Close menu" : "Open menu"}
-          className="focus-ring grid h-10 w-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-white lg:hidden"
+          className="focus-ring grid h-10 w-10 place-items-center rounded-sm border border-white/10 bg-white/[0.04] text-white lg:hidden"
         >
           {open ? <X className="h-4.5 w-4.5" /> : <Menu className="h-4.5 w-4.5" />}
         </button>
@@ -92,7 +92,7 @@ export function SiteNav() {
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-xl px-3.5 py-3 text-[15px] font-medium text-slate-200 transition-colors hover:bg-white/[0.05]"
+                  className="flex items-center justify-between rounded-sm px-3.5 py-3 text-[15px] font-medium text-slate-200 transition-colors hover:bg-white/[0.05]"
                 >
                   {l.label}
                   <ChevronRight className="h-4 w-4 text-slate-500" />

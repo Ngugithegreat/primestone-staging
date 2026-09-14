@@ -78,7 +78,7 @@ export function LiveCopiedTrades({
           return (
             <div
               key={pos.id}
-              className="flex items-center justify-between gap-3 rounded-xl border border-white/[0.07] bg-white/[0.02] p-3.5"
+              className="flex items-center justify-between gap-3 rounded-sm border border-white/[0.07] bg-white/[0.02] p-3.5"
             >
               <div className="flex min-w-0 items-center gap-3">
                 <span className="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white/[0.05]">
